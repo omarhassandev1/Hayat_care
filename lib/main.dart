@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hayat_care/core/routes/app_routes.dart';
+import 'package:hayat_care/core/theme/app_theme.dart';
+import 'package:hayat_care/features/app_settings/presentation/cubit/app_settings_state.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hayat_care/localization/app_localizations.dart';
+
+import 'core/di/injection.dart';
+import 'features/app_settings/presentation/cubit/app_settings_cubit.dart';
+import 'features/layout/presentation/view/main_layout_view.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await configureDependencies();
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenUtilInit(
+      designSize: const Size(393, 852),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, child) => BlocProvider(
+        create: (context) => sl<AppSettingCubit>(),
+        child: BlocBuilder<AppSettingCubit, AppSettingState>(
+          builder: (context, state) {
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: AppTheme.getLightTheme(state.locale.languageCode),
+              darkTheme: AppTheme.getDarkTheme(state.locale.languageCode),
+              themeMode: state.themeMode,
+              locale: state.locale,
+              initialRoute: MainLayoutView.routeName,
+              routes: AppRoutes.routes,
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
+              supportedLocales: AppLocalizations.supportedLocales,
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
