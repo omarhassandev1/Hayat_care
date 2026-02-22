@@ -10,11 +10,9 @@ import '../../features/Auth/presentation/view/terms_and_conditions/screens/terms
 import '../../features/Onboarding/presentation/screens/onboarding_screen.dart';
 import '../../features/Onboarding/presentation/screens/pick_language_screen.dart';
 import '../../features/articles/presentation/view/screens/articles_bookmarks_screen.dart';
-import '../../features/articles/presentation/view/screens/articles_search_screen.dart';
 import '../../features/favorite_doctors/presentation/view/screens/favorite_doctors_screen.dart';
 import '../../features/layout/presentation/view/main_layout_view.dart';
 import '../../features/app_settings/presentation/view/screens/settings_screen.dart';
-import '../../features/profile/presentation/view/screens/add_family_member_screen.dart';
 import '../../features/profile/presentation/view/screens/family_members_screen.dart';
 
 class AppRoutes {
