@@ -8,6 +8,7 @@ import 'package:hayat_care/localization/app_localizations.dart';
 import '../../../../app_settings/presentation/view/widgets/settings_item.dart';
 import '../widgets/profile_tab_header.dart';
 import '../../../../app_settings/presentation/view/widgets/settings_group.dart';
+import 'family_members_screen.dart';
 
 class ProfileTab extends StatelessWidget {
   const ProfileTab({super.key});
@@ -15,6 +16,7 @@ class ProfileTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -60,6 +62,9 @@ class ProfileTab extends StatelessWidget {
                 ),
                 title: AppLocalizations.of(context)!.family,
                 isDark: isDark,
+                onPressed: (){
+                  Navigator.of(context).pushNamed(FamilyMembersScreen.routeName);
+                },
               ),
               SettingsItem(
                 icon: Assets.profile.settings.svg(
@@ -143,9 +148,9 @@ class ProfileTab extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _buildSocialIcon(Assets.profile.linkedin.svg()),
-                _buildSocialIcon(Assets.profile.x.svg()), 
-                _buildSocialIcon(Assets.profile.instagram.svg()), 
-                _buildSocialIcon(Assets.profile.facebook.svg()), 
+                _buildSocialIcon(Assets.profile.x.svg()),
+                _buildSocialIcon(Assets.profile.instagram.svg()),
+                _buildSocialIcon(Assets.profile.facebook.svg()),
               ],
             ),
             SizedBox(height: 40.h),

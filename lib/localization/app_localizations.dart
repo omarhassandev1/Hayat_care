@@ -901,6 +901,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'search for articles'**
   String get searchArticlesHint;
+
+  /// No description provided for @noFamilyDataYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No family data yet'**
+  String get noFamilyDataYet;
+
+  /// No description provided for @addFamilyDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You can add family members to your profile, seek consultation, and add health records for them through your account.'**
+  String get addFamilyDescription;
+
+  /// No description provided for @addFamilyMember.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a Family Member'**
+  String get addFamilyMember;
+
+  /// No description provided for @relationship.
+  ///
+  /// In en, this message translates to:
+  /// **'Relationship'**
+  String get relationship;
+
+  /// No description provided for @dateOfBirth.
+  ///
+  /// In en, this message translates to:
+  /// **'Date of Birth'**
+  String get dateOfBirth;
+
+  /// No description provided for @nationalId.
+  ///
+  /// In en, this message translates to:
+  /// **'National ID'**
+  String get nationalId;
+
+  /// No description provided for @kinship.
+  ///
+  /// In en, this message translates to:
+  /// **'Kinship'**
+  String get kinship;
+
+  /// No description provided for @gender.
+  ///
+  /// In en, this message translates to:
+  /// **'Gender'**
+  String get gender;
+
+  /// No description provided for @male.
+  ///
+  /// In en, this message translates to:
+  /// **'Male'**
+  String get male;
+
+  /// No description provided for @female.
+  ///
+  /// In en, this message translates to:
+  /// **'Female'**
+  String get female;
+
+  /// No description provided for @age.
+  ///
+  /// In en, this message translates to:
+  /// **'Age'**
+  String get age;
+
+  /// No description provided for @yearsOld.
+  ///
+  /// In en, this message translates to:
+  /// **'yrs old'**
+  String get yearsOld;
 }
 
 class _AppLocalizationsDelegate

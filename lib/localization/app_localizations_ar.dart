@@ -421,4 +421,41 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get searchArticlesHint => 'ابحث عن مقالة';
+
+  @override
+  String get noFamilyDataYet => 'لا توجد بيانات عائلية حتى الآن';
+
+  @override
+  String get addFamilyDescription =>
+      'يمكنك إضافة أفراد العائلة إلى ملفك الشخصي، وطلب الاستشارة، وإضافة السجلات الصحية لهم من خلال حسابك.';
+
+  @override
+  String get addFamilyMember => 'إضافة فرد من العائلة';
+
+  @override
+  String get relationship => 'صلة القرابة';
+
+  @override
+  String get dateOfBirth => 'تاريخ الميلاد';
+
+  @override
+  String get nationalId => 'الرقم القومي';
+
+  @override
+  String get kinship => 'درجة القرابة';
+
+  @override
+  String get gender => 'النوع';
+
+  @override
+  String get male => 'ذكر';
+
+  @override
+  String get female => 'انثى';
+
+  @override
+  String get age => 'العمر';
+
+  @override
+  String get yearsOld => 'عام';
 }

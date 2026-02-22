@@ -31,6 +31,20 @@ import 'package:hayat_care/features/articles/domain/use_cases/get_favorite_artic
     as _i304;
 import 'package:hayat_care/features/articles/presentation/cubit/articles_cubit.dart'
     as _i428;
+import 'package:hayat_care/features/profile/data/data_source/mock_family_datasource.dart'
+    as _i999;
+import 'package:hayat_care/features/profile/data/repository_impl/family_repository_impl.dart'
+    as _i946;
+import 'package:hayat_care/features/profile/domain/repository/family_repository.dart'
+    as _i359;
+import 'package:hayat_care/features/profile/domain/usecases/add_family_member.dart'
+    as _i415;
+import 'package:hayat_care/features/profile/domain/usecases/delete_family_member.dart'
+    as _i378;
+import 'package:hayat_care/features/profile/domain/usecases/get_family_members.dart'
+    as _i70;
+import 'package:hayat_care/features/profile/presentation/cubit/family_cubit.dart'
+    as _i858;
 import 'package:hive_flutter/hive_flutter.dart' as _i986;
 import 'package:injectable/injectable.dart' as _i526;
 
@@ -45,6 +59,9 @@ extension GetItInjectableX on _i174.GetIt {
     await gh.factoryAsync<_i986.Box<dynamic>>(
       () => registerModule.settingsBox,
       preResolve: true,
+    );
+    gh.lazySingleton<_i999.MockFamilyDataSource>(
+      () => _i999.MockFamilyDataSource(),
     );
     gh.lazySingleton<_i704.SettingsLocalDataSource>(
       () => _i704.SettingsLocalDataSourceImpl(gh<_i986.Box<dynamic>>()),
@@ -78,9 +95,30 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i664.GetArticlesUseCase>(
       () => _i664.GetArticlesUseCase(gh<_i289.ArticlesRepository>()),
     );
+    gh.lazySingleton<_i359.FamilyRepository>(
+      () => _i946.FamilyRepositoryImpl(gh<_i999.MockFamilyDataSource>()),
+    );
     gh.lazySingleton<_i304.GetFavoriteArticlesUseCase>(
       () => _i304.GetFavoriteArticlesUseCase(
         articlesRepository: gh<_i289.ArticlesRepository>(),
+      ),
+    );
+    gh.lazySingleton<_i415.AddFamilyMemberUseCase>(
+      () => _i415.AddFamilyMemberUseCase(
+        repository: gh<_i359.FamilyRepository>(),
+      ),
+    );
+    gh.lazySingleton<_i378.DeleteFamilyMemberUseCase>(
+      () => _i378.DeleteFamilyMemberUseCase(gh<_i359.FamilyRepository>()),
+    );
+    gh.lazySingleton<_i70.GetFamilyMembersUseCase>(
+      () => _i70.GetFamilyMembersUseCase(gh<_i359.FamilyRepository>()),
+    );
+    gh.factory<_i858.FamilyCubit>(
+      () => _i858.FamilyCubit(
+        getFamilyMembersUseCase: gh<_i70.GetFamilyMembersUseCase>(),
+        addFamilyMemberUseCase: gh<_i415.AddFamilyMemberUseCase>(),
+        deleteFamilyMemberUseCase: gh<_i378.DeleteFamilyMemberUseCase>(),
       ),
     );
     gh.factory<_i428.ArticlesCubit>(

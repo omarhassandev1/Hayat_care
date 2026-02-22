@@ -133,5 +133,18 @@
   "articles": "Articles",
   "trending": "Trending",
   "myBookmark": "My Bookmarks",
-  "searchArticlesHint": "search for articles"
+  "searchArticlesHint": "search for articles",
+  "noFamilyDataYet": "No family data yet",
+  "addFamilyDescription": "You can add family members to your profile, seek consultation, and add health records for them through your account.",
+  "addFamilyMember": "Add a Family Member",
+  "relationship": "Relationship",
+  "dateOfBirth": "Date of Birth",
+  "nationalId": "National ID",
+  "kinship": "Kinship",
+  "gender": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "age": "Age",
+  "yearsOld": "yrs old"
+
 }
