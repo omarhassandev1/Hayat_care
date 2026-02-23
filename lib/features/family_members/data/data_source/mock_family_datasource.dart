@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
 
-import '../../domain/entities/family_member_entity.dart';
+import '../../../family_members/domain/entities/family_member_entity.dart';
 
 @lazySingleton
 class MockFamilyDataSource {

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hayat_care/features/profile/presentation/view/screens/add_family_member_screen.dart';
-import 'package:hayat_care/features/profile/presentation/view/widgets/family_member_card.dart';
+import 'package:hayat_care/features/family_members/presentation/view/widgets/family_member_card.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 
 import '../../../../../core/di/injection.dart';
@@ -10,6 +9,7 @@ import '../../../../../core/widgets/custom_main_button.dart';
 import '../../cubit/familt_state.dart';
 import '../../cubit/family_cubit.dart';
 import '../widgets/no_family_members_widget.dart';
+import 'add_family_member_screen.dart';
 
 class FamilyMembersScreen extends StatelessWidget {
   const FamilyMembersScreen({super.key});
@@ -20,7 +20,7 @@ class FamilyMembersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => sl<FamilyCubit>()..loadMembers(),
-      child: _FamilyMembersView(), // افصل الـ UI في widget منفصلة
+      child: _FamilyMembersView(),
     );
   }
 }

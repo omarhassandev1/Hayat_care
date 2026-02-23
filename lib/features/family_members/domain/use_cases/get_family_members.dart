@@ -6,7 +6,7 @@ import '../repository/family_repository.dart';
 class GetFamilyMembersUseCase {
   final FamilyRepository repository;
 
-  GetFamilyMembersUseCase(this.repository);
+  GetFamilyMembersUseCase({required this.repository});
 
   Future<List<FamilyMemberEntity>> call() => repository.getFamilyMembers();
 }

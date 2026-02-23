@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hayat_care/features/profile/domain/entities/family_member_entity.dart';
+import 'package:hayat_care/features/family_members/domain/entities/family_member_entity.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 import 'package:intl/intl.dart';
 

@@ -1,5 +1,5 @@
-import 'package:hayat_care/features/profile/domain/entities/family_member_entity.dart';
-import 'package:hayat_care/features/profile/domain/repository/family_repository.dart';
+import 'package:hayat_care/features/family_members/domain/entities/family_member_entity.dart';
+import 'package:hayat_care/features/family_members/domain/repository/family_repository.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton

@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hayat_care/features/profile/presentation/view/screens/add_family_member_screen.dart';
 
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/widgets/custom_main_button.dart';
 import '../../../../../gen/assets.gen.dart';
 import '../../../../../localization/app_localizations.dart';
+import '../screens/add_family_member_screen.dart';
 
 class NoFamilyMembersWidget extends StatelessWidget {
-  const NoFamilyMembersWidget({
-    super.key,
-  });
+  const NoFamilyMembersWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +40,12 @@ class NoFamilyMembersWidget extends StatelessWidget {
               children: [
                 CustomMainButton(
                   label: AppLocalizations.of(context)!.addFamilyMember,
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddFamilyMemberScreen(),));
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => AddFamilyMemberScreen(),
+                      ),
+                    );
                   },
                 ),
               ],

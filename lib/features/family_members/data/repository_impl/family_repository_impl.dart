@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 
-import '../../domain/entities/family_member_entity.dart';
-import '../../domain/repository/family_repository.dart';
+import '../../../family_members/domain/entities/family_member_entity.dart';
+import '../../../family_members/domain/repository/family_repository.dart';
 import '../data_source/mock_family_datasource.dart';
 
 @LazySingleton(as: FamilyRepository)

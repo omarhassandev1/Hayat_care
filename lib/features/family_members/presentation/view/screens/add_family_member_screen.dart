@@ -3,12 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/widgets/custom_main_button.dart';
 import 'package:hayat_care/core/widgets/custom_textfield.dart';
-import 'package:hayat_care/features/profile/domain/entities/family_member_entity.dart';
-import 'package:hayat_care/features/profile/presentation/cubit/family_cubit.dart';
+import 'package:hayat_care/features/family_members/domain/entities/family_member_entity.dart';
 
 import '../../../../../core/enums/gender_enum.dart';
 import '../../../../../localization/app_localizations.dart';
-import '../widgets/gender_bottom_sheet.dart';
+import '../../../../profile/presentation/view/widgets/gender_bottom_sheet.dart';
+import '../../cubit/family_cubit.dart';
 
 class AddFamilyMemberScreen extends StatefulWidget {
   const AddFamilyMemberScreen({super.key});
@@ -17,8 +17,6 @@ class AddFamilyMemberScreen extends StatefulWidget {
 }
 
 class _AddFamilyMemberScreenState extends State<AddFamilyMemberScreen> {
-
-
   late final TextEditingController birthDateController;
   late final TextEditingController genderController;
   late final TextEditingController nameController;
@@ -97,22 +95,22 @@ class _AddFamilyMemberScreenState extends State<AddFamilyMemberScreen> {
                   labelText: local.dateOfBirth,
                   hintText: local.dateOfBirth,
                   readOnly: true,
-                    onTap: () async {
-                      DateTime? pickedDate = await showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(1900),
-                        lastDate: DateTime.now(),
-                      );
+                  onTap: () async {
+                    DateTime? pickedDate = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(1900),
+                      lastDate: DateTime.now(),
+                    );
 
-                      if (pickedDate != null) {
-                        setState(() {
-                          selectedBirthDate = pickedDate;
-                          birthDateController.text =
-                          "${pickedDate.day}/${pickedDate.month}/${pickedDate.year}";
-                        });
-                      }
-                    },
+                    if (pickedDate != null) {
+                      setState(() {
+                        selectedBirthDate = pickedDate;
+                        birthDateController.text =
+                            "${pickedDate.day}/${pickedDate.month}/${pickedDate.year}";
+                      });
+                    }
+                  },
                 ),
                 CustomTextField(
                   controller: genderController,
@@ -121,18 +119,17 @@ class _AddFamilyMemberScreenState extends State<AddFamilyMemberScreen> {
                   readOnly: true,
                   onTap: () async {
                     final Gender? pickedGender =
-                    await showModalBottomSheet<Gender>(
-                      context: context,
-                      builder: (context) => GenderBottomSheet(
-                        selectedGender: selectedGenderValue,
-                      ),
-                    );
+                        await showModalBottomSheet<Gender>(
+                          context: context,
+                          builder: (context) => GenderBottomSheet(
+                            selectedGender: selectedGenderValue,
+                          ),
+                        );
 
                     if (pickedGender != null) {
                       setState(() {
                         selectedGenderValue = pickedGender;
-                        genderController.text =
-                        (pickedGender == Gender.male)
+                        genderController.text = (pickedGender == Gender.male)
                             ? local.male
                             : local.female;
                       });
