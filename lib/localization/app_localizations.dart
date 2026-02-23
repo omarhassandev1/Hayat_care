@@ -973,6 +973,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'yrs old'**
   String get yearsOld;
+
+  /// No description provided for @emergencyNoLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency Number (Optional)'**
+  String get emergencyNoLabel;
+
+  /// No description provided for @nationalIdHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your National ID'**
+  String get nationalIdHint;
+
+  /// No description provided for @updateInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Information'**
+  String get updateInfo;
+
+  /// No description provided for @updating.
+  ///
+  /// In en, this message translates to:
+  /// **'Updating...'**
+  String get updating;
 }
 
 class _AppLocalizationsDelegate

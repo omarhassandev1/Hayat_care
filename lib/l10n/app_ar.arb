@@ -145,6 +145,10 @@
   "male": "ذكر",
   "female": "انثى",
   "age": "العمر",
-  "yearsOld": "عام"
+  "yearsOld": "عام",
+  "emergencyNoLabel": "رقم طوارئ (اختياري)",
+  "nationalIdHint": "ادخل رقمك القومي",
+  "updateInfo": "تحديث البيانات",
+  "updating": "... يتم التحديث"
 
 }

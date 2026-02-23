@@ -458,4 +458,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get yearsOld => 'عام';
+
+  @override
+  String get emergencyNoLabel => 'رقم طوارئ (اختياري)';
+
+  @override
+  String get nationalIdHint => 'ادخل رقمك القومي';
+
+  @override
+  String get updateInfo => 'تحديث البيانات';
+
+  @override
+  String get updating => '... يتم التحديث';
 }

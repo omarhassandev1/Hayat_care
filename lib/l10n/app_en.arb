@@ -145,6 +145,10 @@
   "male": "Male",
   "female": "Female",
   "age": "Age",
-  "yearsOld": "yrs old"
+  "yearsOld": "yrs old",
+  "emergencyNoLabel": "Emergency Number (Optional)",
+  "nationalIdHint": "Please enter your National ID",
+  "updateInfo": "Update Information",
+  "updating": "Updating..."
 
 }

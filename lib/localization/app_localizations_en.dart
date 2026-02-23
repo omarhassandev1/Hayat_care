@@ -462,4 +462,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get yearsOld => 'yrs old';
+
+  @override
+  String get emergencyNoLabel => 'Emergency Number (Optional)';
+
+  @override
+  String get nationalIdHint => 'Please enter your National ID';
+
+  @override
+  String get updateInfo => 'Update Information';
+
+  @override
+  String get updating => 'Updating...';
 }
