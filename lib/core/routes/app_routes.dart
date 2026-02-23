@@ -13,7 +13,7 @@ import '../../features/articles/presentation/view/screens/articles_bookmarks_scr
 import '../../features/favorite_doctors/presentation/view/screens/favorite_doctors_screen.dart';
 import '../../features/layout/presentation/view/main_layout_view.dart';
 import '../../features/app_settings/presentation/view/screens/settings_screen.dart';
-import '../../features/profile/presentation/view/screens/family_members_screen.dart';
+import '../../features/family_members/presentation/view/screens/family_members_screen.dart';
 
 class AppRoutes {
   static final Map<String,WidgetBuilder> routes = {

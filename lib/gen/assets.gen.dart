@@ -154,6 +154,14 @@ class $AssetsProfileGen {
   SvgGenImage get aboutUsIcon =>
       const SvgGenImage('assets/profile/about us icon.svg');
 
+  /// File path: assets/profile/disapointed_icon_bright.svg
+  SvgGenImage get disapointedIconBright =>
+      const SvgGenImage('assets/profile/disapointed_icon_bright.svg');
+
+  /// File path: assets/profile/disapointed_icon_filled.svg
+  SvgGenImage get disapointedIconFilled =>
+      const SvgGenImage('assets/profile/disapointed_icon_filled.svg');
+
   /// File path: assets/profile/editIcon.svg
   SvgGenImage get editIcon => const SvgGenImage('assets/profile/editIcon.svg');
 
@@ -209,6 +217,8 @@ class $AssetsProfileGen {
   /// List of all assets
   List<SvgGenImage> get values => [
     aboutUsIcon,
+    disapointedIconBright,
+    disapointedIconFilled,
     editIcon,
     facebook,
     family,
