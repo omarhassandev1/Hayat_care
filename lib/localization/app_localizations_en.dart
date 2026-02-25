@@ -425,4 +425,53 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get searchArticlesHint => 'search for articles';
+
+  @override
+  String get noFamilyDataYet => 'No family data yet';
+
+  @override
+  String get addFamilyDescription =>
+      'You can add family members to your profile, seek consultation, and add health records for them through your account.';
+
+  @override
+  String get addFamilyMember => 'Add a Family Member';
+
+  @override
+  String get relationship => 'Relationship';
+
+  @override
+  String get dateOfBirth => 'Date of Birth';
+
+  @override
+  String get nationalId => 'National ID';
+
+  @override
+  String get kinship => 'Kinship';
+
+  @override
+  String get gender => 'Gender';
+
+  @override
+  String get male => 'Male';
+
+  @override
+  String get female => 'Female';
+
+  @override
+  String get age => 'Age';
+
+  @override
+  String get yearsOld => 'yrs old';
+
+  @override
+  String get emergencyNoLabel => 'Emergency Number (Optional)';
+
+  @override
+  String get nationalIdHint => 'Please enter your National ID';
+
+  @override
+  String get updateInfo => 'Update Information';
+
+  @override
+  String get updating => 'Updating...';
 }

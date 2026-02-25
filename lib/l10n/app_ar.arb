@@ -133,5 +133,22 @@
   "articles": "المقالات",
   "trending": "الأكثر رواجاً",
   "myBookmark": "إشاراتي المرجعية",
-  "searchArticlesHint": "ابحث عن مقالة"
+  "searchArticlesHint": "ابحث عن مقالة",
+  "noFamilyDataYet": "لا توجد بيانات عائلية حتى الآن",
+  "addFamilyDescription": "يمكنك إضافة أفراد العائلة إلى ملفك الشخصي، وطلب الاستشارة، وإضافة السجلات الصحية لهم من خلال حسابك.",
+  "addFamilyMember": "إضافة فرد من العائلة",
+  "relationship": "صلة القرابة",
+  "dateOfBirth": "تاريخ الميلاد",
+  "nationalId": "الرقم القومي",
+  "kinship": "درجة القرابة",
+  "gender": "النوع",
+  "male": "ذكر",
+  "female": "انثى",
+  "age": "العمر",
+  "yearsOld": "عام",
+  "emergencyNoLabel": "رقم طوارئ (اختياري)",
+  "nationalIdHint": "ادخل رقمك القومي",
+  "updateInfo": "تحديث البيانات",
+  "updating": "... يتم التحديث"
+
 }
