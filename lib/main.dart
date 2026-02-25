@@ -9,7 +9,7 @@ import 'package:hayat_care/localization/app_localizations.dart';
 
 import 'core/di/injection.dart';
 import 'features/app_settings/presentation/cubit/app_settings_cubit.dart';
-import 'features/layout/presentation/view/main_layout_view.dart';
+import 'features/splash_screen/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
               darkTheme: AppTheme.getDarkTheme(state.locale.languageCode),
               themeMode: state.themeMode,
               locale: state.locale,
-              initialRoute: MainLayoutView.routeName,
+              initialRoute: SplashScreen.routeName,
               routes: AppRoutes.routes,
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
