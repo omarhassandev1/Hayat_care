@@ -31,6 +31,18 @@ import 'package:hayat_care/features/articles/domain/use_cases/get_favorite_artic
     as _i304;
 import 'package:hayat_care/features/articles/presentation/cubit/articles_cubit.dart'
     as _i428;
+import 'package:hayat_care/features/doctor_browsing/data/data_source/doctors_mock_data_source.dart'
+    as _i555;
+import 'package:hayat_care/features/doctor_browsing/data/repository_impl/doctors_repository_impl.dart'
+    as _i793;
+import 'package:hayat_care/features/doctor_browsing/domain/repositories/doctors_repository.dart'
+    as _i566;
+import 'package:hayat_care/features/doctor_browsing/domain/use_cases/get_all_doctors_use_case.dart'
+    as _i719;
+import 'package:hayat_care/features/doctor_browsing/domain/use_cases/search_doctors_use_case.dart'
+    as _i135;
+import 'package:hayat_care/features/doctor_browsing/presentation/cubit/doctors_cubit.dart'
+    as _i230;
 import 'package:hayat_care/features/family_members/data/data_source/mock_family_datasource.dart'
     as _i160;
 import 'package:hayat_care/features/family_members/data/repository_impl/family_repository_impl.dart'
@@ -72,6 +84,9 @@ extension GetItInjectableX on _i174.GetIt {
       () => registerModule.settingsBox,
       preResolve: true,
     );
+    gh.lazySingleton<_i555.DoctorsMockDataSource>(
+      () => _i555.DoctorsMockDataSource(),
+    );
     gh.lazySingleton<_i160.MockFamilyDataSource>(
       () => _i160.MockFamilyDataSource(),
     );
@@ -92,6 +107,9 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i653.SettingsRepository>(
       () => _i312.SettingsRepositoryImpl(gh<_i704.SettingsLocalDataSource>()),
+    );
+    gh.lazySingleton<_i566.DoctorsRepository>(
+      () => _i793.DoctorsRepositoryImpl(gh<_i555.DoctorsMockDataSource>()),
     );
     gh.lazySingleton<_i289.GetThemeUseCase>(
       () => _i289.GetThemeUseCase(gh<_i653.SettingsRepository>()),
@@ -143,6 +161,20 @@ extension GetItInjectableX on _i174.GetIt {
       () => _i713.ProfileCubit(
         getProfileUseCase: gh<_i727.GetProfileUseCase>(),
         updateProfileUseCase: gh<_i1053.UpdateProfileUseCase>(),
+      ),
+    );
+    gh.lazySingleton<_i719.GetAllDoctorsUseCase>(
+      () => _i719.GetAllDoctorsUseCase(
+        doctorsRepository: gh<_i566.DoctorsRepository>(),
+      ),
+    );
+    gh.factory<_i135.SearchDoctorsUseCase>(
+      () => _i135.SearchDoctorsUseCase(gh<_i566.DoctorsRepository>()),
+    );
+    gh.factory<_i230.DoctorsCubit>(
+      () => _i230.DoctorsCubit(
+        getAllDoctorsUseCase: gh<_i719.GetAllDoctorsUseCase>(),
+        searchDoctorsUseCase: gh<_i135.SearchDoctorsUseCase>(),
       ),
     );
     gh.lazySingleton<_i304.GetFavoriteArticlesUseCase>(
