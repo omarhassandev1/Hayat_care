@@ -105,8 +105,12 @@ class $AssetsDoctorGen {
   /// File path: assets/doctor/rating.svg
   SvgGenImage get rating => const SvgGenImage('assets/doctor/rating.svg');
 
+  /// File path: assets/doctor/sorry_search.svg
+  SvgGenImage get sorrySearch =>
+      const SvgGenImage('assets/doctor/sorry_search.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [experience, people, rating];
+  List<SvgGenImage> get values => [experience, people, rating, sorrySearch];
 }
 
 class $AssetsHomeGen {
