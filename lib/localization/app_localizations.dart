@@ -350,23 +350,11 @@ abstract class AppLocalizations {
   /// **'Dentist'**
   String get dentist;
 
-  /// No description provided for @ophda.
-  ///
-  /// In en, this message translates to:
-  /// **'Ophthalmology'**
-  String get ophda;
-
   /// No description provided for @nutrition.
   ///
   /// In en, this message translates to:
   /// **'Nutrition'**
   String get nutrition;
-
-  /// No description provided for @neuro.
-  ///
-  /// In en, this message translates to:
-  /// **'Neurology'**
-  String get neuro;
 
   /// No description provided for @heart.
   ///
@@ -997,6 +985,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Updating...'**
   String get updating;
+
+  /// No description provided for @dermatology.
+  ///
+  /// In en, this message translates to:
+  /// **'Dermatology'**
+  String get dermatology;
+
+  /// No description provided for @orthopedics.
+  ///
+  /// In en, this message translates to:
+  /// **'Orthopedics'**
+  String get orthopedics;
+
+  /// No description provided for @neurology.
+  ///
+  /// In en, this message translates to:
+  /// **'Neurology'**
+  String get neurology;
+
+  /// No description provided for @pediatrics.
+  ///
+  /// In en, this message translates to:
+  /// **'Pediatrics'**
+  String get pediatrics;
+
+  /// No description provided for @all.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get all;
+
+  /// No description provided for @reviews.
+  ///
+  /// In en, this message translates to:
+  /// **'Reviews'**
+  String get reviews;
+
+  /// No description provided for @bookAppointment.
+  ///
+  /// In en, this message translates to:
+  /// **'Book Appointment'**
+  String get bookAppointment;
+
+  /// No description provided for @results.
+  ///
+  /// In en, this message translates to:
+  /// **'Results'**
+  String get results;
+
+  /// No description provided for @notFoundTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Not Found'**
+  String get notFoundTitle;
+
+  /// No description provided for @notFoundMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Sorry, the keyword you entered cannot be found. Please check again or search with another keyword.'**
+  String get notFoundMessage;
+
+  /// No description provided for @doctors.
+  ///
+  /// In en, this message translates to:
+  /// **'Doctors'**
+  String get doctors;
 }
 
 class _AppLocalizationsDelegate

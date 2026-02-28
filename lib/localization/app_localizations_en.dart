@@ -138,13 +138,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dentist => 'Dentist';
 
   @override
-  String get ophda => 'Ophthalmology';
-
-  @override
   String get nutrition => 'Nutrition';
-
-  @override
-  String get neuro => 'Neurology';
 
   @override
   String get heart => 'Heart';
@@ -474,4 +468,38 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get updating => 'Updating...';
+
+  @override
+  String get dermatology => 'Dermatology';
+
+  @override
+  String get orthopedics => 'Orthopedics';
+
+  @override
+  String get neurology => 'Neurology';
+
+  @override
+  String get pediatrics => 'Pediatrics';
+
+  @override
+  String get all => 'All';
+
+  @override
+  String get reviews => 'Reviews';
+
+  @override
+  String get bookAppointment => 'Book Appointment';
+
+  @override
+  String get results => 'Results';
+
+  @override
+  String get notFoundTitle => 'Not Found';
+
+  @override
+  String get notFoundMessage =>
+      'Sorry, the keyword you entered cannot be found. Please check again or search with another keyword.';
+
+  @override
+  String get doctors => 'Doctors';
 }
