@@ -1045,6 +1045,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sorry, the keyword you entered cannot be found. Please check again or search with another keyword.'**
   String get notFoundMessage;
+
+  /// No description provided for @doctors.
+  ///
+  /// In en, this message translates to:
+  /// **'Doctors'**
+  String get doctors;
 }
 
 class _AppLocalizationsDelegate

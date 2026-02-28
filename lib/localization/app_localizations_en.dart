@@ -499,4 +499,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get notFoundMessage =>
       'Sorry, the keyword you entered cannot be found. Please check again or search with another keyword.';
+
+  @override
+  String get doctors => 'Doctors';
 }

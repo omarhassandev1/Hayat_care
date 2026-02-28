@@ -157,5 +157,6 @@
   "bookAppointment": "Book Appointment",
   "results": "Results",
   "notFoundTitle": "Not Found",
-  "notFoundMessage": "Sorry, the keyword you entered cannot be found. Please check again or search with another keyword."
+  "notFoundMessage": "Sorry, the keyword you entered cannot be found. Please check again or search with another keyword.",
+  "doctors": "Doctors"
 }

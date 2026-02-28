@@ -495,4 +495,7 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get notFoundMessage =>
       'عذراً، الكلمة المفتاحية التي أدخلتها غير موجودة. يرجى التحقق مرة أخرى أو البحث باستخدام كلمة مفتاحية أخرى.';
+
+  @override
+  String get doctors => 'الأطباء';
 }
