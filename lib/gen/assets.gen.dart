@@ -105,12 +105,8 @@ class $AssetsDoctorGen {
   /// File path: assets/doctor/rating.svg
   SvgGenImage get rating => const SvgGenImage('assets/doctor/rating.svg');
 
-  /// File path: assets/doctor/sorry_search.svg
-  SvgGenImage get sorrySearch =>
-      const SvgGenImage('assets/doctor/sorry_search.svg');
-
   /// List of all assets
-  List<SvgGenImage> get values => [experience, people, rating, sorrySearch];
+  List<SvgGenImage> get values => [experience, people, rating];
 }
 
 class $AssetsHomeGen {
@@ -158,17 +154,6 @@ class $AssetsProfileGen {
   SvgGenImage get aboutUsIcon =>
       const SvgGenImage('assets/profile/about us icon.svg');
 
-  /// File path: assets/profile/disapointed_icon_bright.svg
-  SvgGenImage get disapointedIconBright =>
-      const SvgGenImage('assets/profile/disapointed_icon_bright.svg');
-
-  /// File path: assets/profile/disapointed_icon_filled.svg
-  SvgGenImage get disapointedIconFilled =>
-      const SvgGenImage('assets/profile/disapointed_icon_filled.svg');
-
-  /// File path: assets/profile/editIcon.svg
-  SvgGenImage get editIcon => const SvgGenImage('assets/profile/editIcon.svg');
-
   /// File path: assets/profile/facebook.svg
   SvgGenImage get facebook => const SvgGenImage('assets/profile/facebook.svg');
 
@@ -189,10 +174,6 @@ class $AssetsProfileGen {
   /// File path: assets/profile/logout.svg
   SvgGenImage get logout => const SvgGenImage('assets/profile/logout.svg');
 
-  /// File path: assets/profile/no_family_yet.svg
-  SvgGenImage get noFamilyYet =>
-      const SvgGenImage('assets/profile/no_family_yet.svg');
-
   /// File path: assets/profile/person_error_view.svg
   SvgGenImage get personErrorView =>
       const SvgGenImage('assets/profile/person_error_view.svg');
@@ -203,10 +184,6 @@ class $AssetsProfileGen {
 
   /// File path: assets/profile/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/profile/profile.svg');
-
-  /// File path: assets/profile/removeIcon.svg
-  SvgGenImage get removeIcon =>
-      const SvgGenImage('assets/profile/removeIcon.svg');
 
   /// File path: assets/profile/settings.svg
   SvgGenImage get settings => const SvgGenImage('assets/profile/settings.svg');
@@ -221,20 +198,15 @@ class $AssetsProfileGen {
   /// List of all assets
   List<SvgGenImage> get values => [
     aboutUsIcon,
-    disapointedIconBright,
-    disapointedIconFilled,
-    editIcon,
     facebook,
     family,
     helpCenter,
     instagram,
     linkedin,
     logout,
-    noFamilyYet,
     personErrorView,
     privacyPolicy,
     profile,
-    removeIcon,
     settings,
     termsOfUse,
     x,

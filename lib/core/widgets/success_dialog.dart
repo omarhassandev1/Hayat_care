@@ -25,81 +25,73 @@ class SuccessDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.r)),
-      child: Container(
-        decoration: BoxDecoration(
-          color:  Theme.of(context).scaffoldBackgroundColor,
-          borderRadius:  BorderRadius.circular(40.r),
-          border: Border.all(
-            color: AppColors.mainColor,
-            width: Theme.of(context).brightness == Brightness.dark? 1.5 : 0
-          )
-        ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 30.h),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Assets.common.svg.dialogValidIcon.svg(),
-              SizedBox(height: 24.h),
-              Text(
-                title,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 22.sp,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.mainColor,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+      backgroundColor: Color(0xffFFFAFA),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Assets.common.svg.dialogValidIcon.svg(),
+            const SizedBox(height: 24),
+            Text(
+              title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF2D74FF),
+              ),
+            ),
+            const SizedBox(height: 16),
+
+            Text(
+              subtitle,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.black87,
+                height: 1.5,
+              ),
+            ),
+            const SizedBox(height: 32),
+
+            SizedBox(
+              width: double.infinity,
+              height: 44.h,
+              child: ElevatedButton(
+                onPressed: onPrimaryPressed,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF2D74FF),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  elevation: 0,
+                ),
+                child: Text(
+                  primaryButtonText,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.white),
                 ),
               ),
-              SizedBox(height: 16.h),
+            ),
 
-              Text(
-                subtitle,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  height: 1.5,
-                ),
-              ),
-              SizedBox(height: 32.h),
-
+            if (secondaryButtonText != null) ...[
+              const SizedBox(height: 12),
               SizedBox(
                 width: double.infinity,
                 height: 44,
-                child: ElevatedButton(
-                  onPressed: onPrimaryPressed,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF2D74FF),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                    elevation: 0,
+                child: OutlinedButton(
+                  onPressed: onSecondaryPressed,
+                  style: OutlinedButton.styleFrom(
+                    side: const BorderSide(color: AppColors.redColor),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
                   ),
                   child: Text(
-                    primaryButtonText,
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.white),
+                    secondaryButtonText!,
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: AppColors.redColor),
                   ),
                 ),
               ),
-
-              if (secondaryButtonText != null) ...[
-                SizedBox(height: 12.h),
-                SizedBox(
-                  width: double.infinity,
-                  height: 44,
-                  child: OutlinedButton(
-                    onPressed: onSecondaryPressed,
-                    style: OutlinedButton.styleFrom(
-                      side: const BorderSide(color: AppColors.redColor),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-                    ),
-                    child: Text(
-                      secondaryButtonText!,
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: AppColors.redColor),
-                    ),
-                  ),
-                ),
-              ],
             ],
-          ),
+          ],
         ),
       ),
     );

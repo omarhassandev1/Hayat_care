@@ -136,7 +136,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dentist => 'طبيب أسنان';
 
   @override
+  String get ophda => 'طب العيون';
+
+  @override
   String get nutrition => 'التغذية';
+
+  @override
+  String get neuro => 'الأعصاب';
 
   @override
   String get heart => 'القلب';
@@ -415,87 +421,4 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get searchArticlesHint => 'ابحث عن مقالة';
-
-  @override
-  String get noFamilyDataYet => 'لا توجد بيانات عائلية حتى الآن';
-
-  @override
-  String get addFamilyDescription =>
-      'يمكنك إضافة أفراد العائلة إلى ملفك الشخصي، وطلب الاستشارة، وإضافة السجلات الصحية لهم من خلال حسابك.';
-
-  @override
-  String get addFamilyMember => 'إضافة فرد من العائلة';
-
-  @override
-  String get relationship => 'صلة القرابة';
-
-  @override
-  String get dateOfBirth => 'تاريخ الميلاد';
-
-  @override
-  String get nationalId => 'الرقم القومي';
-
-  @override
-  String get kinship => 'درجة القرابة';
-
-  @override
-  String get gender => 'النوع';
-
-  @override
-  String get male => 'ذكر';
-
-  @override
-  String get female => 'انثى';
-
-  @override
-  String get age => 'العمر';
-
-  @override
-  String get yearsOld => 'عام';
-
-  @override
-  String get emergencyNoLabel => 'رقم طوارئ (اختياري)';
-
-  @override
-  String get nationalIdHint => 'ادخل رقمك القومي';
-
-  @override
-  String get updateInfo => 'تحديث البيانات';
-
-  @override
-  String get updating => '... يتم التحديث';
-
-  @override
-  String get dermatology => 'الجلدية';
-
-  @override
-  String get orthopedics => 'العظام والمفاصل';
-
-  @override
-  String get neurology => 'الأعصاب';
-
-  @override
-  String get pediatrics => 'طب الأطفال';
-
-  @override
-  String get all => 'الكل';
-
-  @override
-  String get reviews => 'التقييمات';
-
-  @override
-  String get bookAppointment => 'حجز موعد';
-
-  @override
-  String get results => 'نتائج';
-
-  @override
-  String get notFoundTitle => 'لم يتم العثور على نتائج';
-
-  @override
-  String get notFoundMessage =>
-      'عذراً، الكلمة المفتاحية التي أدخلتها غير موجودة. يرجى التحقق مرة أخرى أو البحث باستخدام كلمة مفتاحية أخرى.';
-
-  @override
-  String get doctors => 'الأطباء';
 }

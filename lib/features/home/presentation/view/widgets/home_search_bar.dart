@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 
-import '../../../../doctor_browsing/presentation/view/screens/doctors_search_screen.dart';
-
 class HomeSearchBar extends StatelessWidget {
   const HomeSearchBar({super.key});
 
@@ -13,31 +11,24 @@ class HomeSearchBar extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (_) => const DoctorsSearchScreen(),
-                ));
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.grey.withAlpha(
-                    Theme.of(context).brightness == Brightness.light ? 20 : 40,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.grey.withAlpha(
+                  Theme.of(context).brightness == Brightness.light ? 20 : 40,
+                ),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.search, color: Colors.grey),
+                  SizedBox(width: 8),
+                  Text(
+                    AppLocalizations.of(context)!.findDoctors,
+                    style: TextStyle(color: Colors.grey),
                   ),
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: Row(
-                  children: [
-                    Icon(Icons.search, color: Colors.grey),
-                    SizedBox(width: 8),
-                    Text(
-                      AppLocalizations.of(context)!.findDoctors,
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ],
-                ),
+                ],
               ),
             ),
           ),
