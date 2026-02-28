@@ -25,43 +25,43 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _focusNode.requestFocus();
-    });
+    isSearching = widget.initialSpecialty == null;
+
+    if (isSearching) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _focusNode.requestFocus();
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) =>
-      sl<DoctorsCubit>()..loadDoctors(specialty: widget.initialSpecialty),
+          sl<DoctorsCubit>()..loadDoctors(specialty: widget.initialSpecialty),
       child: Builder(
         builder: (context) => Scaffold(
           appBar: AppBar(
-            title: TextField(
-              onTap: () {
-                if (!isSearching) {
-                  setState(() {
-                    _focusNode.requestFocus();
-                    isSearching = true;
-                  });
-                }
-              },
-              controller: _searchController,
-              focusNode: _focusNode,
-              style: Theme.of(context).textTheme.labelMedium,
-              decoration: InputDecoration(
-                hintText: AppLocalizations.of(context)!.findDoctors,
-                border: InputBorder.none,
-                hintStyle: Theme.of(context)
-                    .textTheme
-                    .labelMedium
-                    ?.copyWith(color: Colors.grey),
-              ),
-              onChanged: (query) {
-                context.read<DoctorsCubit>().searchDoctors(query);
-              },
-            ),
+            title: isSearching
+                ? TextField(
+                    controller: _searchController,
+                    focusNode: _focusNode,
+                    style: Theme.of(context).textTheme.labelMedium,
+                    decoration: InputDecoration(
+                      hintText: AppLocalizations.of(context)!.findDoctors,
+                      border: InputBorder.none,
+                      hintStyle: Theme.of(
+                        context,
+                      ).textTheme.labelMedium?.copyWith(color: Colors.grey),
+                    ),
+                    onChanged: (query) {
+                      context.read<DoctorsCubit>().searchDoctors(query);
+                    },
+                  )
+                : Text(
+                    AppLocalizations.of(context)!.doctors,
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
             actions: [
               GestureDetector(
                 onTap: () {
