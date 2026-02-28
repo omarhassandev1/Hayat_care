@@ -36,6 +36,7 @@ class ArticlesFilterSection extends StatelessWidget {
                   showCheckmark: false,
                   labelStyle: Theme.of(context).textTheme.labelSmall!.copyWith(
                     color: isSelected ? Colors.white : AppColors.mainColor,
+                    fontSize: 15.sp
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(100.r),
