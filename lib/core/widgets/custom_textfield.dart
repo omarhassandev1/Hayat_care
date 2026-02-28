@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theme/app_colors.dart';
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField({
+  CustomTextField({
     super.key,
     this.hintText,
     this.validator,
@@ -13,9 +13,6 @@ class CustomTextField extends StatefulWidget {
     this.isPassword = false,
     this.onChanged,
     this.labelText,
-    this.textInputType,
-    this.onTap,
-    this.readOnly = false,
   });
 
   final String? hintText;
@@ -25,10 +22,7 @@ class CustomTextField extends StatefulWidget {
   final int? maxLines;
   final TextEditingController? controller;
   final bool isPassword;
-  final void Function(String)? onChanged;
-  final TextInputType? textInputType;
-  final void Function()? onTap;
-  final bool? readOnly;
+  void Function(String)? onChanged;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -50,11 +44,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 widget.labelText!,
                 style: Theme.of(context).textTheme.titleSmall,
               ),
-              SizedBox(height: 5.h),
+              SizedBox(height: 5.h,)
             ],
           ),
         TextFormField(
-          keyboardType: widget.textInputType,
           controller: widget.controller,
           maxLines: widget.maxLines,
           validator: widget.validator,
@@ -88,8 +81,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 : null,
           ),
           onChanged: widget.onChanged,
-          onTap: widget.onTap,
-          readOnly: widget.readOnly!,
         ),
       ],
     );

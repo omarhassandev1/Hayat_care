@@ -350,11 +350,23 @@ abstract class AppLocalizations {
   /// **'Dentist'**
   String get dentist;
 
+  /// No description provided for @ophda.
+  ///
+  /// In en, this message translates to:
+  /// **'Ophthalmology'**
+  String get ophda;
+
   /// No description provided for @nutrition.
   ///
   /// In en, this message translates to:
   /// **'Nutrition'**
   String get nutrition;
+
+  /// No description provided for @neuro.
+  ///
+  /// In en, this message translates to:
+  /// **'Neurology'**
+  String get neuro;
 
   /// No description provided for @heart.
   ///
@@ -889,168 +901,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'search for articles'**
   String get searchArticlesHint;
-
-  /// No description provided for @noFamilyDataYet.
-  ///
-  /// In en, this message translates to:
-  /// **'No family data yet'**
-  String get noFamilyDataYet;
-
-  /// No description provided for @addFamilyDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'You can add family members to your profile, seek consultation, and add health records for them through your account.'**
-  String get addFamilyDescription;
-
-  /// No description provided for @addFamilyMember.
-  ///
-  /// In en, this message translates to:
-  /// **'Add a Family Member'**
-  String get addFamilyMember;
-
-  /// No description provided for @relationship.
-  ///
-  /// In en, this message translates to:
-  /// **'Relationship'**
-  String get relationship;
-
-  /// No description provided for @dateOfBirth.
-  ///
-  /// In en, this message translates to:
-  /// **'Date of Birth'**
-  String get dateOfBirth;
-
-  /// No description provided for @nationalId.
-  ///
-  /// In en, this message translates to:
-  /// **'National ID'**
-  String get nationalId;
-
-  /// No description provided for @kinship.
-  ///
-  /// In en, this message translates to:
-  /// **'Kinship'**
-  String get kinship;
-
-  /// No description provided for @gender.
-  ///
-  /// In en, this message translates to:
-  /// **'Gender'**
-  String get gender;
-
-  /// No description provided for @male.
-  ///
-  /// In en, this message translates to:
-  /// **'Male'**
-  String get male;
-
-  /// No description provided for @female.
-  ///
-  /// In en, this message translates to:
-  /// **'Female'**
-  String get female;
-
-  /// No description provided for @age.
-  ///
-  /// In en, this message translates to:
-  /// **'Age'**
-  String get age;
-
-  /// No description provided for @yearsOld.
-  ///
-  /// In en, this message translates to:
-  /// **'yrs old'**
-  String get yearsOld;
-
-  /// No description provided for @emergencyNoLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency Number (Optional)'**
-  String get emergencyNoLabel;
-
-  /// No description provided for @nationalIdHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Please enter your National ID'**
-  String get nationalIdHint;
-
-  /// No description provided for @updateInfo.
-  ///
-  /// In en, this message translates to:
-  /// **'Update Information'**
-  String get updateInfo;
-
-  /// No description provided for @updating.
-  ///
-  /// In en, this message translates to:
-  /// **'Updating...'**
-  String get updating;
-
-  /// No description provided for @dermatology.
-  ///
-  /// In en, this message translates to:
-  /// **'Dermatology'**
-  String get dermatology;
-
-  /// No description provided for @orthopedics.
-  ///
-  /// In en, this message translates to:
-  /// **'Orthopedics'**
-  String get orthopedics;
-
-  /// No description provided for @neurology.
-  ///
-  /// In en, this message translates to:
-  /// **'Neurology'**
-  String get neurology;
-
-  /// No description provided for @pediatrics.
-  ///
-  /// In en, this message translates to:
-  /// **'Pediatrics'**
-  String get pediatrics;
-
-  /// No description provided for @all.
-  ///
-  /// In en, this message translates to:
-  /// **'All'**
-  String get all;
-
-  /// No description provided for @reviews.
-  ///
-  /// In en, this message translates to:
-  /// **'Reviews'**
-  String get reviews;
-
-  /// No description provided for @bookAppointment.
-  ///
-  /// In en, this message translates to:
-  /// **'Book Appointment'**
-  String get bookAppointment;
-
-  /// No description provided for @results.
-  ///
-  /// In en, this message translates to:
-  /// **'Results'**
-  String get results;
-
-  /// No description provided for @notFoundTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Not Found'**
-  String get notFoundTitle;
-
-  /// No description provided for @notFoundMessage.
-  ///
-  /// In en, this message translates to:
-  /// **'Sorry, the keyword you entered cannot be found. Please check again or search with another keyword.'**
-  String get notFoundMessage;
-
-  /// No description provided for @doctors.
-  ///
-  /// In en, this message translates to:
-  /// **'Doctors'**
-  String get doctors;
 }
 
 class _AppLocalizationsDelegate

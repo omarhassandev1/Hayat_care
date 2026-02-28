@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 import '../../../../../../core/widgets/success_dialog.dart';
 import '../../../../../../gen/assets.gen.dart';
+import '../../login/screens/login_screen.dart';
 import '../../login/widgets/auth_header.dart';
 import '../../login/widgets/brand_widget.dart';
 import '../../terms_and_conditions/widgets/terms_of_service.dart';
@@ -71,7 +72,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             primaryButtonText: AppLocalizations.of(context)!.loginNow,
                             onPrimaryPressed: () {
                               Navigator.of(context).pop();
-                              Navigator.of(context).pop();
+                              Navigator.of(
+                                context,
+                              ).pushNamed(LoginScreen.routeName);
                             },
                             secondaryButtonText: AppLocalizations.of(context)!.cancel,
                             onSecondaryPressed: () {
