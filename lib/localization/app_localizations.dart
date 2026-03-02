@@ -1022,12 +1022,6 @@ abstract class AppLocalizations {
   /// **'Reviews'**
   String get reviews;
 
-  /// No description provided for @bookAppointment.
-  ///
-  /// In en, this message translates to:
-  /// **'Book Appointment'**
-  String get bookAppointment;
-
   /// No description provided for @results.
   ///
   /// In en, this message translates to:
@@ -1051,6 +1045,222 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Doctors'**
   String get doctors;
+
+  /// No description provided for @myAppointments.
+  ///
+  /// In en, this message translates to:
+  /// **'My Appointments'**
+  String get myAppointments;
+
+  /// No description provided for @upcoming.
+  ///
+  /// In en, this message translates to:
+  /// **'Upcoming'**
+  String get upcoming;
+
+  /// No description provided for @completed.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get completed;
+
+  /// No description provided for @cancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get cancelled;
+
+  /// No description provided for @noAppointmentsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No appointments found'**
+  String get noAppointmentsFound;
+
+  /// No description provided for @cancelAppointment.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel Appointment'**
+  String get cancelAppointment;
+
+  /// No description provided for @reschedule.
+  ///
+  /// In en, this message translates to:
+  /// **'Reschedule'**
+  String get reschedule;
+
+  /// No description provided for @bookAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Book Again'**
+  String get bookAgain;
+
+  /// No description provided for @leaveAReview.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave a review'**
+  String get leaveAReview;
+
+  /// No description provided for @messaging.
+  ///
+  /// In en, this message translates to:
+  /// **'Messaging'**
+  String get messaging;
+
+  /// No description provided for @bookAppointment.
+  ///
+  /// In en, this message translates to:
+  /// **'Book Appointment'**
+  String get bookAppointment;
+
+  /// No description provided for @availableTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Available Time'**
+  String get availableTime;
+
+  /// No description provided for @patientDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Patient Details'**
+  String get patientDetails;
+
+  /// No description provided for @selectAgeRange.
+  ///
+  /// In en, this message translates to:
+  /// **'Select age range'**
+  String get selectAgeRange;
+
+  /// No description provided for @writeYourProblem.
+  ///
+  /// In en, this message translates to:
+  /// **'Write your problem'**
+  String get writeYourProblem;
+
+  /// No description provided for @payment.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment'**
+  String get payment;
+
+  /// No description provided for @selectPaymentMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Select the payment method you want to use'**
+  String get selectPaymentMethod;
+
+  /// No description provided for @addNewCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Add New Card'**
+  String get addNewCard;
+
+  /// No description provided for @cardHolderName.
+  ///
+  /// In en, this message translates to:
+  /// **'Card Holder name'**
+  String get cardHolderName;
+
+  /// No description provided for @cardNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Card Number'**
+  String get cardNumber;
+
+  /// No description provided for @expiryDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry Date'**
+  String get expiryDate;
+
+  /// No description provided for @cvv.
+  ///
+  /// In en, this message translates to:
+  /// **'CVV'**
+  String get cvv;
+
+  /// No description provided for @reviewSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Review Summary'**
+  String get reviewSummary;
+
+  /// No description provided for @dateAndHour.
+  ///
+  /// In en, this message translates to:
+  /// **'Date & Hour'**
+  String get dateAndHour;
+
+  /// No description provided for @package.
+  ///
+  /// In en, this message translates to:
+  /// **'Package'**
+  String get package;
+
+  /// No description provided for @medicalConsultation.
+  ///
+  /// In en, this message translates to:
+  /// **'Medical Consultation'**
+  String get medicalConsultation;
+
+  /// No description provided for @normal.
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get normal;
+
+  /// No description provided for @amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount'**
+  String get amount;
+
+  /// No description provided for @total.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get total;
+
+  /// No description provided for @change.
+  ///
+  /// In en, this message translates to:
+  /// **'Change'**
+  String get change;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+
+  /// No description provided for @bookingConfirmedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Booking Confirmed!'**
+  String get bookingConfirmedTitle;
+
+  /// No description provided for @bookingConfirmedSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your appointment has been successfully booked.'**
+  String get bookingConfirmedSubtitle;
+
+  /// No description provided for @goToAppointments.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Appointments'**
+  String get goToAppointments;
+
+  /// No description provided for @cancelBooking.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel Booking'**
+  String get cancelBooking;
+
+  /// No description provided for @found.
+  ///
+  /// In en, this message translates to:
+  /// **'found'**
+  String get found;
 }
 
 class _AppLocalizationsDelegate

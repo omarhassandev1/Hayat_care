@@ -4,11 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/routes/app_routes.dart';
 import 'package:hayat_care/core/theme/app_theme.dart';
 import 'package:hayat_care/features/app_settings/presentation/cubit/app_settings_state.dart';
+import 'package:hayat_care/features/layout/presentation/cubit/layout_cubit.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 
 import 'core/di/injection.dart';
 import 'features/app_settings/presentation/cubit/app_settings_cubit.dart';
+import 'features/profile/presentation/cubit/profile_cubit.dart';
 import 'features/splash_screen/splash_screen.dart';
 
 void main() async {
@@ -27,8 +29,16 @@ class MyApp extends StatelessWidget {
       designSize: const Size(393, 852),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (_, child) => BlocProvider(
-        create: (context) => sl<AppSettingCubit>(),
+      builder: (_, child) => MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => sl<AppSettingCubit>(),
+          ),
+          BlocProvider(
+            create: (context) => sl<ProfileCubit>()..loadProfile(),
+          ),
+          BlocProvider(create: (context) => sl<LayoutCubit>(),)
+        ],
         child: BlocBuilder<AppSettingCubit, AppSettingState>(
           builder: (context, state) {
             return MaterialApp(

@@ -21,6 +21,26 @@ import 'package:hayat_care/features/app_settings/domain/usecases/theme_usecase.d
     as _i289;
 import 'package:hayat_care/features/app_settings/presentation/cubit/app_settings_cubit.dart'
     as _i226;
+import 'package:hayat_care/features/appointments/data/data_sources/appointments_mock_data_source.dart'
+    as _i901;
+import 'package:hayat_care/features/appointments/data/data_sources/booking_mock_date_source.dart'
+    as _i20;
+import 'package:hayat_care/features/appointments/data/repositories_impl/appointment_repository_impl.dart'
+    as _i129;
+import 'package:hayat_care/features/appointments/data/repositories_impl/booking_repository_impl.dart'
+    as _i941;
+import 'package:hayat_care/features/appointments/domain/repositories/appointment_repository.dart'
+    as _i913;
+import 'package:hayat_care/features/appointments/domain/repositories/booking_repository.dart'
+    as _i870;
+import 'package:hayat_care/features/appointments/domain/use_cases/appointment_use_case.dart'
+    as _i848;
+import 'package:hayat_care/features/appointments/domain/use_cases/get_available_slots_use_case.dart'
+    as _i939;
+import 'package:hayat_care/features/appointments/presentation/cubit/appointments_cubit.dart'
+    as _i876;
+import 'package:hayat_care/features/appointments/presentation/cubit/booking_cubit.dart'
+    as _i365;
 import 'package:hayat_care/features/articles/data/repository_impl/articles_repository_impl.dart'
     as _i845;
 import 'package:hayat_care/features/articles/domain/repository/articles_repository.dart'
@@ -57,6 +77,8 @@ import 'package:hayat_care/features/family_members/domain/use_cases/get_family_m
     as _i985;
 import 'package:hayat_care/features/family_members/presentation/cubit/family_cubit.dart'
     as _i725;
+import 'package:hayat_care/features/layout/presentation/cubit/layout_cubit.dart'
+    as _i885;
 import 'package:hayat_care/features/profile/data/data_source/mock_profile_data_source.dart'
     as _i672;
 import 'package:hayat_care/features/profile/data/repository_impl/profile_repository_impl.dart'
@@ -84,6 +106,13 @@ extension GetItInjectableX on _i174.GetIt {
       () => registerModule.settingsBox,
       preResolve: true,
     );
+    gh.singleton<_i885.LayoutCubit>(() => _i885.LayoutCubit());
+    gh.lazySingleton<_i901.AppointmentsMockDataSource>(
+      () => _i901.AppointmentsMockDataSource(),
+    );
+    gh.lazySingleton<_i20.BookingMockDataSource>(
+      () => _i20.BookingMockDataSource(),
+    );
     gh.lazySingleton<_i555.DoctorsMockDataSource>(
       () => _i555.DoctorsMockDataSource(),
     );
@@ -96,11 +125,28 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i704.SettingsLocalDataSource>(
       () => _i704.SettingsLocalDataSourceImpl(gh<_i986.Box<dynamic>>()),
     );
+    gh.lazySingleton<_i913.AppointmentsRepository>(
+      () => _i129.AppointmentsRepositoryImpl(
+        gh<_i901.AppointmentsMockDataSource>(),
+        gh<_i555.DoctorsMockDataSource>(),
+      ),
+    );
     gh.lazySingleton<_i364.ProfileRepository>(
       () => _i737.ProfileRepositoryImpl(gh<_i672.MockProfileDataSource>()),
     );
+    gh.lazySingleton<_i870.BookingRepository>(
+      () => _i941.BookingRepositoryImpl(gh<_i20.BookingMockDataSource>()),
+    );
+    gh.factory<_i939.GetAvailableSlotsUseCase>(
+      () => _i939.GetAvailableSlotsUseCase(gh<_i870.BookingRepository>()),
+    );
     gh.lazySingleton<_i802.FamilyRepository>(
       () => _i974.FamilyRepositoryImpl(gh<_i160.MockFamilyDataSource>()),
+    );
+    gh.factory<_i848.GetAppointmentsByStatusUseCase>(
+      () => _i848.GetAppointmentsByStatusUseCase(
+        gh<_i913.AppointmentsRepository>(),
+      ),
     );
     gh.lazySingleton<_i289.ArticlesRepository>(
       () => _i845.ArticlesRepositoryImpl(),
@@ -142,6 +188,12 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i664.GetArticlesUseCase>(
       () => _i664.GetArticlesUseCase(gh<_i289.ArticlesRepository>()),
     );
+    gh.factory<_i876.AppointmentsCubit>(
+      () => _i876.AppointmentsCubit(
+        getAppointmentsByStatusUseCase:
+            gh<_i848.GetAppointmentsByStatusUseCase>(),
+      ),
+    );
     gh.lazySingleton<_i640.AddFamilyMemberUseCase>(
       () => _i640.AddFamilyMemberUseCase(
         repository: gh<_i802.FamilyRepository>(),
@@ -170,6 +222,11 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i135.SearchDoctorsUseCase>(
       () => _i135.SearchDoctorsUseCase(gh<_i566.DoctorsRepository>()),
+    );
+    gh.factory<_i365.BookingCubit>(
+      () => _i365.BookingCubit(
+        getAvailableSlotsUseCase: gh<_i939.GetAvailableSlotsUseCase>(),
+      ),
     );
     gh.factory<_i230.DoctorsCubit>(
       () => _i230.DoctorsCubit(

@@ -9,7 +9,7 @@ class AppTheme {
 
   static ThemeData getLightTheme(String langCode) {
     String fontFamily = getFontFamily(langCode);
-    
+
     return ThemeData(
       brightness: Brightness.light,
       fontFamily: fontFamily,
@@ -17,6 +17,26 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         elevation: 0,
         backgroundColor: Colors.transparent,
+        foregroundColor: AppColors.blackColor,
+      ),
+      tabBarTheme: TabBarThemeData(
+
+        labelColor: AppColors.mainColor,
+        labelStyle: TextStyle(
+          color: AppColors.mainColor,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w600,
+          fontFamily: fontFamily,
+        ),
+        unselectedLabelColor: AppColors.greyColor,
+        unselectedLabelStyle: TextStyle(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w600,
+          fontFamily: fontFamily,
+        ),
+        indicator: UnderlineTabIndicator(
+          borderSide: BorderSide(color: AppColors.mainColor,width: 3.h),
+        ),
       ),
       textTheme: TextTheme(
         titleLarge: TextStyle(
@@ -74,6 +94,25 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         elevation: 0,
         backgroundColor: Colors.transparent,
+        foregroundColor: Colors.white,
+      ),
+      tabBarTheme: TabBarThemeData(
+        labelColor: AppColors.mainColor,
+        labelStyle: TextStyle(
+          color: AppColors.mainColor,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w600,
+          fontFamily: fontFamily,
+        ),
+        unselectedLabelColor: AppColors.greyColor,
+        unselectedLabelStyle: TextStyle(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w600,
+          fontFamily: fontFamily,
+        ),
+        indicator: UnderlineTabIndicator(
+          borderSide: BorderSide(color: AppColors.mainColor,width: 3.h),
+        ),
       ),
       textTheme: TextTheme(
         titleLarge: TextStyle(

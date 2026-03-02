@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/theme/app_colors.dart';
 import 'package:hayat_care/core/widgets/custom_main_button.dart';
+import 'package:hayat_care/features/appointments/presentation/view/screens/book_appointments_screen.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 
 import '../../../../../gen/assets.gen.dart';
@@ -91,7 +92,9 @@ class DoctorProfileScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 AppLocalizations.of(context)!.aboutDoctor,
-                style: Theme.of(context).textTheme.labelMedium!.copyWith(fontSize: 18),
+                style: Theme.of(
+                  context,
+                ).textTheme.labelMedium!.copyWith(fontSize: 18),
               ),
             ),
             SizedBox(height: 8.h),
@@ -108,7 +111,9 @@ class DoctorProfileScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 AppLocalizations.of(context)!.workingTime,
-                style: Theme.of(context).textTheme.labelMedium!.copyWith(fontSize: 18),
+                style: Theme.of(
+                  context,
+                ).textTheme.labelMedium!.copyWith(fontSize: 18),
               ),
             ),
             SizedBox(height: 8.h),
@@ -129,7 +134,9 @@ class DoctorProfileScreen extends StatelessWidget {
               children: [
                 Text(
                   AppLocalizations.of(context)!.reviews,
-                  style: Theme.of(context).textTheme.labelMedium!.copyWith(fontSize: 18),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.labelMedium!.copyWith(fontSize: 18),
                 ),
                 GestureDetector(
                   onTap: () {},
@@ -151,16 +158,20 @@ class DoctorProfileScreen extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) => [
                 ReviewWidget(
-                  imageUrl: 'https://img.freepik.com/free-photo/woman-with-beautiful-gladiolus-flowers_23-2149441357.jpg?semt=ais_hybrid&w=740&q=80',
+                  imageUrl:
+                      'https://img.freepik.com/free-photo/woman-with-beautiful-gladiolus-flowers_23-2149441357.jpg?semt=ais_hybrid&w=740&q=80',
                   name: 'Lauralee Quintero',
                   rating: 5,
-                  ratingDetails: '"Dr. Ahmed was very professional and attentive. He explained everything clearly."',
+                  ratingDetails:
+                      '"Dr. Ahmed was very professional and attentive. He explained everything clearly."',
                 ),
                 ReviewWidget(
-                  imageUrl: 'https://img.freepik.com/free-photo/woman-with-beautiful-gladiolus-flowers_23-2149441357.jpg?semt=ais_hybrid&w=740&q=80',
+                  imageUrl:
+                      'https://img.freepik.com/free-photo/woman-with-beautiful-gladiolus-flowers_23-2149441357.jpg?semt=ais_hybrid&w=740&q=80',
                   name: 'Lauralee Quintero',
                   rating: 5,
-                  ratingDetails: '"Dr. Ahmed was very professional and attentive. He explained everything clearly."',
+                  ratingDetails:
+                      '"Dr. Ahmed was very professional and attentive. He explained everything clearly."',
                 ),
               ][index],
               separatorBuilder: (context, index) => SizedBox(height: 32.h),
@@ -174,13 +185,28 @@ class DoctorProfileScreen extends StatelessWidget {
           padding: EdgeInsets.only(left: 20.w, right: 20.w, bottom: 16.h),
           child: SizedBox(
             height: 57.h,
-            child: Row(children: [CustomMainButton(label: AppLocalizations.of(context)!.bookAppointment)]),
+            child: Row(
+              children: [
+                CustomMainButton(
+                  label: AppLocalizations.of(context)!.bookAppointment,
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            BookAppointmentScreen(doctor: doctor),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+
 class ReviewWidget extends StatelessWidget {
   const ReviewWidget({
     super.key,
