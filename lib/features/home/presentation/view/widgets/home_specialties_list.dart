@@ -24,7 +24,14 @@ class HomeSpecialtiesList extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelMedium!.copyWith(fontWeight: FontWeight.w700),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => DoctorsSearchScreen(),
+                    ),
+                  );
+                },
                 child: Text(
                   AppLocalizations.of(context)!.seeAll,
                   style: Theme.of(

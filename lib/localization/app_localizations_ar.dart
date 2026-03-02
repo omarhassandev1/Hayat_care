@@ -484,9 +484,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get reviews => 'التقييمات';
 
   @override
-  String get bookAppointment => 'حجز موعد';
-
-  @override
   String get results => 'نتائج';
 
   @override
@@ -498,4 +495,112 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get doctors => 'الأطباء';
+
+  @override
+  String get myAppointments => 'مواعيدي';
+
+  @override
+  String get upcoming => 'القادمة';
+
+  @override
+  String get completed => 'المكتملة';
+
+  @override
+  String get cancelled => 'الملغية';
+
+  @override
+  String get noAppointmentsFound => 'لا توجد مواعيد';
+
+  @override
+  String get cancelAppointment => 'إلغاء الموعد';
+
+  @override
+  String get reschedule => 'إعادة الجدولة';
+
+  @override
+  String get bookAgain => 'احجز مرة أخرى';
+
+  @override
+  String get leaveAReview => 'اترك تقييم';
+
+  @override
+  String get messaging => 'مراسلة';
+
+  @override
+  String get bookAppointment => 'حجز موعد';
+
+  @override
+  String get availableTime => 'الأوقات المتاحة';
+
+  @override
+  String get patientDetails => 'بيانات المريض';
+
+  @override
+  String get selectAgeRange => 'اختر الفئة العمرية';
+
+  @override
+  String get writeYourProblem => 'اكتب مشكلتك';
+
+  @override
+  String get payment => 'الدفع';
+
+  @override
+  String get selectPaymentMethod => 'اختر طريقة الدفع التي تريد استخدامها';
+
+  @override
+  String get addNewCard => 'إضافة بطاقة جديدة';
+
+  @override
+  String get cardHolderName => 'اسم حامل البطاقة';
+
+  @override
+  String get cardNumber => 'رقم البطاقة';
+
+  @override
+  String get expiryDate => 'تاريخ الانتهاء';
+
+  @override
+  String get cvv => 'CVV';
+
+  @override
+  String get reviewSummary => 'مراجعة الملخص';
+
+  @override
+  String get dateAndHour => 'التاريخ والوقت';
+
+  @override
+  String get package => 'الباقة';
+
+  @override
+  String get medicalConsultation => 'استشارة طبية';
+
+  @override
+  String get normal => 'عادي';
+
+  @override
+  String get amount => 'المبلغ';
+
+  @override
+  String get total => 'الإجمالي';
+
+  @override
+  String get change => 'تغيير';
+
+  @override
+  String get confirm => 'تأكيد';
+
+  @override
+  String get bookingConfirmedTitle => 'تم تأكيد الحجز!';
+
+  @override
+  String get bookingConfirmedSubtitle => 'تم حجز موعدك بنجاح.';
+
+  @override
+  String get goToAppointments => 'الذهاب للمواعيد';
+
+  @override
+  String get cancelBooking => 'إلغاء الحجز';
+
+  @override
+  String get found => 'نتيجة';
 }

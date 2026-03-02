@@ -488,9 +488,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reviews => 'Reviews';
 
   @override
-  String get bookAppointment => 'Book Appointment';
-
-  @override
   String get results => 'Results';
 
   @override
@@ -502,4 +499,113 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get doctors => 'Doctors';
+
+  @override
+  String get myAppointments => 'My Appointments';
+
+  @override
+  String get upcoming => 'Upcoming';
+
+  @override
+  String get completed => 'Completed';
+
+  @override
+  String get cancelled => 'Cancelled';
+
+  @override
+  String get noAppointmentsFound => 'No appointments found';
+
+  @override
+  String get cancelAppointment => 'Cancel Appointment';
+
+  @override
+  String get reschedule => 'Reschedule';
+
+  @override
+  String get bookAgain => 'Book Again';
+
+  @override
+  String get leaveAReview => 'Leave a review';
+
+  @override
+  String get messaging => 'Messaging';
+
+  @override
+  String get bookAppointment => 'Book Appointment';
+
+  @override
+  String get availableTime => 'Available Time';
+
+  @override
+  String get patientDetails => 'Patient Details';
+
+  @override
+  String get selectAgeRange => 'Select age range';
+
+  @override
+  String get writeYourProblem => 'Write your problem';
+
+  @override
+  String get payment => 'Payment';
+
+  @override
+  String get selectPaymentMethod => 'Select the payment method you want to use';
+
+  @override
+  String get addNewCard => 'Add New Card';
+
+  @override
+  String get cardHolderName => 'Card Holder name';
+
+  @override
+  String get cardNumber => 'Card Number';
+
+  @override
+  String get expiryDate => 'Expiry Date';
+
+  @override
+  String get cvv => 'CVV';
+
+  @override
+  String get reviewSummary => 'Review Summary';
+
+  @override
+  String get dateAndHour => 'Date & Hour';
+
+  @override
+  String get package => 'Package';
+
+  @override
+  String get medicalConsultation => 'Medical Consultation';
+
+  @override
+  String get normal => 'Normal';
+
+  @override
+  String get amount => 'Amount';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get change => 'Change';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get bookingConfirmedTitle => 'Booking Confirmed!';
+
+  @override
+  String get bookingConfirmedSubtitle =>
+      'Your appointment has been successfully booked.';
+
+  @override
+  String get goToAppointments => 'Go to Appointments';
+
+  @override
+  String get cancelBooking => 'Cancel Booking';
+
+  @override
+  String get found => 'found';
 }
