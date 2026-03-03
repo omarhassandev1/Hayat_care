@@ -603,4 +603,46 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get found => 'نتيجة';
+
+  @override
+  String get cancelAppointmentTitle => 'سبب الإلغاء';
+
+  @override
+  String get cancelAppointmentSubtitle => 'يرجى اختيار سبب إلغاء موعدك.';
+
+  @override
+  String get appointmentCancelledTitle => 'تم إلغاء الموعد';
+
+  @override
+  String get appointmentCancelledSubtitle => 'تم إلغاء موعدك مع الدكتور بنجاح.';
+
+  @override
+  String get cancelConfirmationMessage => 'هل أنت متأكد أنك تريد إلغاء موعدك؟';
+
+  @override
+  String get cancelRefundMessage => 'سيتم إعادة 50% فقط من المبلغ إلى حسابك.';
+
+  @override
+  String get cancelReason1 => 'أريد التحويل لطبيب آخر';
+
+  @override
+  String get cancelReason2 => 'لا أريد استشارة';
+
+  @override
+  String get cancelReason3 => 'لدي نشاط لا يمكن تركه';
+
+  @override
+  String get cancelReason4 => 'تعافيت من المرض';
+
+  @override
+  String get cancelReason5 => 'أريد الإلغاء فقط';
+
+  @override
+  String get cancelReason6 => 'لا أريد الإخبار';
+
+  @override
+  String get cancelReasonOthers => 'أخرى';
+
+  @override
+  String get enterYourMessage => 'أدخل رسالتك';
 }

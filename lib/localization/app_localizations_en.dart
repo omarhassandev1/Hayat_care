@@ -608,4 +608,50 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get found => 'found';
+
+  @override
+  String get cancelAppointmentTitle => 'Reason for Cancellation';
+
+  @override
+  String get cancelAppointmentSubtitle =>
+      'Please select the reason for cancelling your appointment.';
+
+  @override
+  String get appointmentCancelledTitle => 'Appointment Cancelled';
+
+  @override
+  String get appointmentCancelledSubtitle =>
+      'Your appointment with Dr. has been successfully cancelled.';
+
+  @override
+  String get cancelConfirmationMessage =>
+      'Are you sure you want to cancel your appointment?';
+
+  @override
+  String get cancelRefundMessage =>
+      'Only 50% of the funds will be returned to your account.';
+
+  @override
+  String get cancelReason1 => 'I want to change to another doctor';
+
+  @override
+  String get cancelReason2 => 'I don\'t want a consult';
+
+  @override
+  String get cancelReason3 => 'I have an activity that can\'t be left behind';
+
+  @override
+  String get cancelReason4 => 'I have recovered from the disease';
+
+  @override
+  String get cancelReason5 => 'I just want to cancel';
+
+  @override
+  String get cancelReason6 => 'I don\'t want to tell';
+
+  @override
+  String get cancelReasonOthers => 'Others';
+
+  @override
+  String get enterYourMessage => 'Enter Your Message';
 }

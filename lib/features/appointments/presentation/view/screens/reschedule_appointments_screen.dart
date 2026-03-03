@@ -4,30 +4,39 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/di/injection.dart';
 import 'package:hayat_care/core/theme/app_colors.dart';
 import 'package:hayat_care/core/widgets/custom_main_button.dart';
-import 'package:hayat_care/features/appointments/presentation/view/screens/patient_booking_details.dart';
-import 'package:hayat_care/features/appointments/presentation/view/widgets/booking_widgets.dart';
+import 'package:hayat_care/core/widgets/success_dialog.dart';
+import 'package:hayat_care/features/appointments/domain/entities/appointment_entity.dart';
 import 'package:hayat_care/features/doctor_browsing/domain/entities/doctor_entity.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
+import 'package:intl/intl.dart';
 import '../../cubit/booking_cubit.dart';
 import '../../cubit/booking_state.dart';
+import '../widgets/booking_widgets.dart';
 
-class BookAppointmentScreen extends StatelessWidget {
+class RescheduleAppointmentScreen extends StatelessWidget {
   final DoctorEntity doctor;
+  final AppointmentEntity appointment;
 
-  const BookAppointmentScreen({super.key, required this.doctor});
+  const RescheduleAppointmentScreen({
+    super.key,
+    required this.doctor,
+    required this.appointment,
+  });
 
   @override
   Widget build(BuildContext context) {
-    var local = AppLocalizations.of(context)!;
+    final local = AppLocalizations.of(context)!;
+
     return BlocProvider(
       create: (_) => sl<BookingCubit>()..loadSlots(doctor.id),
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            local.bookAppointment,
-            style: Theme.of(
-              context,
-            ).textTheme.labelMedium!.copyWith(fontWeight: FontWeight.w700),
+            local.reschedule,
+            style: Theme.of(context)
+                .textTheme
+                .labelMedium!
+                .copyWith(fontWeight: FontWeight.w700),
           ),
         ),
         body: BlocBuilder<BookingCubit, BookingState>(
@@ -79,27 +88,31 @@ class BookAppointmentScreen extends StatelessWidget {
                         children: [
                           state.selectedTime == null
                               ? CustomMainButton(
-                                  label: local.next,
-                                  fillColor: AppColors.mainColor.withValues(
-                                    alpha: .40,
-                                  ),
-                                )
+                            label: local.next,
+                            fillColor: AppColors.mainColor
+                                .withValues(alpha: .40),
+                          )
                               : CustomMainButton(
-                                  label: local.next,
-                                  onPressed: () {
-                                    Navigator.push(
+                            label: local.confirm,
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                barrierDismissible: false,
+                                builder: (_) => SuccessDialog(
+                                  title: 'Appointment Rescheduled!',
+                                  subtitle:
+                                  'Your appointment with ${doctor.name} has been rescheduled to ${DateFormat('MMM dd, yyyy').format(state.selectedDate)} at ${state.selectedTime}.',
+                                  primaryButtonText: local.confirm,
+                                  onPrimaryPressed: () {
+                                    Navigator.popUntil(
                                       context,
-                                      MaterialPageRoute(
-                                        builder: (_) =>
-                                            PatientBookingDetailsScreen(
-                                              doctor: doctor,
-                                              selectedDate: state.selectedDate,
-                                              selectedTime: state.selectedTime!,
-                                            ),
-                                      ),
+                                          (route) => route.isFirst,
                                     );
                                   },
                                 ),
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ),
@@ -115,6 +128,3 @@ class BookAppointmentScreen extends StatelessWidget {
     );
   }
 }
-
-
-

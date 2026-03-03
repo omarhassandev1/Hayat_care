@@ -193,5 +193,19 @@
   "bookingConfirmedSubtitle": "Your appointment has been successfully booked.",
   "goToAppointments": "Go to Appointments",
   "cancelBooking": "Cancel Booking",
-  "found": "found"
+  "found": "found",
+  "cancelAppointmentTitle": "Reason for Cancellation",
+  "cancelAppointmentSubtitle": "Please select the reason for cancelling your appointment.",
+  "appointmentCancelledTitle": "Appointment Cancelled",
+  "appointmentCancelledSubtitle": "Your appointment with Dr. has been successfully cancelled.",
+  "cancelConfirmationMessage": "Are you sure you want to cancel your appointment?",
+  "cancelRefundMessage": "Only 50% of the funds will be returned to your account.",
+  "cancelReason1": "I want to change to another doctor",
+  "cancelReason2": "I don't want a consult",
+  "cancelReason3": "I have an activity that can't be left behind",
+  "cancelReason4": "I have recovered from the disease",
+  "cancelReason5": "I just want to cancel",
+  "cancelReason6": "I don't want to tell",
+  "cancelReasonOthers": "Others",
+  "enterYourMessage": "Enter Your Message"
 }
