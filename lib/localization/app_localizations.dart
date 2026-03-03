@@ -1261,6 +1261,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'found'**
   String get found;
+
+  /// No description provided for @cancelAppointmentTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason for Cancellation'**
+  String get cancelAppointmentTitle;
+
+  /// No description provided for @cancelAppointmentSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Please select the reason for cancelling your appointment.'**
+  String get cancelAppointmentSubtitle;
+
+  /// No description provided for @appointmentCancelledTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Appointment Cancelled'**
+  String get appointmentCancelledTitle;
+
+  /// No description provided for @appointmentCancelledSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your appointment with Dr. has been successfully cancelled.'**
+  String get appointmentCancelledSubtitle;
+
+  /// No description provided for @cancelConfirmationMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to cancel your appointment?'**
+  String get cancelConfirmationMessage;
+
+  /// No description provided for @cancelRefundMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Only 50% of the funds will be returned to your account.'**
+  String get cancelRefundMessage;
+
+  /// No description provided for @cancelReason1.
+  ///
+  /// In en, this message translates to:
+  /// **'I want to change to another doctor'**
+  String get cancelReason1;
+
+  /// No description provided for @cancelReason2.
+  ///
+  /// In en, this message translates to:
+  /// **'I don\'t want a consult'**
+  String get cancelReason2;
+
+  /// No description provided for @cancelReason3.
+  ///
+  /// In en, this message translates to:
+  /// **'I have an activity that can\'t be left behind'**
+  String get cancelReason3;
+
+  /// No description provided for @cancelReason4.
+  ///
+  /// In en, this message translates to:
+  /// **'I have recovered from the disease'**
+  String get cancelReason4;
+
+  /// No description provided for @cancelReason5.
+  ///
+  /// In en, this message translates to:
+  /// **'I just want to cancel'**
+  String get cancelReason5;
+
+  /// No description provided for @cancelReason6.
+  ///
+  /// In en, this message translates to:
+  /// **'I don\'t want to tell'**
+  String get cancelReason6;
+
+  /// No description provided for @cancelReasonOthers.
+  ///
+  /// In en, this message translates to:
+  /// **'Others'**
+  String get cancelReasonOthers;
+
+  /// No description provided for @enterYourMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Your Message'**
+  String get enterYourMessage;
 }
 
 class _AppLocalizationsDelegate

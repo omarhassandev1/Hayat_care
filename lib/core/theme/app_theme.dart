@@ -11,6 +11,10 @@ class AppTheme {
     String fontFamily = getFontFamily(langCode);
 
     return ThemeData(
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: AppColors.mainColor,
+        primary: AppColors.mainColor,
+      ),
       brightness: Brightness.light,
       fontFamily: fontFamily,
       scaffoldBackgroundColor: const Color(0xffFFFAFA),
@@ -88,6 +92,10 @@ class AppTheme {
     String fontFamily = getFontFamily(langCode);
 
     return ThemeData(
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: AppColors.mainColor,
+        primary: AppColors.mainColor, brightness: Brightness.dark
+      ),
       brightness: Brightness.dark,
       fontFamily: fontFamily,
       scaffoldBackgroundColor: const Color(0xff121212),

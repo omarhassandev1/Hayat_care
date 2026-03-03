@@ -193,5 +193,19 @@
   "bookingConfirmedSubtitle": "تم حجز موعدك بنجاح.",
   "goToAppointments": "الذهاب للمواعيد",
   "cancelBooking": "إلغاء الحجز",
-  "found": "نتيجة"
+  "found": "نتيجة",
+  "cancelAppointmentTitle": "سبب الإلغاء",
+  "cancelAppointmentSubtitle": "يرجى اختيار سبب إلغاء موعدك.",
+  "appointmentCancelledTitle": "تم إلغاء الموعد",
+  "appointmentCancelledSubtitle": "تم إلغاء موعدك مع الدكتور بنجاح.",
+  "cancelConfirmationMessage": "هل أنت متأكد أنك تريد إلغاء موعدك؟",
+  "cancelRefundMessage": "سيتم إعادة 50% فقط من المبلغ إلى حسابك.",
+  "cancelReason1": "أريد التحويل لطبيب آخر",
+  "cancelReason2": "لا أريد استشارة",
+  "cancelReason3": "لدي نشاط لا يمكن تركه",
+  "cancelReason4": "تعافيت من المرض",
+  "cancelReason5": "أريد الإلغاء فقط",
+  "cancelReason6": "لا أريد الإخبار",
+  "cancelReasonOthers": "أخرى",
+  "enterYourMessage": "أدخل رسالتك"
 }
