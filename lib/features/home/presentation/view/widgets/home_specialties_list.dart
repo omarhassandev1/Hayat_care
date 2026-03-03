@@ -28,7 +28,7 @@ class HomeSpecialtiesList extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => DoctorsSearchScreen(),
+                      builder: (_) => DoctorsSearchScreen(isSearching: false,),
                     ),
                   );
                 },

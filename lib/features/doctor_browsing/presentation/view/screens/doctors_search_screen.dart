@@ -10,8 +10,9 @@ import '../widgets/doctors_list_section.dart';
 
 class DoctorsSearchScreen extends StatefulWidget {
   final DoctorSpecialtyEnum? initialSpecialty;
+  final bool? isSearching;
 
-  const DoctorsSearchScreen({super.key, this.initialSpecialty});
+  const DoctorsSearchScreen({super.key, this.initialSpecialty, this.isSearching=true});
 
   @override
   State<DoctorsSearchScreen> createState() => _DoctorsSearchScreenState();
@@ -25,7 +26,7 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen> {
   @override
   void initState() {
     super.initState();
-    isSearching = widget.initialSpecialty == null;
+    isSearching = (widget.initialSpecialty == null && widget.isSearching==true);
 
     if (isSearching) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
