@@ -992,11 +992,11 @@ abstract class AppLocalizations {
   /// **'Dermatology'**
   String get dermatology;
 
-  /// No description provided for @orthopedics.
+  /// No description provided for @ophthalmology.
   ///
   /// In en, this message translates to:
-  /// **'Orthopedics'**
-  String get orthopedics;
+  /// **'Ophthalmology'**
+  String get ophthalmology;
 
   /// No description provided for @neurology.
   ///
@@ -1345,6 +1345,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enter Your Message'**
   String get enterYourMessage;
+
+  /// No description provided for @appointmentRescheduledTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Appointment Rescheduled!'**
+  String get appointmentRescheduledTitle;
+
+  /// No description provided for @appointmentRescheduledSubtitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'Your appointment with'**
+  String get appointmentRescheduledSubtitle1;
+
+  /// No description provided for @appointmentRescheduledSubtitle2.
+  ///
+  /// In en, this message translates to:
+  /// **'has been rescheduled to'**
+  String get appointmentRescheduledSubtitle2;
+
+  /// No description provided for @appointmentRescheduledSubtitle3.
+  ///
+  /// In en, this message translates to:
+  /// **'at'**
+  String get appointmentRescheduledSubtitle3;
 }
 
 class _AppLocalizationsDelegate

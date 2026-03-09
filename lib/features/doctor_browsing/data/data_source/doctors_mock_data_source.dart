@@ -39,7 +39,7 @@ class DoctorsMockDataSource {
     DoctorEntity(
       id: '3',
       name: 'Dr. Omar Khaled',
-      specialty: DoctorSpecialtyEnum.orthopedics,
+      specialty: DoctorSpecialtyEnum.ophthalmology,
       hospital: 'Al Shifa Hospital',
       imageUrl:
           'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400',
@@ -204,7 +204,7 @@ class DoctorsMockDataSource {
     DoctorEntity(
       id: '14',
       name: 'Dr. Amira Zaki',
-      specialty: DoctorSpecialtyEnum.orthopedics,
+      specialty: DoctorSpecialtyEnum.ophthalmology,
       hospital: 'Vision Plus Clinic',
       imageUrl:
           'https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=400',
@@ -279,7 +279,7 @@ class DoctorsMockDataSource {
     DoctorEntity(
       id: '19',
       name: 'Dr. Sherif Anwar',
-      specialty: DoctorSpecialtyEnum.orthopedics,
+      specialty: DoctorSpecialtyEnum.ophthalmology,
       hospital: 'Future Health Clinic',
       imageUrl:
           'https://images.unsplash.com/photo-1623854767648-e7bb8009f0db?w=400',

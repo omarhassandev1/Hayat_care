@@ -473,7 +473,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dermatology => 'Dermatology';
 
   @override
-  String get orthopedics => 'Orthopedics';
+  String get ophthalmology => 'Ophthalmology';
 
   @override
   String get neurology => 'Neurology';
@@ -654,4 +654,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get enterYourMessage => 'Enter Your Message';
+
+  @override
+  String get appointmentRescheduledTitle => 'Appointment Rescheduled!';
+
+  @override
+  String get appointmentRescheduledSubtitle1 => 'Your appointment with';
+
+  @override
+  String get appointmentRescheduledSubtitle2 => 'has been rescheduled to';
+
+  @override
+  String get appointmentRescheduledSubtitle3 => 'at';
 }

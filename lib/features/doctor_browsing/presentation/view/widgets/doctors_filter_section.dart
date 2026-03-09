@@ -19,7 +19,7 @@ class DoctorsFilterSection extends StatelessWidget {
     DoctorSpecialtyEnum.addiction,
     DoctorSpecialtyEnum.cardiologists,
     DoctorSpecialtyEnum.dermatology,
-    DoctorSpecialtyEnum.orthopedics,
+    DoctorSpecialtyEnum.ophthalmology,
     DoctorSpecialtyEnum.neurology,
     DoctorSpecialtyEnum.pediatrics,
   ];

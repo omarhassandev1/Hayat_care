@@ -33,10 +33,9 @@ class RescheduleAppointmentScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             local.reschedule,
-            style: Theme.of(context)
-                .textTheme
-                .labelMedium!
-                .copyWith(fontWeight: FontWeight.w700),
+            style: Theme.of(
+              context,
+            ).textTheme.labelMedium!.copyWith(fontWeight: FontWeight.w700),
           ),
         ),
         body: BlocBuilder<BookingCubit, BookingState>(
@@ -88,31 +87,33 @@ class RescheduleAppointmentScreen extends StatelessWidget {
                         children: [
                           state.selectedTime == null
                               ? CustomMainButton(
-                            label: local.next,
-                            fillColor: AppColors.mainColor
-                                .withValues(alpha: .40),
-                          )
+                                  label: local.next,
+                                  fillColor: AppColors.mainColor.withValues(
+                                    alpha: .40,
+                                  ),
+                                )
                               : CustomMainButton(
-                            label: local.confirm,
-                            onPressed: () {
-                              showDialog(
-                                context: context,
-                                barrierDismissible: false,
-                                builder: (_) => SuccessDialog(
-                                  title: 'Appointment Rescheduled!',
-                                  subtitle:
-                                  'Your appointment with ${doctor.name} has been rescheduled to ${DateFormat('MMM dd, yyyy').format(state.selectedDate)} at ${state.selectedTime}.',
-                                  primaryButtonText: local.confirm,
-                                  onPrimaryPressed: () {
-                                    Navigator.popUntil(
-                                      context,
-                                          (route) => route.isFirst,
+                                  label: local.confirm,
+                                  onPressed: () {
+                                    showDialog(
+                                      context: context,
+                                      barrierDismissible: false,
+                                      builder: (_) => SuccessDialog(
+                                        title:
+                                            local.appointmentRescheduledTitle,
+                                        subtitle:
+                                            '${local.appointmentRescheduledSubtitle1} ${doctor.name} ${local.appointmentRescheduledSubtitle2} ${DateFormat('MMM dd, yyyy').format(state.selectedDate)} ${local.appointmentRescheduledSubtitle3} ${state.selectedTime}.',
+                                        primaryButtonText: local.confirm,
+                                        onPrimaryPressed: () {
+                                          Navigator.popUntil(
+                                            context,
+                                            (route) => route.isFirst,
+                                          );
+                                        },
+                                      ),
                                     );
                                   },
                                 ),
-                              );
-                            },
-                          ),
                         ],
                       ),
                     ),

@@ -12,7 +12,7 @@ enum DoctorSpecialtyEnum {
   addiction,
   cardiologists,
   dermatology,
-  orthopedics,
+  ophthalmology,
   neurology,
   pediatrics,
 }
@@ -29,7 +29,7 @@ extension DoctorSpecialtyEnumX on DoctorSpecialtyEnum {
       case DoctorSpecialtyEnum.addiction:     return l.specialty_addiction;
       case DoctorSpecialtyEnum.cardiologists: return l.cardiologists;
       case DoctorSpecialtyEnum.dermatology:   return l.dermatology;
-      case DoctorSpecialtyEnum.orthopedics:   return l.orthopedics;
+      case DoctorSpecialtyEnum.ophthalmology:   return l.ophthalmology;
       case DoctorSpecialtyEnum.neurology:     return l.neurology;
       case DoctorSpecialtyEnum.pediatrics:    return l.pediatrics;
     }

@@ -82,7 +82,7 @@ class FavoriteDoctorsScreen extends StatelessWidget {
             doctor: DoctorEntity(
               id: '3',
               name: 'Dr. Omar Khaled',
-              specialty: DoctorSpecialtyEnum.orthopedics,
+              specialty: DoctorSpecialtyEnum.ophthalmology,
               hospital: 'Al Shifa Hospital',
               imageUrl:
                   'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400',

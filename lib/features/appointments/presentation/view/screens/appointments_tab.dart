@@ -8,58 +8,78 @@ import '../../../../../gen/assets.gen.dart';
 import '../../cubit/appointments_cubit.dart';
 import '../widgets/appointments_list_section.dart';
 
-class AppointmentsTab extends StatelessWidget {
+class AppointmentsTab extends StatefulWidget {
   const AppointmentsTab({super.key});
 
   @override
+  State<AppointmentsTab> createState() => _AppointmentsTabState();
+}
+
+class _AppointmentsTabState extends State<AppointmentsTab>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+  late AppointmentsCubit _cubit;
+
+  @override
+  void initState() {
+    super.initState();
+    _cubit = sl<AppointmentsCubit>()..loadAppointments();
+    _tabController = TabController(length: 3, vsync: this);
+    _tabController.addListener(() {
+      if (!_tabController.indexIsChanging) {
+        Future.delayed(const Duration(milliseconds: 100), () {
+          final status = AppointmentStatusEnum.values[_tabController.index];
+          _cubit.loadAppointments(status: status);
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    var local = AppLocalizations.of(context)!;
-    return BlocProvider(
-      create: (_) => sl<AppointmentsCubit>()..loadAppointments(),
-      child: DefaultTabController(
-        animationDuration: const Duration(milliseconds: 300),
-        length: 3,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Row(
-              children: [
-                Assets.common.logoColored.svg(height: 36.h),
-                SizedBox(width: 8.w),
-                Text(
-                  local.myAppointments,
-                  style: Theme.of(context).textTheme.labelMedium,
-                ),
-              ],
-            ),
-            bottom: PreferredSize(
-              preferredSize: Size.fromHeight(48.h),
-              child: Builder(
-                builder: (context) => TabBar(
-                  onTap: (index) {
-                    final status = AppointmentStatusEnum.values[index];
-                    context.read<AppointmentsCubit>().loadAppointments(
-                      status: status,
-                    );
-                  },
-                  unselectedLabelColor: Colors.grey,
-                  indicatorColor: Theme.of(context).colorScheme.primary,
-                  tabs: [
-                    Tab(text: local.upcoming),
-                    Tab(text: local.completed),
-                    Tab(text: local.cancelled),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          body: const TabBarView(
-            physics: BouncingScrollPhysics(),
+    final local = AppLocalizations.of(context)!;
+
+    return BlocProvider.value(
+      value: _cubit,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Row(
             children: [
-              AppointmentsListSection(),
-              AppointmentsListSection(),
-              AppointmentsListSection(),
+              Assets.common.logoColored.svg(height: 36.h),
+              SizedBox(width: 8.w),
+              Text(
+                local.myAppointments,
+                style: Theme.of(context).textTheme.labelMedium,
+              ),
             ],
           ),
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(48.h),
+            child: TabBar(
+              controller: _tabController,
+              unselectedLabelColor: Colors.grey,
+              tabs: [
+                Tab(text: local.upcoming),
+                Tab(text: local.completed),
+                Tab(text: local.cancelled),
+              ],
+            ),
+          ),
+        ),
+        body: TabBarView(
+          controller: _tabController,
+          physics: const BouncingScrollPhysics(),
+          children: const [
+            AppointmentsListSection(),
+            AppointmentsListSection(),
+            AppointmentsListSection(),
+          ],
         ),
       ),
     );
