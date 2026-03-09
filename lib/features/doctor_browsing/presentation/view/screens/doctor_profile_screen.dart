@@ -1,11 +1,17 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/theme/app_colors.dart';
 import 'package:hayat_care/core/widgets/custom_main_button.dart';
 import 'package:hayat_care/features/appointments/presentation/view/screens/book_appointments_screen.dart';
+import 'package:hayat_care/features/reviews/presentation/cubit/reviews_cubit.dart';
+import 'package:hayat_care/features/reviews/presentation/cubit/reviews_state.dart';
+import 'package:hayat_care/features/reviews/presentation/view/screens/all_reviews_screen.dart';
+import 'package:hayat_care/features/reviews/presentation/view/widgets/review_card.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 
+import '../../../../../core/di/injection.dart';
 import '../../../../../gen/assets.gen.dart';
 
 import 'package:hayat_care/core/enums/doctor_specialty_enum.dart';
@@ -18,166 +24,185 @@ class DoctorProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return BlocProvider(
+      create: (_) => sl<ReviewsCubit>()..loadReviews(doctor.id),
+  child: Scaffold(
       appBar: AppBar(
         elevation: 0,
         actions: [
           IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              radius: 60.r,
-              backgroundColor: AppColors.lightGreyColor,
-              child: ClipOval(
-                child: CachedNetworkImage(
-                  imageUrl: doctor.imageUrl,
-                  fit: BoxFit.cover,
-                  height: double.infinity,
-                  errorWidget: (context, url, error) =>
-                      Assets.profile.personErrorView.svg(
-                        colorFilter: ColorFilter.mode(
-                          AppColors.mainColor,
-                          BlendMode.srcIn,
+      body: Builder(
+        builder: (context) => SingleChildScrollView(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 60.r,
+                backgroundColor: AppColors.lightGreyColor,
+                child: ClipOval(
+                  child: CachedNetworkImage(
+                    height: 120.r,
+                    width: 120.r,
+                    imageUrl: doctor.imageUrl,
+                    fit: BoxFit.cover,
+                    errorWidget: (context, url, error) =>
+                        Assets.profile.personErrorView.svg(
+                          colorFilter: ColorFilter.mode(
+                            AppColors.mainColor,
+                            BlendMode.srcIn,
+                          ),
+                          height: 70.h,
+                          width: 70.h,
                         ),
-                        height: 70.h,
-                        width: 70.h,
-                      ),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 16.h),
-            Text(
-              doctor.name,
-              style: TextStyle(
-                fontSize: 22.sp,
-                fontWeight: FontWeight.bold,
-                color: AppColors.mainColor,
-              ),
-            ),
-            Text(
-              doctor.specialty.toLocalizedString(context),
-              style: TextStyle(fontSize: 16.sp, color: Colors.grey),
-            ),
-            SizedBox(height: 24.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                DoctorStatsCard(
-                  value: '${doctor.patientsCount}+',
-                  label: AppLocalizations.of(context)!.patients,
-                  icon: Assets.doctor.people.svg(),
-                  bgColor: const Color(0xff7ACEFA).withAlpha(50),
-                ),
-                DoctorStatsCard(
-                  value: '${doctor.experienceYears} Yrs',
-                  label: AppLocalizations.of(context)!.experience,
-                  icon: Assets.doctor.experience.svg(),
-                  bgColor: const Color(0xffecbbc0).withAlpha(80),
-                ),
-                DoctorStatsCard(
-                  value: doctor.rating.toString(),
-                  label: AppLocalizations.of(context)!.ratings,
-                  icon: Assets.doctor.rating.svg(),
-                  bgColor: const Color(0xffffe3b4).withAlpha(80),
-                ),
-              ],
-            ),
-            SizedBox(height: 32.h),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                AppLocalizations.of(context)!.aboutDoctor,
-                style: Theme.of(
-                  context,
-                ).textTheme.labelMedium!.copyWith(fontSize: 18),
-              ),
-            ),
-            SizedBox(height: 8.h),
-            Text(
-              doctor.about,
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                fontSize: 14,
-                color: AppColors.blueishGreyColor,
-                height: 1.5,
-              ),
-            ),
-            SizedBox(height: 32.h),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                AppLocalizations.of(context)!.workingTime,
-                style: Theme.of(
-                  context,
-                ).textTheme.labelMedium!.copyWith(fontSize: 18),
-              ),
-            ),
-            SizedBox(height: 8.h),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                doctor.workingHours,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  fontSize: 14,
-                  color: AppColors.blueishGreyColor,
-                  height: 1.5,
+              SizedBox(height: 16.h),
+              Text(
+                doctor.name,
+                style: TextStyle(
+                  fontSize: 22.sp,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.mainColor,
                 ),
               ),
-            ),
-            SizedBox(height: 32.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  AppLocalizations.of(context)!.reviews,
+              Text(
+                doctor.specialty.toLocalizedString(context),
+                style: TextStyle(fontSize: 16.sp, color: Colors.grey),
+              ),
+              SizedBox(height: 24.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  DoctorStatsCard(
+                    value: '${doctor.patientsCount}+',
+                    label: AppLocalizations.of(context)!.patients,
+                    icon: Assets.doctor.people.svg(),
+                    bgColor: const Color(0xff7ACEFA).withAlpha(50),
+                  ),
+                  DoctorStatsCard(
+                    value: '${doctor.experienceYears} Yrs',
+                    label: AppLocalizations.of(context)!.experience,
+                    icon: Assets.doctor.experience.svg(),
+                    bgColor: const Color(0xffecbbc0).withAlpha(80),
+                  ),
+                  DoctorStatsCard(
+                    value: doctor.rating.toString(),
+                    label: AppLocalizations.of(context)!.ratings,
+                    icon: Assets.doctor.rating.svg(),
+                    bgColor: const Color(0xffffe3b4).withAlpha(80),
+                  ),
+                ],
+              ),
+              SizedBox(height: 32.h),
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(
+                  AppLocalizations.of(context)!.aboutDoctor,
                   style: Theme.of(
                     context,
                   ).textTheme.labelMedium!.copyWith(fontSize: 18),
                 ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Text(
-                    AppLocalizations.of(context)!.seeAll,
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      color: AppColors.mainColor,
-                      fontWeight: FontWeight.w600,
-                    ),
+              ),
+              SizedBox(height: 8.h),
+              Text(
+                doctor.about,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  fontSize: 14,
+                  height: 1.5,
+                ),
+              ),
+              SizedBox(height: 32.h),
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(
+                  AppLocalizations.of(context)!.workingTime,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.labelMedium!.copyWith(fontSize: 18),
+                ),
+              ),
+              SizedBox(height: 8.h),
+              Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(
+                  doctor.workingHours,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    fontSize: 14,
+                    height: 1.5,
                   ),
                 ),
-              ],
-            ),
-            SizedBox(height: 16.h),
-            ListView.separated(
-              itemCount: 2,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) => [
-                ReviewWidget(
-                  imageUrl:
-                      'https://img.freepik.com/free-photo/woman-with-beautiful-gladiolus-flowers_23-2149441357.jpg?semt=ais_hybrid&w=740&q=80',
-                  name: 'Lauralee Quintero',
-                  rating: 5,
-                  ratingDetails:
-                      '"Dr. Ahmed was very professional and attentive. He explained everything clearly."',
-                ),
-                ReviewWidget(
-                  imageUrl:
-                      'https://img.freepik.com/free-photo/woman-with-beautiful-gladiolus-flowers_23-2149441357.jpg?semt=ais_hybrid&w=740&q=80',
-                  name: 'Lauralee Quintero',
-                  rating: 5,
-                  ratingDetails:
-                      '"Dr. Ahmed was very professional and attentive. He explained everything clearly."',
-                ),
-              ][index],
-              separatorBuilder: (context, index) => SizedBox(height: 32.h),
-            ),
-            SizedBox(height: 100.h),
-          ],
+              ),
+              SizedBox(height: 32.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    AppLocalizations.of(context)!.reviews,
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelMedium!
+                        .copyWith(fontSize: 18),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => BlocProvider.value(
+                            value: context.read<ReviewsCubit>(),
+                            child: AllReviewsScreen(doctor: doctor),
+                          ),
+                        ),
+                      );
+                    },
+                    child: Text(AppLocalizations.of(context)!.seeAll,
+                      style: TextStyle(
+                        fontSize: 16.sp,
+                        color: AppColors.mainColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16.h),
+              BlocBuilder<ReviewsCubit, ReviewsState>(
+                builder: (context, state) {
+                  if (state is ReviewsLoading) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  if (state is ReviewsLoaded) {
+                    if (state.reviews.isEmpty) {
+                      return Center(
+                        child: Text(
+                          AppLocalizations.of(context)!.noReviewsYet,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium!
+                              .copyWith(color: Colors.grey),
+                        ),
+                      );
+                    }
+                    final previewReviews = state.reviews.take(2).toList();
+                    return ListView.separated(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: previewReviews.length,
+                      separatorBuilder: (_, __) => SizedBox(height: 16.h),
+                      itemBuilder: (_, index) =>
+                          ReviewCard(review: previewReviews[index]),
+                    );
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+              SizedBox(height: 100.h),
+            ],
+          ),
         ),
       ),
       bottomSheet: SafeArea(
@@ -203,76 +228,8 @@ class DoctorProfileScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class ReviewWidget extends StatelessWidget {
-  const ReviewWidget({
-    super.key,
-    required this.imageUrl,
-    required this.name,
-    required this.rating,
-    required this.ratingDetails,
-  });
-  final String imageUrl;
-  final String name;
-  final int rating;
-  final String ratingDetails;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 16.h),
-      child: Column(
-        spacing: 12.h,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: CircleAvatar(
-              radius: 30.h,
-              backgroundImage: NetworkImage(imageUrl),
-            ),
-            title: Text(
-              name,
-              style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                fontSize: 17.sp,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            trailing: Container(
-              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 4.h),
-              decoration: BoxDecoration(
-                border: Border.all(color: AppColors.mainColor),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.star_border, size: 16, color: Colors.blue),
-                  SizedBox(width: 4),
-                  Text(
-                    rating.toString(),
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.mainColor,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Text(
-            ratingDetails,
-            style: Theme.of(context).textTheme.labelSmall!.copyWith(
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ],
-      ),
-    );
+    ),
+);
   }
 }
 

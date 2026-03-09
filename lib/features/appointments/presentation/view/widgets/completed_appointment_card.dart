@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hayat_care/core/di/injection.dart';
 import 'package:hayat_care/core/theme/app_colors.dart';
 import 'package:hayat_care/features/appointments/domain/entities/appointment_with_doctor_entity.dart';
+import 'package:hayat_care/features/appointments/presentation/view/screens/book_appointments_screen.dart';
+import 'package:hayat_care/features/reviews/presentation/cubit/reviews_cubit.dart';
+import 'package:hayat_care/features/reviews/presentation/view/screens/rate_doctor_screen.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 import 'appointment_card_header.dart';
 
 class CompletedAppointmentCard extends StatelessWidget {
   final AppointmentWithDoctorEntity appointmentWithDoctor;
 
-  const CompletedAppointmentCard({super.key, required this.appointmentWithDoctor});
+  const CompletedAppointmentCard({
+    super.key,
+    required this.appointmentWithDoctor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +51,9 @@ class CompletedAppointmentCard extends StatelessWidget {
             SizedBox(height: 12.h),
             Divider(
               thickness: 0.5,
-              color: isDark ? AppColors.lightGreyColor : AppColors.darkGreyColor,
+              color: isDark
+                  ? AppColors.lightGreyColor
+                  : AppColors.darkGreyColor,
             ),
             SizedBox(height: 12.h),
             Row(
@@ -51,11 +61,13 @@ class CompletedAppointmentCard extends StatelessWidget {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      // navigate to book appointment screen
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => BookAppointmentScreen(doctor: doctor),));
                     },
                     child: Container(
                       padding: EdgeInsets.symmetric(
-                          horizontal: 10.w, vertical: 9.h),
+                        horizontal: 10.w,
+                        vertical: 9.h,
+                      ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.r),
                         border: Border.all(color: AppColors.mainColor),
@@ -75,7 +87,15 @@ class CompletedAppointmentCard extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      // navigate to rate doctor screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => BlocProvider(
+                            create: (_) => sl<ReviewsCubit>(),
+                            child: RateDoctorScreen(doctor: appointmentWithDoctor.doctor),
+                          ),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.mainColor,
@@ -85,10 +105,10 @@ class CompletedAppointmentCard extends StatelessWidget {
                     ),
                     child: Text(
                       local.leaveAReview,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium!
-                          .copyWith(fontSize: 13.sp, color: Colors.white),
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        fontSize: 13.sp,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
