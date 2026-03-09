@@ -1369,6 +1369,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'at'**
   String get appointmentRescheduledSubtitle3;
+
+  /// No description provided for @rateDoctor.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate Doctor'**
+  String get rateDoctor;
+
+  /// No description provided for @howWasYourExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'How was your experience with'**
+  String get howWasYourExperience;
+
+  /// No description provided for @writeYourReview.
+  ///
+  /// In en, this message translates to:
+  /// **'Write Your Review'**
+  String get writeYourReview;
+
+  /// No description provided for @writeYourReviewHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Your Message'**
+  String get writeYourReviewHint;
+
+  /// No description provided for @submitReview.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit'**
+  String get submitReview;
+
+  /// No description provided for @thankYouForReview.
+  ///
+  /// In en, this message translates to:
+  /// **'Review Successful!'**
+  String get thankYouForReview;
+
+  /// No description provided for @reviewSubmittedSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'your review has been successfully submitted. Thank you very much!'**
+  String get reviewSubmittedSubtitle;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'Ok'**
+  String get ok;
+
+  /// No description provided for @wouldYouRecommend.
+  ///
+  /// In en, this message translates to:
+  /// **'Would you recommend'**
+  String get wouldYouRecommend;
+
+  /// No description provided for @toYourFriends.
+  ///
+  /// In en, this message translates to:
+  /// **' to your friends?'**
+  String get toYourFriends;
+
+  /// No description provided for @yes.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes'**
+  String get yes;
+
+  /// No description provided for @no.
+  ///
+  /// In en, this message translates to:
+  /// **'No'**
+  String get no;
+
+  /// No description provided for @noReviewsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No reviews yet'**
+  String get noReviewsYet;
 }
 
 class _AppLocalizationsDelegate

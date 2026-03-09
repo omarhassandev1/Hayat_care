@@ -666,4 +666,44 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appointmentRescheduledSubtitle3 => 'at';
+
+  @override
+  String get rateDoctor => 'Rate Doctor';
+
+  @override
+  String get howWasYourExperience => 'How was your experience with';
+
+  @override
+  String get writeYourReview => 'Write Your Review';
+
+  @override
+  String get writeYourReviewHint => 'Enter Your Message';
+
+  @override
+  String get submitReview => 'Submit';
+
+  @override
+  String get thankYouForReview => 'Review Successful!';
+
+  @override
+  String get reviewSubmittedSubtitle =>
+      'your review has been successfully submitted. Thank you very much!';
+
+  @override
+  String get ok => 'Ok';
+
+  @override
+  String get wouldYouRecommend => 'Would you recommend';
+
+  @override
+  String get toYourFriends => ' to your friends?';
+
+  @override
+  String get yes => 'Yes';
+
+  @override
+  String get no => 'No';
+
+  @override
+  String get noReviewsYet => 'No reviews yet';
 }

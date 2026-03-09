@@ -211,5 +211,19 @@
   "appointmentRescheduledTitle": "تم إعادة جدولة الموعد!",
   "appointmentRescheduledSubtitle1": "تم إعادة جدولة موعدك مع",
   "appointmentRescheduledSubtitle2": "إلى",
-  "appointmentRescheduledSubtitle3": "في تمام"
+  "appointmentRescheduledSubtitle3": "في تمام",
+  "rateDoctor": "كتابة تقييم",
+  "howWasYourExperience": "كيف كانت تجربتك مع",
+  "writeYourReview": "اكتب تقييمك",
+  "writeYourReviewHint": "أدخل رسالتك",
+  "submitReview": "إرسال",
+  "thankYouForReview": "تم التقييم بنجاح!",
+  "reviewSubmittedSubtitle": "تم إرسال تقييمك بنجاح. شكراً جزيلاً!",
+  "ok": "حسناً",
+  "wouldYouRecommend": "هل توصي بـ",
+  "toYourFriends": " لأصدقائك؟",
+  "yes": "نعم",
+  "no": "لا",
+  "noReviewsYet": "لا توجد تقييمات بعد"
+
 }
