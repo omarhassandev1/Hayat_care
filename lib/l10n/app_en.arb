@@ -149,7 +149,7 @@
   "updateInfo": "Update Information",
   "updating": "Updating...",
   "dermatology": "Dermatology",
-  "orthopedics": "Orthopedics",
+  "ophthalmology": "Ophthalmology",
   "neurology": "Neurology",
   "pediatrics": "Pediatrics",
   "all": "All",
@@ -207,5 +207,9 @@
   "cancelReason5": "I just want to cancel",
   "cancelReason6": "I don't want to tell",
   "cancelReasonOthers": "Others",
-  "enterYourMessage": "Enter Your Message"
+  "enterYourMessage": "Enter Your Message",
+  "appointmentRescheduledTitle": "Appointment Rescheduled!",
+  "appointmentRescheduledSubtitle1": "Your appointment with",
+  "appointmentRescheduledSubtitle2": "has been rescheduled to",
+  "appointmentRescheduledSubtitle3": "at"
 }

@@ -149,7 +149,7 @@
   "updateInfo": "تحديث البيانات",
   "updating": "... يتم التحديث",
   "dermatology": "الجلدية",
-  "orthopedics": "العظام والمفاصل",
+  "ophthalmology": "رمد",
   "neurology": "الأعصاب",
   "pediatrics": "طب الأطفال",
   "all": "الكل",
@@ -207,5 +207,9 @@
   "cancelReason5": "أريد الإلغاء فقط",
   "cancelReason6": "لا أريد الإخبار",
   "cancelReasonOthers": "أخرى",
-  "enterYourMessage": "أدخل رسالتك"
+  "enterYourMessage": "أدخل رسالتك",
+  "appointmentRescheduledTitle": "تم إعادة جدولة الموعد!",
+  "appointmentRescheduledSubtitle1": "تم إعادة جدولة موعدك مع",
+  "appointmentRescheduledSubtitle2": "إلى",
+  "appointmentRescheduledSubtitle3": "في تمام"
 }

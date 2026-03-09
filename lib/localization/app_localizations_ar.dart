@@ -469,7 +469,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dermatology => 'الجلدية';
 
   @override
-  String get orthopedics => 'العظام والمفاصل';
+  String get ophthalmology => 'رمد';
 
   @override
   String get neurology => 'الأعصاب';
@@ -645,4 +645,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get enterYourMessage => 'أدخل رسالتك';
+
+  @override
+  String get appointmentRescheduledTitle => 'تم إعادة جدولة الموعد!';
+
+  @override
+  String get appointmentRescheduledSubtitle1 => 'تم إعادة جدولة موعدك مع';
+
+  @override
+  String get appointmentRescheduledSubtitle2 => 'إلى';
+
+  @override
+  String get appointmentRescheduledSubtitle3 => 'في تمام';
 }
