@@ -66,7 +66,7 @@ class HomeSpecialtiesList extends StatelessWidget {
     return [
       SpecialtyItem(specialty: DoctorSpecialtyEnum.general,      icon: Assets.home.doctorSpecialtyIcons.general.svg(height: 24.h)),
       SpecialtyItem(specialty: DoctorSpecialtyEnum.dentist,      icon: Assets.home.doctorSpecialtyIcons.dentist.svg(height: 24.h)),
-      SpecialtyItem(specialty: DoctorSpecialtyEnum.orthopedics,        icon: Assets.home.doctorSpecialtyIcons.ophda.svg(height: 24.h)),
+      SpecialtyItem(specialty: DoctorSpecialtyEnum.ophthalmology,        icon: Assets.home.doctorSpecialtyIcons.ophda.svg(height: 24.h)),
       SpecialtyItem(specialty: DoctorSpecialtyEnum.nutrition,    icon: Assets.home.doctorSpecialtyIcons.nutrition.svg(height: 24.h)),
       SpecialtyItem(specialty: DoctorSpecialtyEnum.neurology,        icon: Assets.home.doctorSpecialtyIcons.neuro.svg(height: 24.h)),
       SpecialtyItem(specialty: DoctorSpecialtyEnum.heart,        icon: Assets.home.doctorSpecialtyIcons.heart.svg(height: 24.h)),
