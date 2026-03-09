@@ -211,5 +211,19 @@
   "appointmentRescheduledTitle": "Appointment Rescheduled!",
   "appointmentRescheduledSubtitle1": "Your appointment with",
   "appointmentRescheduledSubtitle2": "has been rescheduled to",
-  "appointmentRescheduledSubtitle3": "at"
+  "appointmentRescheduledSubtitle3": "at",
+  "rateDoctor": "Rate Doctor",
+  "howWasYourExperience": "How was your experience with",
+  "writeYourReview": "Write Your Review",
+  "writeYourReviewHint": "Enter Your Message",
+  "submitReview": "Submit",
+  "thankYouForReview": "Review Successful!",
+  "reviewSubmittedSubtitle": "your review has been successfully submitted. Thank you very much!",
+  "ok": "Ok",
+  "wouldYouRecommend": "Would you recommend",
+  "toYourFriends": " to your friends?",
+  "yes": "Yes",
+  "no": "No",
+  "noReviewsYet": "No reviews yet"
+
 }

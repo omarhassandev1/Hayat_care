@@ -657,4 +657,43 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get appointmentRescheduledSubtitle3 => 'في تمام';
+
+  @override
+  String get rateDoctor => 'كتابة تقييم';
+
+  @override
+  String get howWasYourExperience => 'كيف كانت تجربتك مع';
+
+  @override
+  String get writeYourReview => 'اكتب تقييمك';
+
+  @override
+  String get writeYourReviewHint => 'أدخل رسالتك';
+
+  @override
+  String get submitReview => 'إرسال';
+
+  @override
+  String get thankYouForReview => 'تم التقييم بنجاح!';
+
+  @override
+  String get reviewSubmittedSubtitle => 'تم إرسال تقييمك بنجاح. شكراً جزيلاً!';
+
+  @override
+  String get ok => 'حسناً';
+
+  @override
+  String get wouldYouRecommend => 'هل توصي بـ';
+
+  @override
+  String get toYourFriends => ' لأصدقائك؟';
+
+  @override
+  String get yes => 'نعم';
+
+  @override
+  String get no => 'لا';
+
+  @override
+  String get noReviewsYet => 'لا توجد تقييمات بعد';
 }

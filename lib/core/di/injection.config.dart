@@ -91,6 +91,18 @@ import 'package:hayat_care/features/profile/domain/usecases/update_profile_useca
     as _i1053;
 import 'package:hayat_care/features/profile/presentation/cubit/profile_cubit.dart'
     as _i713;
+import 'package:hayat_care/features/reviews/data/datasources/reviews_mock_datasource.dart'
+    as _i551;
+import 'package:hayat_care/features/reviews/data/repositories_impl/reviews_repository_impl.dart'
+    as _i1008;
+import 'package:hayat_care/features/reviews/domain/repositories/reviews_repository.dart'
+    as _i982;
+import 'package:hayat_care/features/reviews/domain/use_cases/get_doctor_reviews_use_case.dart'
+    as _i47;
+import 'package:hayat_care/features/reviews/domain/use_cases/submit_review_use_case.dart'
+    as _i60;
+import 'package:hayat_care/features/reviews/presentation/cubit/reviews_cubit.dart'
+    as _i185;
 import 'package:hive_flutter/hive_flutter.dart' as _i986;
 import 'package:injectable/injectable.dart' as _i526;
 
@@ -121,6 +133,9 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i672.MockProfileDataSource>(
       () => _i672.MockProfileDataSource(),
+    );
+    gh.lazySingleton<_i551.ReviewsMockDatasource>(
+      () => _i551.ReviewsMockDatasource(),
     );
     gh.lazySingleton<_i704.SettingsLocalDataSource>(
       () => _i704.SettingsLocalDataSourceImpl(gh<_i986.Box<dynamic>>()),
@@ -188,6 +203,15 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i664.GetArticlesUseCase>(
       () => _i664.GetArticlesUseCase(gh<_i289.ArticlesRepository>()),
     );
+    gh.lazySingleton<_i982.ReviewsRepository>(
+      () => _i1008.ReviewsRepositoryImpl(gh<_i551.ReviewsMockDatasource>()),
+    );
+    gh.factory<_i47.GetDoctorReviewsUseCase>(
+      () => _i47.GetDoctorReviewsUseCase(gh<_i982.ReviewsRepository>()),
+    );
+    gh.factory<_i60.SubmitReviewUseCase>(
+      () => _i60.SubmitReviewUseCase(gh<_i982.ReviewsRepository>()),
+    );
     gh.factory<_i876.AppointmentsCubit>(
       () => _i876.AppointmentsCubit(
         getAppointmentsByStatusUseCase:
@@ -232,6 +256,12 @@ extension GetItInjectableX on _i174.GetIt {
       () => _i230.DoctorsCubit(
         getAllDoctorsUseCase: gh<_i719.GetAllDoctorsUseCase>(),
         searchDoctorsUseCase: gh<_i135.SearchDoctorsUseCase>(),
+      ),
+    );
+    gh.factory<_i185.ReviewsCubit>(
+      () => _i185.ReviewsCubit(
+        gh<_i47.GetDoctorReviewsUseCase>(),
+        gh<_i60.SubmitReviewUseCase>(),
       ),
     );
     gh.lazySingleton<_i304.GetFavoriteArticlesUseCase>(
