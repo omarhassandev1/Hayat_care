@@ -16,11 +16,13 @@ import '../widgets/booking_widgets.dart';
 class RescheduleAppointmentScreen extends StatelessWidget {
   final DoctorEntity doctor;
   final AppointmentEntity appointment;
+  final String reason;
 
   const RescheduleAppointmentScreen({
     super.key,
     required this.doctor,
     required this.appointment,
+    required this.reason,
   });
 
   @override
