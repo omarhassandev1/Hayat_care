@@ -1447,6 +1447,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No reviews yet'**
   String get noReviewsYet;
+
+  /// No description provided for @rescheduleReasonTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason for Schedule Change'**
+  String get rescheduleReasonTitle;
+
+  /// No description provided for @rescheduleReason1.
+  ///
+  /// In en, this message translates to:
+  /// **'I\'m having a schedule clash'**
+  String get rescheduleReason1;
+
+  /// No description provided for @rescheduleReason2.
+  ///
+  /// In en, this message translates to:
+  /// **'I\'m not available on the scheduled date'**
+  String get rescheduleReason2;
+
+  /// No description provided for @rescheduleReason3.
+  ///
+  /// In en, this message translates to:
+  /// **'I have an activity that can\'t be left behind'**
+  String get rescheduleReason3;
+
+  /// No description provided for @rescheduleReason4.
+  ///
+  /// In en, this message translates to:
+  /// **'I don\'t want to tell'**
+  String get rescheduleReason4;
+
+  /// No description provided for @rescheduleReasonOthers.
+  ///
+  /// In en, this message translates to:
+  /// **'Others'**
+  String get rescheduleReasonOthers;
 }
 
 class _AppLocalizationsDelegate

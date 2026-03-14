@@ -224,6 +224,12 @@
   "toYourFriends": " لأصدقائك؟",
   "yes": "نعم",
   "no": "لا",
-  "noReviewsYet": "لا توجد تقييمات بعد"
+  "noReviewsYet": "لا توجد تقييمات بعد",
+  "rescheduleReasonTitle": "سبب تغيير الموعد",
+  "rescheduleReason1": "لدي تعارض في الجدول",
+  "rescheduleReason2": "لست متاحًا في الموعد المحدد",
+  "rescheduleReason3": "لدي نشاط لا يمكن تركه",
+  "rescheduleReason4": "لا أرغب في الإخبار",
+  "rescheduleReasonOthers": "أخرى"
 
 }

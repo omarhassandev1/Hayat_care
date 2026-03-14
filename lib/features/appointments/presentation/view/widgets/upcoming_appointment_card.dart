@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/theme/app_colors.dart';
 import 'package:hayat_care/features/appointments/domain/entities/appointment_with_doctor_entity.dart';
-import 'package:hayat_care/features/appointments/presentation/view/screens/reschedule_appointments_screen.dart';
+import 'package:hayat_care/features/appointments/presentation/view/screens/reschedule_reasons_screen.dart';
 import 'package:hayat_care/features/appointments/presentation/view/widgets/cancel_appointment_bottom_sheet.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 import 'appointment_card_header.dart';
@@ -88,9 +88,8 @@ class UpcomingAppointmentCard extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => RescheduleAppointmentScreen(
-                            doctor: doctor,
-                            appointment: appointment,
+                          builder: (_) => RescheduleReasonScreen(
+                            appointmentWithDoctor: appointmentWithDoctor,
                           ),
                         ),
                       );
