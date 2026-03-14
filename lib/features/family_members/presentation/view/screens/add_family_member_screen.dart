@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hayat_care/core/theme/app_colors.dart';
 import 'package:hayat_care/core/widgets/custom_main_button.dart';
 import 'package:hayat_care/core/widgets/custom_textfield.dart';
 import 'package:hayat_care/features/family_members/domain/entities/family_member_entity.dart';
@@ -55,8 +56,6 @@ class _AddFamilyMemberScreenState extends State<AddFamilyMemberScreen> {
   @override
   Widget build(BuildContext context) {
     var local = AppLocalizations.of(context)!;
-    Gender? selectedGenderValue;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -150,25 +149,30 @@ class _AddFamilyMemberScreenState extends State<AddFamilyMemberScreen> {
                 SizedBox(height: 5.h),
                 Row(
                   children: [
-                    CustomMainButton(
-                      label: local.addFamilyMember,
-                      onPressed: () {
-                        if (selectedBirthDate == null) {
-                          return;
-                        }
+                    selectedBirthDate == null || selectedGenderValue == null
+                        ? CustomMainButton(
+                            label: local.addFamilyMember,
+                            fillColor: AppColors.mainColor.withValues(
+                              alpha: 0.4,
+                            ),
+                          )
+                        : CustomMainButton(
+                            label: local.addFamilyMember,
+                            onPressed: () {
+                              final member = FamilyMemberEntity(
+                                nationalId: nationalIdController.text.trim(),
+                                name: nameController.text.trim(),
+                                relationship: relationshipController.text
+                                    .trim(),
+                                birthDate: selectedBirthDate!,
+                                gender: selectedGenderValue!,
+                              );
 
-                        final member = FamilyMemberEntity(
-                          nationalId: nationalIdController.text.trim(),
-                          name: nameController.text.trim(),
-                          relationship: relationshipController.text.trim(),
-                          birthDate: selectedBirthDate!,
-                        );
+                              context.read<FamilyCubit>().addMember(member);
 
-                        context.read<FamilyCubit>().addMember(member);
-
-                        Navigator.pop(context);
-                      },
-                    ),
+                              Navigator.pop(context);
+                            },
+                          ),
                   ],
                 ),
               ],

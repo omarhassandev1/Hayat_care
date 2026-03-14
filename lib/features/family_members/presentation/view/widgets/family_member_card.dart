@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hayat_care/core/enums/gender_enum.dart';
 import 'package:hayat_care/features/family_members/domain/entities/family_member_entity.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 import 'package:intl/intl.dart';
@@ -11,6 +12,23 @@ class FamilyMemberCard extends StatelessWidget {
   final FamilyMemberEntity member;
 
   const FamilyMemberCard({super.key, required this.member});
+
+  bool get _isMale => member.gender == Gender.male;
+
+  Color get _primaryColor =>
+      _isMale ? AppColors.mainColor : const Color(0xFFFF3C88);
+
+  List<Color> get _gradientColors => _isMale
+      ? [const Color(0xFF448AFF), const Color(0xFF2962FF)]
+      : [const Color(0xFFFF78AB), const Color(0xFFFF3C88)];
+
+  Color _bgColor(bool isDark) => _isMale
+      ? (isDark
+      ? AppColors.mainColor.withValues(alpha: 0.10)
+      : const Color(0xFFF0F9FF))
+      : (isDark
+      ? const Color(0xFFFF3C88).withValues(alpha: 0.10)
+      : const Color(0xFFFFF0F9));
 
   int _calculateAge(DateTime dob) {
     final now = DateTime.now();
@@ -36,7 +54,7 @@ class FamilyMemberCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: isDark ? AppColors.darkCardColor : Colors.white,
         borderRadius: BorderRadius.circular(24.r),
-        border: isDark ? null : Border.all(color: Colors.grey.shade100),
+        border: Border.all(color: _primaryColor.withValues(alpha: 0.3),width: 2.5.w),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.05),
@@ -72,12 +90,12 @@ class FamilyMemberCard extends StatelessWidget {
 
           Row(
             children: [
-              const Icon(Icons.people_outline, color: Colors.blue, size: 20),
+              Icon(Icons.people_outline, color: _primaryColor, size: 20),
               const SizedBox(width: 8),
               Text(
                 member.relationship,
-                style: const TextStyle(
-                  color: Colors.blue,
+                style: TextStyle(
+                  color: _primaryColor,
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
                 ),
@@ -88,29 +106,23 @@ class FamilyMemberCard extends StatelessWidget {
           const SizedBox(height: 24),
 
           _buildInfoTile(
+            context: context,
             label:
-                "${AppLocalizations.of(context)!.age} | ${AppLocalizations.of(context)!.dateOfBirth}",
+            "${AppLocalizations.of(context)!.age} | ${AppLocalizations.of(context)!.dateOfBirth}",
             value:
-                "${_calculateAge(member.birthDate)} ${AppLocalizations.of(context)!.yearsOld} • ${DateFormat.yMEd().format(member.birthDate)}",
+            "${_calculateAge(member.birthDate)} ${AppLocalizations.of(context)!.yearsOld} • ${DateFormat.yMEd().format(member.birthDate)}",
             icon: Icons.calendar_today,
-            gradient: const [Color(0xFF448AFF), Color(0xFF2962FF)],
-            bgColor: isDark
-                ? AppColors.mainColor.withValues(alpha: .10)
-                : const Color(0xFFF0F9FF),
-            labelColor: AppColors.mainColor,
+            bgColor: _bgColor(isDark),
           ),
 
           const SizedBox(height: 16),
 
           _buildInfoTile(
+            context: context,
             label: AppLocalizations.of(context)!.nationalId,
             value: _maskId(member.nationalId),
             icon: Icons.credit_card,
-            gradient: const [Color(0xFFE040FB), Color(0xFFD500F9)],
-            bgColor: isDark
-                ? const Color(0xFFD500F9).withValues(alpha: .10)
-                : const Color(0xFFFFF0F9),
-            labelColor: const Color(0xFFD500F9),
+            bgColor: _bgColor(isDark),
           ),
         ],
       ),
@@ -118,12 +130,11 @@ class FamilyMemberCard extends StatelessWidget {
   }
 
   Widget _buildInfoTile({
+    required BuildContext context,
     required String label,
     required String value,
     required IconData icon,
-    required List<Color> gradient,
     required Color bgColor,
-    required Color labelColor,
   }) {
     return Container(
       padding: EdgeInsets.all(8.r),
@@ -138,7 +149,7 @@ class FamilyMemberCard extends StatelessWidget {
             padding: EdgeInsets.all(12.r),
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: gradient,
+                colors: _gradientColors,
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -153,7 +164,7 @@ class FamilyMemberCard extends StatelessWidget {
               Text(
                 label,
                 style: TextStyle(
-                  color: labelColor,
+                  color: _primaryColor,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w500,
                 ),
