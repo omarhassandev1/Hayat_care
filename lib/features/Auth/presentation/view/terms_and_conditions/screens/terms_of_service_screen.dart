@@ -9,6 +9,7 @@ class TermsOfServiceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -24,26 +25,24 @@ class TermsOfServiceScreen extends StatelessWidget {
                     Text(
                       'AGREEMENT',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: AppColors.greyColor,
+                        color: isDark? AppColors.lightGreyColor: AppColors.greyColor,
                       ),
                     ),
                     Text(
                       'Terms of Service',
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: AppColors.blackColor,
                         fontSize: 30.sp,
                       ),
                     ),
                     Text(
                       'Last updated on 1/12/2025',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: AppColors.blackColor,
                       ),
                     ),
                   ],
                 ),
               ),
-              Divider(color: AppColors.lightGreyColor),
+              Divider(color: isDark? AppColors.darkGreyColor : AppColors.lightGreyColor),
               _clauseBuilder(
                 1,
                 'HayatCare provides a digital healthcare platform designed to support users in managing their health journey. The application offers access to health-related information, tracking tools, and communication features in a secure and user-friendly environment.',
@@ -98,7 +97,6 @@ Widget _clauseBuilder(int index, String description) {
         Text(
           'Clause $index:',
           style: TextStyle(
-            color: AppColors.blackColor,
             fontSize: 20.sp,
             fontWeight: FontWeight.w800,
           ),
@@ -106,7 +104,6 @@ Widget _clauseBuilder(int index, String description) {
         Text(
           description,
           style: TextStyle(
-            color: AppColors.blackColor,
             fontSize: 16.sp,
             fontWeight: FontWeight.w400,
           ),
