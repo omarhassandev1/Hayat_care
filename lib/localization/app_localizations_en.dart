@@ -706,4 +706,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noReviewsYet => 'No reviews yet';
+
+  @override
+  String get rescheduleReasonTitle => 'Reason for Schedule Change';
+
+  @override
+  String get rescheduleReason1 => 'I\'m having a schedule clash';
+
+  @override
+  String get rescheduleReason2 => 'I\'m not available on the scheduled date';
+
+  @override
+  String get rescheduleReason3 =>
+      'I have an activity that can\'t be left behind';
+
+  @override
+  String get rescheduleReason4 => 'I don\'t want to tell';
+
+  @override
+  String get rescheduleReasonOthers => 'Others';
 }

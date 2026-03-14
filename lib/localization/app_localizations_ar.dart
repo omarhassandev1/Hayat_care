@@ -696,4 +696,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noReviewsYet => 'لا توجد تقييمات بعد';
+
+  @override
+  String get rescheduleReasonTitle => 'سبب تغيير الموعد';
+
+  @override
+  String get rescheduleReason1 => 'لدي تعارض في الجدول';
+
+  @override
+  String get rescheduleReason2 => 'لست متاحًا في الموعد المحدد';
+
+  @override
+  String get rescheduleReason3 => 'لدي نشاط لا يمكن تركه';
+
+  @override
+  String get rescheduleReason4 => 'لا أرغب في الإخبار';
+
+  @override
+  String get rescheduleReasonOthers => 'أخرى';
 }

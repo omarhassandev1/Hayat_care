@@ -224,6 +224,12 @@
   "toYourFriends": " to your friends?",
   "yes": "Yes",
   "no": "No",
-  "noReviewsYet": "No reviews yet"
+  "noReviewsYet": "No reviews yet",
+  "rescheduleReasonTitle": "Reason for Schedule Change",
+  "rescheduleReason1": "I'm having a schedule clash",
+  "rescheduleReason2": "I'm not available on the scheduled date",
+  "rescheduleReason3": "I have an activity that can't be left behind",
+  "rescheduleReason4": "I don't want to tell",
+  "rescheduleReasonOthers": "Others"
 
 }
