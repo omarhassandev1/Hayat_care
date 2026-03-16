@@ -725,4 +725,47 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get rescheduleReasonOthers => 'Others';
+
+  @override
+  String get callUs => 'Call us';
+
+  @override
+  String get sendAnEmail => 'Send an email';
+
+  @override
+  String get sendAMessage => 'Send a Message';
+
+  @override
+  String get phoneNumber => 'Phone Number';
+
+  @override
+  String get phoneNumberHint => 'Phone Number';
+
+  @override
+  String get message => 'Message';
+
+  @override
+  String get enterYourMessageHint => 'Enter Your Message';
+
+  @override
+  String get sendYourMessage => 'Send Your Message';
+
+  @override
+  String get successful => 'Successful';
+
+  @override
+  String get successMessageBody =>
+      'Thank you for sending your message. We\'ve received it and will get back to you as soon as possible.';
+
+  @override
+  String get continuee => 'Continue';
+
+  @override
+  String get required => 'required';
+
+  @override
+  String get enterValidEmail => 'Enter a valid email';
+
+  @override
+  String get logOutOfYourAccount => 'log out of your account ?';
 }

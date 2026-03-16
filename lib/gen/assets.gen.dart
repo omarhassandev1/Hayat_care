@@ -189,6 +189,10 @@ class $AssetsProfileGen {
   /// File path: assets/profile/logout.svg
   SvgGenImage get logout => const SvgGenImage('assets/profile/logout.svg');
 
+  /// File path: assets/profile/logout_bottom_sheet.svg
+  SvgGenImage get logoutBottomSheet =>
+      const SvgGenImage('assets/profile/logout_bottom_sheet.svg');
+
   /// File path: assets/profile/no_family_yet.svg
   SvgGenImage get noFamilyYet =>
       const SvgGenImage('assets/profile/no_family_yet.svg');
@@ -230,6 +234,7 @@ class $AssetsProfileGen {
     instagram,
     linkedin,
     logout,
+    logoutBottomSheet,
     noFamilyYet,
     personErrorView,
     privacyPolicy,
