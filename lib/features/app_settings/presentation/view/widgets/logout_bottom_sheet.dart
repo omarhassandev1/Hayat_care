@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hayat_care/gen/assets.gen.dart';
 
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/widgets/custom_main_button.dart';
 import '../../../../../core/widgets/custom_secondary_button.dart';
 import '../../../../../localization/app_localizations.dart';
 
-class DeleteAccountBottomSheet extends StatelessWidget {
-  const DeleteAccountBottomSheet({super.key});
+class LogoutBottomSheet extends StatelessWidget {
+  const LogoutBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +27,11 @@ class DeleteAccountBottomSheet extends StatelessWidget {
                 color: AppColors.redColor,
                 borderRadius: BorderRadius.circular(8.r),
               ),
-              child: Icon(Icons.delete, size: 40.h, color: Colors.white),
+              child: Assets.profile.logoutBottomSheet.svg(height: 40.h),
             ),
             SizedBox(height: 20.h),
             Text(
-              AppLocalizations.of(context)!.confirmAccountDeletion,
+              AppLocalizations.of(context)!.logOutOfYourAccount,
               style: Theme.of(context).textTheme.labelMedium,
             ),
             SizedBox(height: 32.h),
@@ -43,6 +44,7 @@ class DeleteAccountBottomSheet extends StatelessWidget {
                   textStyle: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: isDark? AppColors.lightGreyColor : AppColors.darkGreyColor,
                   ),
+                  onPressed: () => Navigator.pop(context),
                 ),
                 CustomMainButton(
                   label: AppLocalizations.of(context)!.confirm_button,

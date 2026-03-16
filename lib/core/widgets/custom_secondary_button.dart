@@ -8,10 +8,12 @@ class CustomSecondaryButton extends StatelessWidget {
     this.onPressed,
     this.textStyle,
     this.backgroundColor,
+    this.borderColor,
   });
   final String label;
   final TextStyle? textStyle;
   final Color? backgroundColor;
+  final Color? borderColor;
   final void Function()? onPressed;
 
   @override
@@ -23,7 +25,7 @@ class CustomSecondaryButton extends StatelessWidget {
           decoration: BoxDecoration(
             color: backgroundColor ?? Colors.transparent,
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: AppColors.mainColor),
+            border: Border.all(color: borderColor ?? AppColors.mainColor),
           ),
           padding: EdgeInsets.symmetric(vertical: 15),
           alignment: Alignment.center,

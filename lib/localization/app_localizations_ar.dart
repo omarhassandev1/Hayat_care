@@ -714,4 +714,47 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get rescheduleReasonOthers => 'أخرى';
+
+  @override
+  String get callUs => 'اتصل بنا';
+
+  @override
+  String get sendAnEmail => 'أرسل بريداً إلكترونياً';
+
+  @override
+  String get sendAMessage => 'أرسل رسالة';
+
+  @override
+  String get phoneNumber => 'رقم الهاتف';
+
+  @override
+  String get phoneNumberHint => 'رقم الهاتف';
+
+  @override
+  String get message => 'الرسالة';
+
+  @override
+  String get enterYourMessageHint => 'أدخل رسالتك';
+
+  @override
+  String get sendYourMessage => 'أرسل رسالتك';
+
+  @override
+  String get successful => 'تم بنجاح';
+
+  @override
+  String get successMessageBody =>
+      'شكراً لإرسالك رسالتك. لقد استلمناها وسنرد عليك في أقرب وقت ممكن.';
+
+  @override
+  String get continuee => 'متابعة';
+
+  @override
+  String get required => 'مطلوب';
+
+  @override
+  String get enterValidEmail => 'ادخل بريد الكتروني صالح';
+
+  @override
+  String get logOutOfYourAccount => 'تسجيل الخروج من حسابك ؟';
 }

@@ -1483,6 +1483,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Others'**
   String get rescheduleReasonOthers;
+
+  /// No description provided for @callUs.
+  ///
+  /// In en, this message translates to:
+  /// **'Call us'**
+  String get callUs;
+
+  /// No description provided for @sendAnEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Send an email'**
+  String get sendAnEmail;
+
+  /// No description provided for @sendAMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Send a Message'**
+  String get sendAMessage;
+
+  /// No description provided for @phoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get phoneNumber;
+
+  /// No description provided for @phoneNumberHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get phoneNumberHint;
+
+  /// No description provided for @message.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get message;
+
+  /// No description provided for @enterYourMessageHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Your Message'**
+  String get enterYourMessageHint;
+
+  /// No description provided for @sendYourMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Your Message'**
+  String get sendYourMessage;
+
+  /// No description provided for @successful.
+  ///
+  /// In en, this message translates to:
+  /// **'Successful'**
+  String get successful;
+
+  /// No description provided for @successMessageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you for sending your message. We\'ve received it and will get back to you as soon as possible.'**
+  String get successMessageBody;
+
+  /// No description provided for @continuee.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continuee;
+
+  /// No description provided for @required.
+  ///
+  /// In en, this message translates to:
+  /// **'required'**
+  String get required;
+
+  /// No description provided for @enterValidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email'**
+  String get enterValidEmail;
+
+  /// No description provided for @logOutOfYourAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'log out of your account ?'**
+  String get logOutOfYourAccount;
 }
 
 class _AppLocalizationsDelegate

@@ -230,6 +230,20 @@
   "rescheduleReason2": "لست متاحًا في الموعد المحدد",
   "rescheduleReason3": "لدي نشاط لا يمكن تركه",
   "rescheduleReason4": "لا أرغب في الإخبار",
-  "rescheduleReasonOthers": "أخرى"
+  "rescheduleReasonOthers": "أخرى",
+  "callUs": "اتصل بنا",
+  "sendAnEmail": "أرسل بريداً إلكترونياً",
+  "sendAMessage": "أرسل رسالة",
+  "phoneNumber": "رقم الهاتف",
+  "phoneNumberHint": "رقم الهاتف",
+  "message": "الرسالة",
+  "enterYourMessageHint": "أدخل رسالتك",
+  "sendYourMessage": "أرسل رسالتك",
+  "successful": "تم بنجاح",
+  "successMessageBody": "شكراً لإرسالك رسالتك. لقد استلمناها وسنرد عليك في أقرب وقت ممكن.",
+  "continuee": "متابعة",
+  "required": "مطلوب",
+  "enterValidEmail": "ادخل بريد الكتروني صالح",
+  "logOutOfYourAccount": "تسجيل الخروج من حسابك ؟"
 
 }

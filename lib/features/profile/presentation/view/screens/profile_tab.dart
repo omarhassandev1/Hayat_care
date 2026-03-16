@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/theme/app_colors.dart';
+import 'package:hayat_care/features/app_settings/presentation/view/screens/about_us_screen.dart';
+import 'package:hayat_care/features/app_settings/presentation/view/screens/help_center_screen.dart';
+import 'package:hayat_care/features/app_settings/presentation/view/screens/privacy_policy_screen.dart';
 import 'package:hayat_care/features/app_settings/presentation/view/screens/settings_screen.dart';
+import 'package:hayat_care/features/app_settings/presentation/view/screens/terms_of_service_screen.dart';
+import 'package:hayat_care/features/app_settings/presentation/view/widgets/logout_bottom_sheet.dart';
 import 'package:hayat_care/features/profile/presentation/cubit/profile_cubit.dart';
 import 'package:hayat_care/features/profile/presentation/view/screens/my_profile_screen.dart';
 import 'package:hayat_care/gen/assets.gen.dart';
@@ -125,6 +130,9 @@ class ProfileTab extends StatelessWidget {
                     ),
                     title: AppLocalizations.of(context)!.helpCenter,
                     isDark: isDark,
+                    onPressed: (){
+                      Navigator.of(context).pushNamed(HelpCenterScreen.routeName);
+                    },
                   ),
                   SettingsItem(
                     icon: Assets.profile.aboutUsIcon.svg(
@@ -135,6 +143,9 @@ class ProfileTab extends StatelessWidget {
                     ),
                     title: AppLocalizations.of(context)!.aboutUs,
                     isDark: isDark,
+                    onPressed: (){
+                      Navigator.of(context).pushNamed(AboutUsScreen.routeName);
+                    },
                   ),
                   SettingsItem(
                     icon: Assets.profile.termsOfUse.svg(
@@ -145,6 +156,9 @@ class ProfileTab extends StatelessWidget {
                     ),
                     title: AppLocalizations.of(context)!.termsOfUse,
                     isDark: isDark,
+                    onPressed: (){
+                      Navigator.of(context).pushNamed(TermsOfServiceScreen.routeName);
+                    },
                   ),
                   SettingsItem(
                     icon: Assets.profile.privacyPolicy.svg(
@@ -155,6 +169,9 @@ class ProfileTab extends StatelessWidget {
                     ),
                     title: AppLocalizations.of(context)!.privacyPolicy,
                     isDark: isDark,
+                    onPressed: (){
+                      Navigator.of(context).pushNamed(PrivacyPolicyScreen.routeName);
+                    },
                   ),
                   SettingsItem(
                     icon: Assets.profile.logout.svg(),
@@ -162,6 +179,15 @@ class ProfileTab extends StatelessWidget {
                     isDark: isDark,
                     textColor: AppColors.redColor,
                     iconColor: AppColors.redColor,
+                    onPressed: (){
+                      showModalBottomSheet(
+                        enableDrag: true,
+                        showDragHandle: true,
+                        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                        context: context,
+                        builder: (context) => LogoutBottomSheet(),
+                      );
+                    },
                   ),
                 ],
                 isDark: isDark,

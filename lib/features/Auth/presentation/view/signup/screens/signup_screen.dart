@@ -8,7 +8,7 @@ import '../../../../../../core/widgets/success_dialog.dart';
 import '../../../../../../gen/assets.gen.dart';
 import '../../login/widgets/auth_header.dart';
 import '../../login/widgets/brand_widget.dart';
-import '../../terms_and_conditions/widgets/terms_of_service.dart';
+import '../../login/widgets/terms_of_service.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});

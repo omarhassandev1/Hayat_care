@@ -16,12 +16,14 @@ class CustomTextField extends StatefulWidget {
     this.textInputType,
     this.onTap,
     this.readOnly = false,
+    this.fillColor,
   });
 
   final String? hintText;
   final String? labelText;
   final String? Function(String?)? validator;
   final Color? hintColor;
+  final Color? fillColor;
   final int? maxLines;
   final TextEditingController? controller;
   final bool isPassword;
@@ -61,6 +63,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
           style: Theme.of(context).textTheme.bodyMedium,
           obscureText: isPassword,
           decoration: InputDecoration(
+            fillColor: widget.fillColor,
+            filled: widget.fillColor != null ? true : false,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
             focusedBorder: _getBorder(AppColors.mainColor),
             enabledBorder: _getBorder(AppColors.lightGreyColor),

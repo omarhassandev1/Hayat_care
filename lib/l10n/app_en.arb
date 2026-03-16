@@ -230,6 +230,21 @@
   "rescheduleReason2": "I'm not available on the scheduled date",
   "rescheduleReason3": "I have an activity that can't be left behind",
   "rescheduleReason4": "I don't want to tell",
-  "rescheduleReasonOthers": "Others"
+  "rescheduleReasonOthers": "Others",
+  "callUs": "Call us",
+  "sendAnEmail": "Send an email",
+  "sendAMessage": "Send a Message",
+  "phoneNumber": "Phone Number",
+  "phoneNumberHint": "Phone Number",
+  "message": "Message",
+  "enterYourMessageHint": "Enter Your Message",
+  "sendYourMessage": "Send Your Message",
+  "successful": "Successful",
+  "successMessageBody": "Thank you for sending your message. We've received it and will get back to you as soon as possible.",
+  "continuee": "Continue",
+  "required": "required",
+  "enterValidEmail": "Enter a valid email",
+  "logOutOfYourAccount": "log out of your account ?"
+
 
 }
