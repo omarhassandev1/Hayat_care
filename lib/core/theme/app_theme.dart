@@ -160,6 +160,10 @@ class AppTheme {
           fontFamily: fontFamily,
         ),
       ),
+      inputDecorationTheme: const InputDecorationTheme(
+        filled: true,
+        fillColor: AppColors.darkTextFieldFillColor,
+      ),
       dividerColor: Colors.white,
     );
   }

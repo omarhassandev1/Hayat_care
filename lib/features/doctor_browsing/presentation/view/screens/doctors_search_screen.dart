@@ -12,7 +12,11 @@ class DoctorsSearchScreen extends StatefulWidget {
   final DoctorSpecialtyEnum? initialSpecialty;
   final bool? isSearching;
 
-  const DoctorsSearchScreen({super.key, this.initialSpecialty, this.isSearching=true});
+  const DoctorsSearchScreen({
+    super.key,
+    this.initialSpecialty,
+    this.isSearching = true,
+  });
 
   @override
   State<DoctorsSearchScreen> createState() => _DoctorsSearchScreenState();
@@ -26,7 +30,8 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen> {
   @override
   void initState() {
     super.initState();
-    isSearching = (widget.initialSpecialty == null && widget.isSearching==true);
+    isSearching =
+        (widget.initialSpecialty == null && widget.isSearching == true);
 
     if (isSearching) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -47,13 +52,21 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen> {
                 ? TextField(
                     controller: _searchController,
                     focusNode: _focusNode,
-                    style: Theme.of(context).textTheme.labelMedium,
+                    style: Theme.of(context).textTheme.labelSmall,
                     decoration: InputDecoration(
                       hintText: AppLocalizations.of(context)!.findDoctors,
-                      border: InputBorder.none,
-                      hintStyle: Theme.of(
-                        context,
-                      ).textTheme.labelMedium?.copyWith(color: Colors.grey),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.r),
+                        borderSide: BorderSide.none,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.r),
+                        borderSide: BorderSide.none,
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.r),
+                        borderSide: BorderSide.none,
+                      ),
                     ),
                     onChanged: (query) {
                       context.read<DoctorsCubit>().searchDoctors(query);
