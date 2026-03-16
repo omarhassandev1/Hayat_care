@@ -9,7 +9,7 @@ import '../../../../../../gen/assets.gen.dart';
 import '../../../../../layout/presentation/view/main_layout_view.dart';
 import '../../forget_password/screens/forget_password_screen.dart';
 import '../../signup/screens/signup_screen.dart';
-import '../../terms_and_conditions/widgets/terms_of_service.dart';
+import '../widgets/terms_of_service.dart';
 import '../widgets/auth_header.dart';
 import '../widgets/brand_widget.dart';
 

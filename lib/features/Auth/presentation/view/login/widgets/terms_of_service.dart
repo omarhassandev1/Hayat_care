@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hayat_care/features/app_settings/presentation/view/screens/terms_of_service_screen.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 
-import '../screens/privacy_policy_screen.dart';
-import '../screens/terms_of_service_screen.dart';
+import '../../../../../app_settings/presentation/view/screens/privacy_policy_screen.dart';
 
 class TermsOfService extends StatefulWidget {
   const TermsOfService({
