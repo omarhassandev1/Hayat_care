@@ -24,7 +24,6 @@ class AppTheme {
         foregroundColor: AppColors.blackColor,
       ),
       tabBarTheme: TabBarThemeData(
-
         labelColor: AppColors.mainColor,
         labelStyle: TextStyle(
           color: AppColors.mainColor,
@@ -39,7 +38,7 @@ class AppTheme {
           fontFamily: fontFamily,
         ),
         indicator: UnderlineTabIndicator(
-          borderSide: BorderSide(color: AppColors.mainColor,width: 3.h),
+          borderSide: BorderSide(color: AppColors.mainColor, width: 3.h),
         ),
       ),
       textTheme: TextTheme(
@@ -82,9 +81,10 @@ class AppTheme {
       ),
       inputDecorationTheme: const InputDecorationTheme(
         filled: true,
-        fillColor: Colors.white,
+        fillColor: AppColors.lightTextFieldFillColor,
       ),
       dividerColor: Colors.black,
+      bottomSheetTheme: BottomSheetThemeData(backgroundColor: Colors.white),
     );
   }
 
@@ -94,7 +94,8 @@ class AppTheme {
     return ThemeData(
       colorScheme: ColorScheme.fromSeed(
         seedColor: AppColors.mainColor,
-        primary: AppColors.mainColor, brightness: Brightness.dark
+        primary: AppColors.mainColor,
+        brightness: Brightness.dark,
       ),
       brightness: Brightness.dark,
       fontFamily: fontFamily,
@@ -119,7 +120,7 @@ class AppTheme {
           fontFamily: fontFamily,
         ),
         indicator: UnderlineTabIndicator(
-          borderSide: BorderSide(color: AppColors.mainColor,width: 3.h),
+          borderSide: BorderSide(color: AppColors.mainColor, width: 3.h),
         ),
       ),
       textTheme: TextTheme(
@@ -165,6 +166,10 @@ class AppTheme {
         fillColor: AppColors.darkTextFieldFillColor,
       ),
       dividerColor: Colors.white,
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: AppColors.darkCardColor,
+        elevation: 5,
+      ),
     );
   }
 }

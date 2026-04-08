@@ -24,7 +24,7 @@ class DoctorsMockDataSource {
     DoctorEntity(
       id: '2',
       name: 'Dr. Lina Hassan',
-      specialty: DoctorSpecialtyEnum.dermatology,
+      specialty: DoctorSpecialtyEnum.dentist,
       hospital: 'Al Noor Hospital',
       imageUrl:
           'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400',
@@ -69,7 +69,7 @@ class DoctorsMockDataSource {
     DoctorEntity(
       id: '5',
       name: 'Dr. Ahmed Ali',
-      specialty: DoctorSpecialtyEnum.pediatrics,
+      specialty: DoctorSpecialtyEnum.cardiologists,
       hospital: 'Future Health Clinic',
       imageUrl:
           'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400',
@@ -264,7 +264,7 @@ class DoctorsMockDataSource {
     DoctorEntity(
       id: '18',
       name: 'Dr. Yasmine Galal',
-      specialty: DoctorSpecialtyEnum.dermatology,
+      specialty: DoctorSpecialtyEnum.addiction,
       hospital: 'Glow Skin Clinic',
       imageUrl:
           'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400',
@@ -294,7 +294,7 @@ class DoctorsMockDataSource {
     DoctorEntity(
       id: '20',
       name: 'Dr. Noha Magdy',
-      specialty: DoctorSpecialtyEnum.pediatrics,
+      specialty: DoctorSpecialtyEnum.bones,
       hospital: 'Hayat Hospital',
       imageUrl:
           'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=400',

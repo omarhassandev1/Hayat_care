@@ -255,6 +255,7 @@
   "chronicIllness": "دعم الأمراض المزمنة",
   "griefSupport": "مجموعة دعم الحزن",
   "parentingSupport": "مجموعة دعم الأبوة",
-  "fieldRequired": "هذا الحقل مطلوب"
+  "fieldRequired": "هذا الحقل مطلوب",
+  "pleaseFillAllFields": "من فضلك املئ جميع الحقول"
 
 }

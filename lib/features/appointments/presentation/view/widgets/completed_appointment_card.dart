@@ -61,7 +61,12 @@ class CompletedAppointmentCard extends StatelessWidget {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => BookAppointmentScreen(doctor: doctor),));
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              BookAppointmentScreen(doctor: doctor),
+                        ),
+                      );
                     },
                     child: Container(
                       padding: EdgeInsets.symmetric(
@@ -92,7 +97,9 @@ class CompletedAppointmentCard extends StatelessWidget {
                         MaterialPageRoute(
                           builder: (_) => BlocProvider(
                             create: (_) => sl<ReviewsCubit>(),
-                            child: RateDoctorScreen(doctor: appointmentWithDoctor.doctor),
+                            child: RateDoctorScreen(
+                              doctor: appointmentWithDoctor.doctor,
+                            ),
                           ),
                         ),
                       );

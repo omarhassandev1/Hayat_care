@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/enums/appointment_status_enum.dart';
-import 'package:hayat_care/features/appointments/presentation/view/widgets/cancelled_appointment_card.dart';
-import 'package:hayat_care/features/appointments/presentation/view/widgets/completed_appointment_card.dart';
-import 'package:hayat_care/features/appointments/presentation/view/widgets/upcoming_appointment_card.dart';
+import 'package:hayat_care/features/appointments/presentation/view/widgets/v2/cancelled_appointment_card_v2.dart';
+import 'package:hayat_care/features/appointments/presentation/view/widgets/v2/completed_appointment_card_v2.dart';
+import 'package:hayat_care/features/appointments/presentation/view/widgets/v2/upcoming_appointment_card_v2.dart';
 import '../../cubit/appointments_cubit.dart';
 import '../../cubit/appointments_state.dart';
 
@@ -48,11 +48,11 @@ class AppointmentsListSection extends StatelessWidget {
               final item = state.appointments[index];
               return switch (item.appointment.status) {
                 AppointmentStatusEnum.upcoming =>
-                    UpcomingAppointmentCard(appointmentWithDoctor: item),
+                    UpcomingAppointmentCardV2(appointmentWithDoctor: item),
                 AppointmentStatusEnum.completed =>
-                    CompletedAppointmentCard(appointmentWithDoctor: item),
+                    CompletedAppointmentCardV2(appointmentWithDoctor: item),
                 AppointmentStatusEnum.cancelled =>
-                    CancelledAppointmentCard(appointmentWithDoctor: item),
+                    CancelledAppointmentCardV2(appointmentWithDoctor: item),
               };
             },
           );

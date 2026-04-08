@@ -41,7 +41,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-  bool isDark = Theme.of(context).brightness == Brightness.dark;
+    bool isDark = Theme.of(context).brightness == Brightness.dark;
     return Column(
       spacing: 5,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,15 +67,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
             fillColor: widget.fillColor,
             filled: true,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
-            focusedBorder: _getBorder(AppColors.mainColor),
-            enabledBorder: _getBorder(AppColors.lightGreyColor),
-            disabledBorder: _getBorder(AppColors.lightGreyColor),
-            errorBorder: _getBorder(AppColors.redColor),
+            focusedBorder: _getBorder(AppColors.mainColor, isDark),
+            enabledBorder: _getBorder(AppColors.lightGreyColor, isDark),
+            disabledBorder: _getBorder(AppColors.lightGreyColor, isDark),
+            errorBorder: _getBorder(AppColors.redColor, isDark),
             hintText: widget.hintText,
             hintStyle: TextStyle(
               fontSize: 12.sp,
               fontWeight: FontWeight.w400,
-              color: isDark? AppColors.lightGreyColor : AppColors.greyColor,
+              color: isDark ? AppColors.lightGreyColor : AppColors.greyColor,
             ),
             suffixIcon: widget.isPassword
                 ? IconButton(
@@ -100,10 +100,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
     );
   }
 
-  _getBorder(Color color) {
+  InputBorder? _getBorder(Color color, bool isDark) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(16),
-      borderSide: BorderSide(color: color,width: .7),
+      borderRadius: BorderRadius.circular(16.r),
+      borderSide: BorderSide(color: isDark? color: Colors.transparent, width: .7),
     );
   }
 }

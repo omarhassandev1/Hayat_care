@@ -1,4 +1,3 @@
-// features/doctor_browsing/domain/entities/doctor_entity.dart
 
 import 'package:hayat_care/core/enums/doctor_specialty_enum.dart';
 

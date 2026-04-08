@@ -13,4 +13,5 @@ class AppColors{
   static const Color bloodyRedColor = Color(0xffC62828);
   static const Color greenColor = Color(0xff07BD74);
   static const Color darkTextFieldFillColor = Color(0xff232323);
+  static const Color lightTextFieldFillColor = Color(0xfff7f3f5);
 }

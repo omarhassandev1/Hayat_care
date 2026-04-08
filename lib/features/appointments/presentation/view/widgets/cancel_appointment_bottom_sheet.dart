@@ -28,7 +28,7 @@ class CancelAppointmentBottomSheet extends StatelessWidget {
             width: 40.w,
             height: 4.h,
             decoration: BoxDecoration(
-              color: AppColors.lightGreyColor,
+              color: AppColors.greyColor,
               borderRadius: BorderRadius.circular(100.r),
             ),
           ),

@@ -791,4 +791,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get fieldRequired => 'هذا الحقل مطلوب';
+
+  @override
+  String get pleaseFillAllFields => 'من فضلك املئ جميع الحقول';
 }

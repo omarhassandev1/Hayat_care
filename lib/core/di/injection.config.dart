@@ -77,6 +77,22 @@ import 'package:hayat_care/features/family_members/domain/use_cases/get_family_m
     as _i985;
 import 'package:hayat_care/features/family_members/presentation/cubit/family_cubit.dart'
     as _i725;
+import 'package:hayat_care/features/health/data/datasources/health_mock_datasource.dart'
+    as _i350;
+import 'package:hayat_care/features/health/data/repositories_impl/health_repository_impl.dart'
+    as _i562;
+import 'package:hayat_care/features/health/domain/repositories/health_repository.dart'
+    as _i336;
+import 'package:hayat_care/features/health/domain/use_cases/get_support_groups_use_case.dart'
+    as _i458;
+import 'package:hayat_care/features/health/domain/use_cases/join_support_group_use_case.dart'
+    as _i153;
+import 'package:hayat_care/features/health/domain/use_cases/submit_donation_use_case.dart'
+    as _i757;
+import 'package:hayat_care/features/health/presentation/cubits/donation_cubit/donation_cubit.dart'
+    as _i364;
+import 'package:hayat_care/features/health/presentation/cubits/health_cubit/health_cubit.dart'
+    as _i431;
 import 'package:hayat_care/features/layout/presentation/cubit/layout_cubit.dart'
     as _i885;
 import 'package:hayat_care/features/profile/data/data_source/mock_profile_data_source.dart'
@@ -131,6 +147,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i160.MockFamilyDataSource>(
       () => _i160.MockFamilyDataSource(),
     );
+    gh.lazySingleton<_i350.HealthMockDatasource>(
+      () => _i350.HealthMockDatasource(),
+    );
     gh.lazySingleton<_i672.MockProfileDataSource>(
       () => _i672.MockProfileDataSource(),
     );
@@ -139,6 +158,9 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i704.SettingsLocalDataSource>(
       () => _i704.SettingsLocalDataSourceImpl(gh<_i986.Box<dynamic>>()),
+    );
+    gh.lazySingleton<_i336.HealthRepository>(
+      () => _i562.HealthRepositoryImpl(gh<_i350.HealthMockDatasource>()),
     );
     gh.lazySingleton<_i913.AppointmentsRepository>(
       () => _i129.AppointmentsRepositoryImpl(
@@ -191,6 +213,15 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i289.GetThemeUseCase>(),
         gh<_i289.CacheThemeUseCase>(),
       ),
+    );
+    gh.factory<_i458.GetSupportGroupsUseCase>(
+      () => _i458.GetSupportGroupsUseCase(gh<_i336.HealthRepository>()),
+    );
+    gh.factory<_i153.JoinSupportGroupUseCase>(
+      () => _i153.JoinSupportGroupUseCase(gh<_i336.HealthRepository>()),
+    );
+    gh.factory<_i757.SubmitDonationUseCase>(
+      () => _i757.SubmitDonationUseCase(gh<_i336.HealthRepository>()),
     );
     gh.lazySingleton<_i727.GetProfileUseCase>(
       () => _i727.GetProfileUseCase(repository: gh<_i364.ProfileRepository>()),
@@ -246,6 +277,15 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i135.SearchDoctorsUseCase>(
       () => _i135.SearchDoctorsUseCase(gh<_i566.DoctorsRepository>()),
+    );
+    gh.factory<_i364.DonationCubit>(
+      () => _i364.DonationCubit(gh<_i757.SubmitDonationUseCase>()),
+    );
+    gh.factory<_i431.HealthCubit>(
+      () => _i431.HealthCubit(
+        gh<_i458.GetSupportGroupsUseCase>(),
+        gh<_i153.JoinSupportGroupUseCase>(),
+      ),
     );
     gh.factory<_i365.BookingCubit>(
       () => _i365.BookingCubit(

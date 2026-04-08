@@ -65,7 +65,7 @@ class FavoriteDoctorsScreen extends StatelessWidget {
             doctor: DoctorEntity(
               id: '2',
               name: 'Dr. Lina Hassan',
-              specialty: DoctorSpecialtyEnum.dermatology,
+              specialty: DoctorSpecialtyEnum.dentist,
               hospital: 'Al Noor Hospital',
               imageUrl:
                   'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400',
@@ -116,7 +116,7 @@ class FavoriteDoctorsScreen extends StatelessWidget {
             doctor: DoctorEntity(
               id: '5',
               name: 'Dr. Ahmed Ali',
-              specialty: DoctorSpecialtyEnum.pediatrics,
+              specialty: DoctorSpecialtyEnum.neurology,
               hospital: 'Future Health Clinic',
               imageUrl:
                   'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400',

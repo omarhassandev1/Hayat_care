@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hayat_care/core/di/injection.dart';
 import 'package:hayat_care/core/theme/app_colors.dart';
+import 'package:hayat_care/features/health/presentation/cubits/health_cubit/health_cubit.dart';
+import 'package:hayat_care/features/health/presentation/view/screens/group_session_patient_details_screen.dart';
 import 'package:hayat_care/localization/app_localizations.dart';
 
 import '../../../../../gen/assets.gen.dart';
@@ -11,7 +15,12 @@ class JoinUsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.only(start: 20.w, end: 3.h, top: 34.h, bottom: 24.h),
+      padding: EdgeInsetsDirectional.only(
+        start: 20.w,
+        end: 3.h,
+        top: 34.h,
+        bottom: 24.h,
+      ),
       child: Stack(
         children: [
           Row(
@@ -59,7 +68,15 @@ class JoinUsCard extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => BlocProvider(
+                              create: (_) => sl<HealthCubit>(),
+                              child: const GroupSessionPatientDetailsScreen(),
+                            ),
+                          ),
+                        ),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
                           foregroundColor: AppColors.mainColor,
@@ -83,7 +100,8 @@ class JoinUsCard extends StatelessWidget {
           PositionedDirectional(
             end: 0.w,
             bottom: 0.h,
-            child: Assets.home.common.joinUs.svg()),
+            child: Assets.home.common.joinUs.svg(),
+          ),
         ],
       ),
     );
