@@ -244,6 +244,17 @@
   "continuee": "متابعة",
   "required": "مطلوب",
   "enterValidEmail": "ادخل بريد الكتروني صالح",
-  "logOutOfYourAccount": "تسجيل الخروج من حسابك ؟"
+  "logOutOfYourAccount": "تسجيل الخروج من حسابك ؟",
+  "groupSessions": "الجلسات الجماعية",
+  "address": "العنوان",
+  "supportGroupType": "نوع مجموعة الدعم",
+  "groupSessionConfirmed": "تم تأكيد الجلسة الجماعية!",
+  "groupSessionConfirmedSubtitle": "سيتواصل معك فريقنا لإرسال تفاصيل الجلسة والجدول الزمني.",
+  "addictionSupport": "مجموعة دعم الإدمان",
+  "mentalHealth": "حلقة الصحة النفسية",
+  "chronicIllness": "دعم الأمراض المزمنة",
+  "griefSupport": "مجموعة دعم الحزن",
+  "parentingSupport": "مجموعة دعم الأبوة",
+  "fieldRequired": "هذا الحقل مطلوب"
 
 }

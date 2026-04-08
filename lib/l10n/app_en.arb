@@ -166,7 +166,7 @@
   "cancelAppointment": "Cancel Appointment",
   "reschedule": "Reschedule",
   "bookAgain": "Book Again",
-  "leaveAReview": "Leave a review",
+  "leaveAReview": "review",
   "messaging": "Messaging",
   "bookAppointment": "Book Appointment",
   "availableTime": "Available Time",
@@ -244,7 +244,18 @@
   "continuee": "Continue",
   "required": "required",
   "enterValidEmail": "Enter a valid email",
-  "logOutOfYourAccount": "log out of your account ?"
+  "logOutOfYourAccount": "log out of your account ?",
+  "groupSessions": "Group Sessions",
+  "address": "Address",
+  "supportGroupType": "Support Group Type",
+  "groupSessionConfirmed": "Support Group Session Confirmed!",
+  "groupSessionConfirmedSubtitle": "Our team will send you the session details and schedule.",
+  "addictionSupport": "Addiction Support Group",
+  "mentalHealth": "Mental Health Circle",
+  "chronicIllness": "Chronic Illness Support",
+  "griefSupport": "Grief Support Group",
+  "parentingSupport": "Parenting Support Group",
+  "fieldRequired": "This field is required"
 
 
 }

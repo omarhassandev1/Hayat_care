@@ -18,18 +18,19 @@ class DoctorsFilterSection extends StatelessWidget {
     DoctorSpecialtyEnum.bones,
     DoctorSpecialtyEnum.addiction,
     DoctorSpecialtyEnum.cardiologists,
-    DoctorSpecialtyEnum.dermatology,
     DoctorSpecialtyEnum.ophthalmology,
     DoctorSpecialtyEnum.neurology,
-    DoctorSpecialtyEnum.pediatrics,
   ];
 
   @override
   Widget build(BuildContext context) {
     final cubit = context.watch<DoctorsCubit>();
 
-    return SizedBox(
-      height: 40.h,
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minHeight: 50.h,
+        maxHeight: 60.h,
+      ),
       child: ListView.builder(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         scrollDirection: Axis.horizontal,

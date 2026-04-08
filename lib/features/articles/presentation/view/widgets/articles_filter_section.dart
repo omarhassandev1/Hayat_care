@@ -17,8 +17,11 @@ class ArticlesFilterSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 40.h,
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: 50.h,
+            maxHeight: 60.h,
+          ),
           child: ListView.builder(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             scrollDirection: Axis.horizontal,

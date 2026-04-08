@@ -1097,7 +1097,7 @@ abstract class AppLocalizations {
   /// No description provided for @leaveAReview.
   ///
   /// In en, this message translates to:
-  /// **'Leave a review'**
+  /// **'review'**
   String get leaveAReview;
 
   /// No description provided for @messaging.
@@ -1567,6 +1567,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'log out of your account ?'**
   String get logOutOfYourAccount;
+
+  /// No description provided for @groupSessions.
+  ///
+  /// In en, this message translates to:
+  /// **'Group Sessions'**
+  String get groupSessions;
+
+  /// No description provided for @address.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get address;
+
+  /// No description provided for @supportGroupType.
+  ///
+  /// In en, this message translates to:
+  /// **'Support Group Type'**
+  String get supportGroupType;
+
+  /// No description provided for @groupSessionConfirmed.
+  ///
+  /// In en, this message translates to:
+  /// **'Support Group Session Confirmed!'**
+  String get groupSessionConfirmed;
+
+  /// No description provided for @groupSessionConfirmedSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Our team will send you the session details and schedule.'**
+  String get groupSessionConfirmedSubtitle;
+
+  /// No description provided for @addictionSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Addiction Support Group'**
+  String get addictionSupport;
+
+  /// No description provided for @mentalHealth.
+  ///
+  /// In en, this message translates to:
+  /// **'Mental Health Circle'**
+  String get mentalHealth;
+
+  /// No description provided for @chronicIllness.
+  ///
+  /// In en, this message translates to:
+  /// **'Chronic Illness Support'**
+  String get chronicIllness;
+
+  /// No description provided for @griefSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Grief Support Group'**
+  String get griefSupport;
+
+  /// No description provided for @parentingSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Parenting Support Group'**
+  String get parentingSupport;
+
+  /// No description provided for @fieldRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required'**
+  String get fieldRequired;
 }
 
 class _AppLocalizationsDelegate

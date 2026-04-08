@@ -757,4 +757,38 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get logOutOfYourAccount => 'تسجيل الخروج من حسابك ؟';
+
+  @override
+  String get groupSessions => 'الجلسات الجماعية';
+
+  @override
+  String get address => 'العنوان';
+
+  @override
+  String get supportGroupType => 'نوع مجموعة الدعم';
+
+  @override
+  String get groupSessionConfirmed => 'تم تأكيد الجلسة الجماعية!';
+
+  @override
+  String get groupSessionConfirmedSubtitle =>
+      'سيتواصل معك فريقنا لإرسال تفاصيل الجلسة والجدول الزمني.';
+
+  @override
+  String get addictionSupport => 'مجموعة دعم الإدمان';
+
+  @override
+  String get mentalHealth => 'حلقة الصحة النفسية';
+
+  @override
+  String get chronicIllness => 'دعم الأمراض المزمنة';
+
+  @override
+  String get griefSupport => 'مجموعة دعم الحزن';
+
+  @override
+  String get parentingSupport => 'مجموعة دعم الأبوة';
+
+  @override
+  String get fieldRequired => 'هذا الحقل مطلوب';
 }

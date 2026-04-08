@@ -525,7 +525,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get bookAgain => 'Book Again';
 
   @override
-  String get leaveAReview => 'Leave a review';
+  String get leaveAReview => 'review';
 
   @override
   String get messaging => 'Messaging';
@@ -768,4 +768,38 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get logOutOfYourAccount => 'log out of your account ?';
+
+  @override
+  String get groupSessions => 'Group Sessions';
+
+  @override
+  String get address => 'Address';
+
+  @override
+  String get supportGroupType => 'Support Group Type';
+
+  @override
+  String get groupSessionConfirmed => 'Support Group Session Confirmed!';
+
+  @override
+  String get groupSessionConfirmedSubtitle =>
+      'Our team will send you the session details and schedule.';
+
+  @override
+  String get addictionSupport => 'Addiction Support Group';
+
+  @override
+  String get mentalHealth => 'Mental Health Circle';
+
+  @override
+  String get chronicIllness => 'Chronic Illness Support';
+
+  @override
+  String get griefSupport => 'Grief Support Group';
+
+  @override
+  String get parentingSupport => 'Parenting Support Group';
+
+  @override
+  String get fieldRequired => 'This field is required';
 }
