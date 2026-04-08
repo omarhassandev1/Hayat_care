@@ -16,6 +16,7 @@ class AppTheme {
         primary: AppColors.mainColor,
       ),
       brightness: Brightness.light,
+      splashColor: Colors.transparent,
       fontFamily: fontFamily,
       scaffoldBackgroundColor: const Color(0xffFFFAFA),
       appBarTheme: const AppBarTheme(
@@ -98,6 +99,7 @@ class AppTheme {
         brightness: Brightness.dark,
       ),
       brightness: Brightness.dark,
+      splashColor: Colors.transparent,
       fontFamily: fontFamily,
       scaffoldBackgroundColor: const Color(0xff121212),
       appBarTheme: const AppBarTheme(
