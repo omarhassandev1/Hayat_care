@@ -256,6 +256,17 @@
   "griefSupport": "مجموعة دعم الحزن",
   "parentingSupport": "مجموعة دعم الأبوة",
   "fieldRequired": "هذا الحقل مطلوب",
-  "pleaseFillAllFields": "من فضلك املئ جميع الحقول"
+  "pleaseFillAllFields": "من فضلك املئ جميع الحقول",
+  "myActivity": "نشاطي",
+  "trackYourImpact": "تابع تأثيرك وتطورك باستمرار",
+  "sessionsAttended": "الجلسات التي حضرتها",
+  "contributions": "المساهمات",
+  "bloodDonations": "تبرعات الدم",
+  "moneyDonation": "التبرعات المالية",
+  "transactionHistory": "سجل المعاملات",
+  "attended": "تم حضورها"
+
+
+
 
 }

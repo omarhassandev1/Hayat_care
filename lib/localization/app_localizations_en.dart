@@ -805,4 +805,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pleaseFillAllFields => 'Please fill all fields';
+
+  @override
+  String get myActivity => 'My Activity';
+
+  @override
+  String get trackYourImpact => 'Track your impact';
+
+  @override
+  String get sessionsAttended => 'Sessions Attended';
+
+  @override
+  String get contributions => 'contributions';
+
+  @override
+  String get bloodDonations => 'Blood Donations';
+
+  @override
+  String get moneyDonation => 'MoneyDonation';
+
+  @override
+  String get transactionHistory => 'Transaction History';
+
+  @override
+  String get attended => 'Attended';
 }

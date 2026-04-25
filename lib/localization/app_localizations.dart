@@ -1639,6 +1639,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please fill all fields'**
   String get pleaseFillAllFields;
+
+  /// No description provided for @myActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'My Activity'**
+  String get myActivity;
+
+  /// No description provided for @trackYourImpact.
+  ///
+  /// In en, this message translates to:
+  /// **'Track your impact'**
+  String get trackYourImpact;
+
+  /// No description provided for @sessionsAttended.
+  ///
+  /// In en, this message translates to:
+  /// **'Sessions Attended'**
+  String get sessionsAttended;
+
+  /// No description provided for @contributions.
+  ///
+  /// In en, this message translates to:
+  /// **'contributions'**
+  String get contributions;
+
+  /// No description provided for @bloodDonations.
+  ///
+  /// In en, this message translates to:
+  /// **'Blood Donations'**
+  String get bloodDonations;
+
+  /// No description provided for @moneyDonation.
+  ///
+  /// In en, this message translates to:
+  /// **'MoneyDonation'**
+  String get moneyDonation;
+
+  /// No description provided for @transactionHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction History'**
+  String get transactionHistory;
+
+  /// No description provided for @attended.
+  ///
+  /// In en, this message translates to:
+  /// **'Attended'**
+  String get attended;
 }
 
 class _AppLocalizationsDelegate

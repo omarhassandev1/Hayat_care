@@ -794,4 +794,28 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get pleaseFillAllFields => 'من فضلك املئ جميع الحقول';
+
+  @override
+  String get myActivity => 'نشاطي';
+
+  @override
+  String get trackYourImpact => 'تابع تأثيرك وتطورك باستمرار';
+
+  @override
+  String get sessionsAttended => 'الجلسات التي حضرتها';
+
+  @override
+  String get contributions => 'المساهمات';
+
+  @override
+  String get bloodDonations => 'تبرعات الدم';
+
+  @override
+  String get moneyDonation => 'التبرعات المالية';
+
+  @override
+  String get transactionHistory => 'سجل المعاملات';
+
+  @override
+  String get attended => 'تم حضورها';
 }

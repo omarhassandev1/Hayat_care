@@ -256,7 +256,16 @@
   "griefSupport": "Grief Support Group",
   "parentingSupport": "Parenting Support Group",
   "fieldRequired": "This field is required",
-  "pleaseFillAllFields": "Please fill all fields"
+  "pleaseFillAllFields": "Please fill all fields",
+  "myActivity": "My Activity",
+  "trackYourImpact": "Track your impact",
+  "sessionsAttended": "Sessions Attended",
+  "contributions": "contributions",
+  "bloodDonations": "Blood Donations",
+  "moneyDonation": "MoneyDonation",
+  "transactionHistory": "Transaction History",
+  "attended": "Attended"
+
 
 
 }

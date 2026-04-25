@@ -113,6 +113,34 @@ class $AssetsDoctorGen {
   List<SvgGenImage> get values => [experience, people, rating, sorrySearch];
 }
 
+class $AssetsHealthGen {
+  const $AssetsHealthGen();
+
+  /// File path: assets/health/blood_icon.svg
+  SvgGenImage get bloodIcon =>
+      const SvgGenImage('assets/health/blood_icon.svg');
+
+  /// File path: assets/health/contributions_icon.svg
+  SvgGenImage get contributionsIcon =>
+      const SvgGenImage('assets/health/contributions_icon.svg');
+
+  /// File path: assets/health/group_icon.svg
+  SvgGenImage get groupIcon =>
+      const SvgGenImage('assets/health/group_icon.svg');
+
+  /// File path: assets/health/stats_icon.svg
+  SvgGenImage get statsIcon =>
+      const SvgGenImage('assets/health/stats_icon.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+    bloodIcon,
+    contributionsIcon,
+    groupIcon,
+    statsIcon,
+  ];
+}
+
 class $AssetsHomeGen {
   const $AssetsHomeGen();
 
@@ -461,6 +489,7 @@ class Assets {
   static const $AssetsBottomNavBarGen bottomNavBar = $AssetsBottomNavBarGen();
   static const $AssetsCommonGen common = $AssetsCommonGen();
   static const $AssetsDoctorGen doctor = $AssetsDoctorGen();
+  static const $AssetsHealthGen health = $AssetsHealthGen();
   static const $AssetsHomeGen home = $AssetsHomeGen();
   static const $AssetsMockGen mock = $AssetsMockGen();
   static const $AssetsOnboardingGen onboarding = $AssetsOnboardingGen();
