@@ -46,7 +46,7 @@ class CompletedAppointmentCardV2 extends StatelessWidget {
             statusLabel: local.completed,
             statusColor: AppColors.greenColor,
           ),
-          Divider(height: 0,thickness: .5,endIndent: 20.r,),
+          Divider(height: 0, thickness: .5, endIndent: 20.r),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 15.r),
             child: Row(
@@ -56,14 +56,15 @@ class CompletedAppointmentCardV2 extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) =>
-                              BookAppointmentScreen(doctor: doctor),
+                          builder: (_) => BookAppointmentScreen(doctor: doctor),
                         ),
                       );
                     },
                     child: Container(
                       padding: EdgeInsets.symmetric(
-                          horizontal: 10.w, vertical: 9.h),
+                        horizontal: 10.w,
+                        vertical: 9.h,
+                      ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.r),
                         border: Border.all(color: AppColors.mainColor),
@@ -71,8 +72,11 @@ class CompletedAppointmentCardV2 extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.refresh_outlined,
-                              color: AppColors.mainColor, size: 14.sp),
+                          Icon(
+                            Icons.refresh_outlined,
+                            color: AppColors.mainColor,
+                            size: 14.sp,
+                          ),
                           SizedBox(width: 4.w),
                           Text(
                             local.bookAgain,
@@ -88,8 +92,8 @@ class CompletedAppointmentCardV2 extends StatelessWidget {
                 ),
                 SizedBox(width: 12.w),
                 Expanded(
-                  child: ElevatedButton.icon(
-                    onPressed: () {
+                  child: GestureDetector(
+                    onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -102,20 +106,31 @@ class CompletedAppointmentCardV2 extends StatelessWidget {
                         ),
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.mainColor,
-                      shape: RoundedRectangleBorder(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10.w,
+                        vertical: 9.h,
+                      ),
+                      decoration: BoxDecoration(
+                        color: AppColors.mainColor,
                         borderRadius: BorderRadius.circular(12.r),
                       ),
-                    ),
-                    icon: Icon(Icons.star_outline,
-                        size: 14.sp, color: Colors.white),
-                    label: Text(
-                      local.leaveAReview,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium!
-                          .copyWith(fontSize: 13.sp, color: Colors.white),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.star_outline,
+                            size: 14.sp,
+                            color: Colors.white,
+                          ),
+                          SizedBox(width: 4.w),
+                          Text(
+                            local.leaveAReview,
+                            style: Theme.of(context).textTheme.bodyMedium!
+                                .copyWith(fontSize: 13.sp, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

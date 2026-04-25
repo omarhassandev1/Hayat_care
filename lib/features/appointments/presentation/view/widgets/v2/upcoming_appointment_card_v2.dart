@@ -43,7 +43,7 @@ class UpcomingAppointmentCardV2 extends StatelessWidget {
             statusLabel: local.upcoming,
             statusColor: AppColors.mainColor,
           ),
-          Divider(height: 0,thickness: .5,endIndent: 20.r,),
+          Divider(height: 0, thickness: .5, endIndent: 20.r),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 15.r),
             child: Directionality(
@@ -94,8 +94,8 @@ class UpcomingAppointmentCardV2 extends StatelessWidget {
                   ),
                   SizedBox(width: 12.w),
                   Expanded(
-                    child: ElevatedButton.icon(
-                      onPressed: () {
+                    child: GestureDetector(
+                      onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -105,22 +105,33 @@ class UpcomingAppointmentCardV2 extends StatelessWidget {
                           ),
                         );
                       },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.mainColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12.r),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 10.w,
+                          vertical: 9.h,
                         ),
-                      ),
-                      icon: Icon(
-                        Icons.calendar_month_outlined,
-                        size: 14.sp,
-                        color: Colors.white,
-                      ),
-                      label: Text(
-                        local.reschedule,
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          fontSize: 13.sp,
-                          color: Colors.white,
+                        decoration: BoxDecoration(
+                          color: AppColors.mainColor,
+                          borderRadius: BorderRadiusGeometry.circular(12.r),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.calendar_month_outlined,
+                              size: 14.sp,
+                              color: Colors.white,
+                            ),
+                            SizedBox(width: 4.w),
+                            Text(
+                              local.reschedule,
+                              style: Theme.of(context).textTheme.bodyMedium!
+                                  .copyWith(
+                                    fontSize: 13.sp,
+                                    color: Colors.white,
+                                  ),
+                            ),
+                          ],
                         ),
                       ),
                     ),

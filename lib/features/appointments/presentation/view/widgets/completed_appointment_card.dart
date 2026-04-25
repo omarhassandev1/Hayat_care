@@ -90,8 +90,8 @@ class CompletedAppointmentCard extends StatelessWidget {
                 ),
                 SizedBox(width: 12.w),
                 Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
+                  child: GestureDetector(
+                    onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -104,17 +104,21 @@ class CompletedAppointmentCard extends StatelessWidget {
                         ),
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.mainColor,
-                      shape: RoundedRectangleBorder(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10.w,
+                        vertical: 9.h,
+                      ),
+                      decoration: BoxDecoration(
+                        color: AppColors.mainColor,
                         borderRadius: BorderRadius.circular(12.r),
                       ),
-                    ),
-                    child: Text(
-                      local.leaveAReview,
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        fontSize: 13.sp,
-                        color: Colors.white,
+                      child: Text(
+                        local.leaveAReview,
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          fontSize: 13.sp,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
