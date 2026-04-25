@@ -108,6 +108,7 @@ flutter:
   - assets/mock/
   - assets/doctor/
   - assets/profile/
+  - assets/health/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

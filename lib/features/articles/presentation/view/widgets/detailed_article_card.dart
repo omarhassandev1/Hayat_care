@@ -56,9 +56,9 @@ class DetailedArticlesCard extends StatelessWidget {
                       style: TextStyle(color: Colors.grey, fontSize: 12.sp),
                     ),
                     Text(
-                      title,
+                      title*5,
                       style: Theme.of(context).textTheme.titleSmall,
-                      maxLines: 3,
+                      maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
                     Container(
