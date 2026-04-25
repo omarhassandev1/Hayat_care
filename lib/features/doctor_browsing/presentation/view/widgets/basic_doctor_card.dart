@@ -242,10 +242,12 @@ class BasicDoctorCardUpdated extends StatelessWidget {
                           size: 20,
                         ),
                         SizedBox(width: 4.w),
-                        Text(
-                          "${doctor.rating} (${doctor.reviewsCount} ${AppLocalizations.of(context)!.reviews})",
-                          style: Theme.of(context).textTheme.titleSmall!
-                              .copyWith(fontWeight: FontWeight.w500),
+                        Expanded(
+                          child: Text(
+                            "${doctor.rating} (${doctor.reviewsCount} ${AppLocalizations.of(context)!.reviews})",
+                            style: Theme.of(context).textTheme.titleSmall!
+                                .copyWith(fontWeight: FontWeight.w500),
+                          ),
                         ),
                       ],
                     ),

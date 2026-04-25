@@ -28,7 +28,7 @@ class HomeView extends StatelessWidget {
 
             SliverToBoxAdapter(child: HomeTopDoctorsSection()),
 
-            SliverToBoxAdapter(child: JoinUsCard()),
+            SliverToBoxAdapter(child: JoinUsCard(isSeeAllButtonAvailable: false,)),
 
             SliverToBoxAdapter(child: HomeTopArticlesSection()),
 
