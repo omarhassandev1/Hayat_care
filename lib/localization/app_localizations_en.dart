@@ -829,4 +829,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get attended => 'Attended';
+
+  @override
+  String get chatbot_title => 'Hayat Assistant';
+
+  @override
+  String get chatbot_subtitle => 'General Health Info Only';
+
+  @override
+  String get chatbot_disclaimer =>
+      'This assistant provides general health info only. Not a substitute for medical advice.';
+
+  @override
+  String get chatbot_hint => 'Ask a health question...';
+
+  @override
+  String get chatbot_attach_image => 'Upload Image (Lab Result)';
+
+  @override
+  String get chatbot_attach_pdf => 'Upload PDF (Medical Report)';
 }

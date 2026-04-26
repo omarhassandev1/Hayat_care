@@ -1687,6 +1687,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Attended'**
   String get attended;
+
+  /// No description provided for @chatbot_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Hayat Assistant'**
+  String get chatbot_title;
+
+  /// No description provided for @chatbot_subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'General Health Info Only'**
+  String get chatbot_subtitle;
+
+  /// No description provided for @chatbot_disclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'This assistant provides general health info only. Not a substitute for medical advice.'**
+  String get chatbot_disclaimer;
+
+  /// No description provided for @chatbot_hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask a health question...'**
+  String get chatbot_hint;
+
+  /// No description provided for @chatbot_attach_image.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload Image (Lab Result)'**
+  String get chatbot_attach_image;
+
+  /// No description provided for @chatbot_attach_pdf.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload PDF (Medical Report)'**
+  String get chatbot_attach_pdf;
 }
 
 class _AppLocalizationsDelegate

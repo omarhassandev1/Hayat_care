@@ -264,7 +264,13 @@
   "bloodDonations": "تبرعات الدم",
   "moneyDonation": "التبرعات المالية",
   "transactionHistory": "سجل المعاملات",
-  "attended": "تم حضورها"
+  "attended": "تم حضورها",
+  "chatbot_title": "مساعد حياة",
+  "chatbot_subtitle": "معلومات صحية عامة فقط",
+  "chatbot_disclaimer": "يقدم هذا المساعد معلومات صحية عامة فقط. لا يُغني عن استشارة الطبيب.",
+  "chatbot_hint": "اسأل سؤالاً صحياً...",
+  "chatbot_attach_image": "رفع صورة (نتيجة تحليل)",
+  "chatbot_attach_pdf": "رفع ملف PDF (تقرير طبي)"
 
 
 
