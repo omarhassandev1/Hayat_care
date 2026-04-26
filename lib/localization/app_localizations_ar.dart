@@ -818,4 +818,23 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get attended => 'تم حضورها';
+
+  @override
+  String get chatbot_title => 'مساعد حياة';
+
+  @override
+  String get chatbot_subtitle => 'معلومات صحية عامة فقط';
+
+  @override
+  String get chatbot_disclaimer =>
+      'يقدم هذا المساعد معلومات صحية عامة فقط. لا يُغني عن استشارة الطبيب.';
+
+  @override
+  String get chatbot_hint => 'اسأل سؤالاً صحياً...';
+
+  @override
+  String get chatbot_attach_image => 'رفع صورة (نتيجة تحليل)';
+
+  @override
+  String get chatbot_attach_pdf => 'رفع ملف PDF (تقرير طبي)';
 }

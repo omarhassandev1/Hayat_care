@@ -51,6 +51,16 @@ import 'package:hayat_care/features/articles/domain/use_cases/get_favorite_artic
     as _i304;
 import 'package:hayat_care/features/articles/presentation/cubit/articles_cubit.dart'
     as _i428;
+import 'package:hayat_care/features/chatbot/data/datasources/local_chat_datasource.dart'
+    as _i439;
+import 'package:hayat_care/features/chatbot/data/repositories/chat_repository_impl.dart'
+    as _i1048;
+import 'package:hayat_care/features/chatbot/domain/repositories/i_chat_repository.dart'
+    as _i42;
+import 'package:hayat_care/features/chatbot/domain/use_cases/send_message_use_case.dart'
+    as _i589;
+import 'package:hayat_care/features/chatbot/presentation/cubit/chat_cubit.dart'
+    as _i628;
 import 'package:hayat_care/features/doctor_browsing/data/data_source/doctors_mock_data_source.dart'
     as _i555;
 import 'package:hayat_care/features/doctor_browsing/data/repository_impl/doctors_repository_impl.dart'
@@ -141,6 +151,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i20.BookingMockDataSource>(
       () => _i20.BookingMockDataSource(),
     );
+    gh.lazySingleton<_i439.LocalChatDatasource>(
+      () => _i439.LocalChatDatasource(),
+    );
     gh.lazySingleton<_i555.DoctorsMockDataSource>(
       () => _i555.DoctorsMockDataSource(),
     );
@@ -191,6 +204,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i653.SettingsRepository>(
       () => _i312.SettingsRepositoryImpl(gh<_i704.SettingsLocalDataSource>()),
     );
+    gh.lazySingleton<_i42.IChatRepository>(
+      () => _i1048.ChatRepositoryImpl(gh<_i439.LocalChatDatasource>()),
+    );
     gh.lazySingleton<_i566.DoctorsRepository>(
       () => _i793.DoctorsRepositoryImpl(gh<_i555.DoctorsMockDataSource>()),
     );
@@ -222,6 +238,12 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i757.SubmitDonationUseCase>(
       () => _i757.SubmitDonationUseCase(gh<_i336.HealthRepository>()),
+    );
+    gh.factory<_i589.SendTextMessageUseCase>(
+      () => _i589.SendTextMessageUseCase(gh<_i42.IChatRepository>()),
+    );
+    gh.factory<_i589.SendFileMessageUseCase>(
+      () => _i589.SendFileMessageUseCase(gh<_i42.IChatRepository>()),
     );
     gh.lazySingleton<_i727.GetProfileUseCase>(
       () => _i727.GetProfileUseCase(repository: gh<_i364.ProfileRepository>()),
@@ -314,6 +336,12 @@ extension GetItInjectableX on _i174.GetIt {
         getFamilyMembersUseCase: gh<_i985.GetFamilyMembersUseCase>(),
         addFamilyMemberUseCase: gh<_i640.AddFamilyMemberUseCase>(),
         deleteFamilyMemberUseCase: gh<_i683.DeleteFamilyMemberUseCase>(),
+      ),
+    );
+    gh.factory<_i628.ChatCubit>(
+      () => _i628.ChatCubit(
+        gh<_i589.SendTextMessageUseCase>(),
+        gh<_i589.SendFileMessageUseCase>(),
       ),
     );
     gh.factory<_i428.ArticlesCubit>(

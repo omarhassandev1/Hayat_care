@@ -264,7 +264,13 @@
   "bloodDonations": "Blood Donations",
   "moneyDonation": "MoneyDonation",
   "transactionHistory": "Transaction History",
-  "attended": "Attended"
+  "attended": "Attended",
+  "chatbot_title": "Hayat Assistant",
+  "chatbot_subtitle": "General Health Info Only",
+  "chatbot_disclaimer": "This assistant provides general health info only. Not a substitute for medical advice.",
+  "chatbot_hint": "Ask a health question...",
+  "chatbot_attach_image": "Upload Image (Lab Result)",
+  "chatbot_attach_pdf": "Upload PDF (Medical Report)"
 
 
 

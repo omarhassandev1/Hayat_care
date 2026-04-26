@@ -13,6 +13,7 @@ import 'package:hayat_care/features/app_settings/presentation/view/screens/priva
 import 'package:hayat_care/features/app_settings/presentation/view/screens/settings_screen.dart';
 import 'package:hayat_care/features/app_settings/presentation/view/screens/terms_of_service_screen.dart';
 import 'package:hayat_care/features/articles/presentation/view/screens/articles_bookmarks_screen.dart';
+import 'package:hayat_care/features/chatbot/presentation/view/screens/chatbot_screen.dart';
 import 'package:hayat_care/features/family_members/presentation/view/screens/family_members_screen.dart';
 import 'package:hayat_care/features/favorite_doctors/presentation/view/screens/favorite_doctors_screen.dart';
 import 'package:hayat_care/features/layout/presentation/view/main_layout_view.dart';
@@ -39,5 +40,6 @@ class AppRoutes {
     HelpCenterScreen.routeName : (context) => HelpCenterScreen(),
     ContactSupportScreen.routeName : (context) => ContactSupportScreen(),
     MessageSuccessScreen.routeName : (context) => MessageSuccessScreen(),
+    ChatbotScreen.routeName : (context) => ChatbotScreen(),
   };
 }
