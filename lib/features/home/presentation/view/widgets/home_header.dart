@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/theme/app_colors.dart';
+import 'package:hayat_care/features/chatbot/presentation/view/screens/chatbot_screen.dart';
 import 'package:hayat_care/features/favorite_doctors/presentation/view/screens/favorite_doctors_screen.dart';
 import 'package:hayat_care/features/profile/presentation/cubit/profile_cubit.dart';
 import 'package:hayat_care/features/profile/presentation/cubit/profile_state.dart';
@@ -78,15 +79,17 @@ class HomeHeader extends StatelessWidget {
                   onPressed: () {},
                 ),
                 _buildActionIcon(
-                  icon: Assets.home.common.ai.svg(
-                    height: 24.h,
-                    colorFilter: ColorFilter.mode(
-                      isDark ? Colors.white : Colors.black,
-                      BlendMode.srcIn,
+                    icon: Assets.home.common.ai.svg(
+                      height: 24.h,
+                      colorFilter: ColorFilter.mode(
+                        isDark ? Colors.white : Colors.black,
+                        BlendMode.srcIn,
+                      ),
                     ),
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(ChatbotScreen.routeName);
+                    },
                   ),
-                  onPressed: () {},
-                ),
                 _buildActionIcon(
                   icon: Assets.home.common.favorite.svg(
                     height: 20.h,
