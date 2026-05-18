@@ -105,6 +105,16 @@ import 'package:hayat_care/features/health/presentation/cubits/health_cubit/heal
     as _i431;
 import 'package:hayat_care/features/layout/presentation/cubit/layout_cubit.dart'
     as _i885;
+import 'package:hayat_care/features/notifications/data/datasources/local_notification_datasource.dart'
+    as _i476;
+import 'package:hayat_care/features/notifications/data/repositories/notification_repository_impl.dart'
+    as _i689;
+import 'package:hayat_care/features/notifications/domain/repositories/i_notification_repository.dart'
+    as _i1012;
+import 'package:hayat_care/features/notifications/domain/use_cases/get_notifications_use_case.dart'
+    as _i967;
+import 'package:hayat_care/features/notifications/presentation/cubit/notification_cubit.dart'
+    as _i539;
 import 'package:hayat_care/features/profile/data/data_source/mock_profile_data_source.dart'
     as _i672;
 import 'package:hayat_care/features/profile/data/repository_impl/profile_repository_impl.dart'
@@ -187,6 +197,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i870.BookingRepository>(
       () => _i941.BookingRepositoryImpl(gh<_i20.BookingMockDataSource>()),
     );
+    gh.lazySingleton<_i476.ILocalNotificationDatasource>(
+      () => _i476.LocalNotificationDatasource(),
+    );
     gh.factory<_i939.GetAvailableSlotsUseCase>(
       () => _i939.GetAvailableSlotsUseCase(gh<_i870.BookingRepository>()),
     );
@@ -253,6 +266,11 @@ extension GetItInjectableX on _i174.GetIt {
         repository: gh<_i364.ProfileRepository>(),
       ),
     );
+    gh.lazySingleton<_i1012.INotificationRepository>(
+      () => _i689.NotificationRepositoryImpl(
+        gh<_i476.ILocalNotificationDatasource>(),
+      ),
+    );
     gh.lazySingleton<_i664.GetArticlesUseCase>(
       () => _i664.GetArticlesUseCase(gh<_i289.ArticlesRepository>()),
     );
@@ -270,6 +288,9 @@ extension GetItInjectableX on _i174.GetIt {
         getAppointmentsByStatusUseCase:
             gh<_i848.GetAppointmentsByStatusUseCase>(),
       ),
+    );
+    gh.factory<_i967.GetNotificationsUseCase>(
+      () => _i967.GetNotificationsUseCase(gh<_i1012.INotificationRepository>()),
     );
     gh.lazySingleton<_i640.AddFamilyMemberUseCase>(
       () => _i640.AddFamilyMemberUseCase(
@@ -330,6 +351,9 @@ extension GetItInjectableX on _i174.GetIt {
       () => _i304.GetFavoriteArticlesUseCase(
         articlesRepository: gh<_i289.ArticlesRepository>(),
       ),
+    );
+    gh.factory<_i539.NotificationCubit>(
+      () => _i539.NotificationCubit(gh<_i967.GetNotificationsUseCase>()),
     );
     gh.factory<_i725.FamilyCubit>(
       () => _i725.FamilyCubit(

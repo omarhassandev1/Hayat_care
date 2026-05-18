@@ -270,7 +270,17 @@
   "chatbot_disclaimer": "يقدم هذا المساعد معلومات صحية عامة فقط. لا يُغني عن استشارة الطبيب.",
   "chatbot_hint": "اسأل سؤالاً صحياً...",
   "chatbot_attach_image": "رفع صورة (نتيجة تحليل)",
-  "chatbot_attach_pdf": "رفع ملف PDF (تقرير طبي)"
+  "chatbot_attach_pdf": "رفع ملف PDF (تقرير طبي)",
+  "notifications": "الإشعارات",
+  "no_notifications": "لا توجد إشعارات بعد",
+  "notification_retry": "إعادة المحاولة",
+  "notification_error": "حدث خطأ ما.\nيرجى المحاولة مرة أخرى.",
+  "just_now": "الآن",
+  "minutes_ago": "منذ {count} د",
+  "hours_ago": "منذ {count} س",
+  "days_ago": "منذ {count} يوم",
+  "today": "اليوم",
+  "yesterday": "أمس"
 
 
 

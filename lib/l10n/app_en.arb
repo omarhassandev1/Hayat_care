@@ -270,7 +270,17 @@
   "chatbot_disclaimer": "This assistant provides general health info only. Not a substitute for medical advice.",
   "chatbot_hint": "Ask a health question...",
   "chatbot_attach_image": "Upload Image (Lab Result)",
-  "chatbot_attach_pdf": "Upload PDF (Medical Report)"
+  "chatbot_attach_pdf": "Upload PDF (Medical Report)",
+  "notifications": "Notifications",
+  "no_notifications": "No notifications yet",
+  "notification_retry": "Retry",
+  "notification_error": "Something went wrong.\nPlease try again.",
+  "just_now": "Just now",
+  "minutes_ago": "{count}m ago",
+  "hours_ago": "{count}h ago",
+  "days_ago": "{count}d ago",
+  "today": "Today",
+  "yesterday": "Yesterday"
 
 
 

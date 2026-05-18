@@ -1723,6 +1723,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Upload PDF (Medical Report)'**
   String get chatbot_attach_pdf;
+
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// No description provided for @no_notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'No notifications yet'**
+  String get no_notifications;
+
+  /// No description provided for @notification_retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get notification_retry;
+
+  /// No description provided for @notification_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong.\nPlease try again.'**
+  String get notification_error;
+
+  /// No description provided for @just_now.
+  ///
+  /// In en, this message translates to:
+  /// **'Just now'**
+  String get just_now;
+
+  /// No description provided for @minutes_ago.
+  ///
+  /// In en, this message translates to:
+  /// **'{count}m ago'**
+  String minutes_ago(Object count);
+
+  /// No description provided for @hours_ago.
+  ///
+  /// In en, this message translates to:
+  /// **'{count}h ago'**
+  String hours_ago(Object count);
+
+  /// No description provided for @days_ago.
+  ///
+  /// In en, this message translates to:
+  /// **'{count}d ago'**
+  String days_ago(Object count);
+
+  /// No description provided for @today.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get today;
+
+  /// No description provided for @yesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get yesterday;
 }
 
 class _AppLocalizationsDelegate
