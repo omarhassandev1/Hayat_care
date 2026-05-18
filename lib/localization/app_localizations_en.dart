@@ -848,4 +848,40 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get chatbot_attach_pdf => 'Upload PDF (Medical Report)';
+
+  @override
+  String get notifications => 'Notifications';
+
+  @override
+  String get no_notifications => 'No notifications yet';
+
+  @override
+  String get notification_retry => 'Retry';
+
+  @override
+  String get notification_error => 'Something went wrong.\nPlease try again.';
+
+  @override
+  String get just_now => 'Just now';
+
+  @override
+  String minutes_ago(Object count) {
+    return '${count}m ago';
+  }
+
+  @override
+  String hours_ago(Object count) {
+    return '${count}h ago';
+  }
+
+  @override
+  String days_ago(Object count) {
+    return '${count}d ago';
+  }
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get yesterday => 'Yesterday';
 }

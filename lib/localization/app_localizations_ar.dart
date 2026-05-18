@@ -837,4 +837,40 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get chatbot_attach_pdf => 'رفع ملف PDF (تقرير طبي)';
+
+  @override
+  String get notifications => 'الإشعارات';
+
+  @override
+  String get no_notifications => 'لا توجد إشعارات بعد';
+
+  @override
+  String get notification_retry => 'إعادة المحاولة';
+
+  @override
+  String get notification_error => 'حدث خطأ ما.\nيرجى المحاولة مرة أخرى.';
+
+  @override
+  String get just_now => 'الآن';
+
+  @override
+  String minutes_ago(Object count) {
+    return 'منذ $count د';
+  }
+
+  @override
+  String hours_ago(Object count) {
+    return 'منذ $count س';
+  }
+
+  @override
+  String days_ago(Object count) {
+    return 'منذ $count يوم';
+  }
+
+  @override
+  String get today => 'اليوم';
+
+  @override
+  String get yesterday => 'أمس';
 }
