@@ -1,7 +1,9 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hayat_care/core/routes/app_routes.dart';
+import 'package:hayat_care/core/services/fcm_service.dart';
 import 'package:hayat_care/core/theme/app_theme.dart';
 import 'package:hayat_care/features/app_settings/presentation/cubit/app_settings_state.dart';
 import 'package:hayat_care/features/layout/presentation/cubit/layout_cubit.dart';
@@ -15,6 +17,8 @@ import 'features/splash_screen/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await FCMService().init();
   await Hive.initFlutter();
   await configureDependencies();
   runApp(const MyApp());
